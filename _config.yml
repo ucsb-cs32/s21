@@ -42,7 +42,7 @@ cal_dates: >
   {"label":"Last day of instruction", "date":"2020-12-10" },
   {"label":"Finals Begin", "date":"2020-12-12" },
   {"label":"Finals End", "date":"2020-12-18" },
-  {"label":"Last day to drop (without $3 fee)", "date":"2020-10-07" }
+  {"label":"Last day to drop (without $3 fee)", "date":"2020-10-07" },
   {"label":"Last day to drop (deadline)", "date":"2020-10-28" }
   ]
 
