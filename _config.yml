@@ -29,7 +29,7 @@ submit_cs_course:
 
 start_week: 0
 start_date: 2020-09-27 00:00:00.00-7:00
-num_weeks: 10
+num_weeks: 11
 extra_exam_week: true
 sections: "9am, 10am, 11am, 12pm"
 
