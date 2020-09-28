@@ -39,10 +39,11 @@ cal_dates: >
   {"label":"Holiday: Veteran's Day", "date":"2020-11-11" },
   {"label":"Holiday: Thanksgiving", "date":"2020-11-26" },
   {"label":"Holiday: Thanksgiving", "date":"2020-11-27" },
-  {"label":"Last day of instruction", "date":"2020-12-1" },
+  {"label":"Last day of instruction", "date":"2020-12-10" },
   {"label":"Finals Begin", "date":"2020-12-12" },
   {"label":"Finals End", "date":"2020-12-18" },
-  {"label":"Last day to drop (11pm)", "date":"2020-04-24" }
+  {"label":"Last day to drop (without $3 fee)", "date":"2020-10-07" }
+  {"label":"Last day to drop (deadline)", "date":"2020-10-28" }
   ]
 
 
