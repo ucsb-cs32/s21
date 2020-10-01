@@ -9,25 +9,28 @@ ready: true
 # Instructor
 Jedrzej Kozerawski
 
-* TBA
+* M 1PM,  F 10AM
 
 # TAs
 
 Aishwarya Manickam Rameshbabu 
 
-* TBA
+* T 10AM,  R 4PM
 
 Bowen Zhang
 
-* TBA
+* T 4PM,  W 4PM
 
 Suriya Dakshina Murthy
 
-* TBA
+* M 12PM,  R 9AM
 
 # Tutor Open Lab Hours
 
 Alan Roddick
 
-* TBA
+* M 1PM,  W 1PM
 
+Connor Rapelje
+
+* T 1PM,  R 1PM
