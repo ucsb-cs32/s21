@@ -9,7 +9,7 @@ ready: true
 # Instructor
 Jedrzej Kozerawski
 
-* M 1PM,  F 10AM
+* M 2PM,  F 10AM
 
 # TAs
 
