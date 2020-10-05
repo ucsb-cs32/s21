@@ -9,7 +9,7 @@ ready: true
 # Instructor
 Jedrzej Kozerawski
 
-* M 2PM,  F 10AM
+* M 12PM,  F 10AM
 
 # TAs
 
@@ -23,7 +23,7 @@ Bowen Zhang
 
 Suriya Dakshina Murthy
 
-* M 12PM,  R 9AM
+* M 2PM,  R 9AM
 
 # Tutor Open Lab Hours
 
