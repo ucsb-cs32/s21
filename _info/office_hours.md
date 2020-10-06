@@ -29,7 +29,7 @@ Suriya Dakshina Murthy
 
 Alan Roddick
 
-* M 1PM,  W 1PM
+* T 12PM,  W 2:30PM
 
 Connor Rapelje
 
