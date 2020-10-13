@@ -73,6 +73,27 @@ clean:
 ## Global Namespace
 * By default, all variables and functions are defined in a global namespace if no namespace is explicitly defined.
 
+
+## Specifying something in the global namespace.
+* It’s possible that local definitions have namespace conflicts if using namespace ... has a naming conflict.
+* You can specify the global namespace by prepending “::” to indicate the global namespace.
+
+## Example
+
+```
+// main.cpp
+using namespace CS_32_F1;
+
+void someFunction() {
+	std::cout << "in some function (global namespace)" << std::endl;
+}
+
+int main() {
+	someFunction(); // which one?? – won’t compile.
+	//::someFunction(); // knows it’s someFunction in global namespace
+}
+```
+
 ## Appending to existing namespaces
 * Namespace definitions can span multiple files (it adds on to the namespace if it already exists).
 * Imagine if the standard library had to be defined in a single namespace block!!
@@ -154,26 +175,6 @@ main: main.o F1.o F2.o
 
 clean:
 	rm -f *.o main
-```
-
-## Specifying something in the global namespace.
-* It’s possible that local definitions have namespace conflicts if using namespace ... has a naming conflict.
-* You can specify the global namespace by prepending “::” to indicate the global namespace.
-
-## Example
-
-```
-// main.cpp
-using namespace CS_32_F1;
-
-void someFunction() {
-	cout << "in some function (global namespace)" << endl;
-}
-
-int main() {
-	// someFunction(); // which one?? – won’t compile.
-	::someFunction(); // knows it’s someFunction in global namespace
-}
 ```
 
 # Structs
