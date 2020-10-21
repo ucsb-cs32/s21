@@ -57,7 +57,7 @@ Its now time to use the git-command line tools to perform version control for th
 git pull
 git add .
 git commit -m "Initial version of lab02 files"
-git push origin master
+git push origin main
 ```
 
 Go ahead and type them out on a terminal in your git repo directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo.
