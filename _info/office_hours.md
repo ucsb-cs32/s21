@@ -23,7 +23,7 @@ Bowen Zhang
 
 Suriya Dakshina Murthy
 
-* M 2PM,  R 9AM
+* M 9AM,  R 9AM
 
 # Tutor Open Lab Hours
 
