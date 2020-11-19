@@ -116,6 +116,8 @@ g++ -o hello hello.cpp
 // forkExec.cpp
 #include <unistd.h>
 #include <iostream>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 using namespace std;
 
