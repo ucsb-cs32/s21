@@ -1,5 +1,5 @@
 ---
-title: CS32, Fall 2020
+title: CS32, Winter 2021 (Zoë Wood)
 ---
 
 # {{site.course}}, {{site.quarter}}
