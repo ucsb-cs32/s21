@@ -1,55 +1,55 @@
+default_branch: main
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
-remote_theme: ucsb-cs-course-repos/course-repo-jekyll-theme
+remote_theme: ucsb-cs-course-repos/course-repo-jekyll-theme@pcmultlectwithmasterormain
+
 
 url: https://ucsb-cs32.github.io 
-baseurl: "/f20"
+baseurl: "/w21"
 
 course: "CS32"
-qtr: "F20"
-quarter: "Fall 2020"
+qtr: "W21"
+quarter: "Winter 2021"
 piazza_url: https://piazza.com/ucsb/fall2020/cs32/home
 gauchospace_course_page:
 gradescope_class_url: https://www.gradescope.com/courses/193319
 
-ta_list: "Aishwarya, Bowen, Suriya"
+instructor_name: "Zoë Wood"
+ta_list: ""
 ta_list_full: "Aishwarya Manickam Rameshbabu, Bowen Zhang, Suriya Dakshina Murthy"
-mentors_list: "Alan Roddick, Connor Rapelje"
-discussion_section_times: "9am, 10am, 11am, 12pm"
+mentors_list: "Alan Roddick, Bethany Long, Qiru Hu"
+discussion_section_times: "noon, 1pm"
 
-github_url: https://github.com/ucsb-cs32/f20
+github_url: https://github.com/ucsb-cs32/w21
 mentor_url:
 
 on_campus: http://proquest.safaribooksonline.com
 off_campus: http://proquest.safaribooksonline.com.proxy.library.ucsb.edu:2048
 
-submit_cs_course:
 
-start_week: 0
-start_date: 2020-09-27 00:00:00.00-7:00
-num_weeks: 11
+start_week: 1
+start_date: 2021-01-03
+num_weeks: 10
 extra_exam_week: true
-sections: "9am, 10am, 11am, 12pm"
 
 cal_dates: >
   [
-  {"label":"First day of instructions", "date":"2020-10-01" },
-  {"label":"Holiday: Veteran's Day", "date":"2020-11-11" },
-  {"label":"Holiday: Thanksgiving", "date":"2020-11-26" },
-  {"label":"Holiday: Thanksgiving", "date":"2020-11-27" },
-  {"label":"Last day of instruction", "date":"2020-12-10" },
-  {"label":"Finals Begin", "date":"2020-12-12" },
-  {"label":"Finals End", "date":"2020-12-18" },
-  {"label":"Last day to drop (without $3 fee)", "date":"2020-10-07" },
-  {"label":"Last day to drop (deadline)", "date":"2020-10-28" }
+    {"label":"W21 1st day of instruction", "date":"2021-01-04" },	
+    {"label":"Univ Holiday", "date":"2021-01-18" , "holiday": true},
+    {"label":"Univ Holiday", "date":"2021-01-15" , "holiday": true},
+    {"label":"W21 instruction ends", "date":"2021-03-12" },
+    {"label":"W21 finals start", "date":"2021-03-13" },
+    {"label":"W21 finals end", "date":"2021-03-19" },
+    {"label":"W21 qtr ends", "date":"2021-03-19" }
   ]
 
 
 kramdown:
    parse_block_html: true
-   default_lang: python
+   default_lang: cpp
 
 exclude:
    - vendor
