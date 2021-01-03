@@ -6,8 +6,9 @@ ready: true
 
 # Course Staff<a name="staff"></a>
 
-## Course Instructor: {{site.instructor}}
-* Office hours time and location are available on [CMPSC 32 Office Hours](/w21/info/office_hours/)
+## Course Instructor: 
+
+{{site.instructor_name}}
 
 ## TAs
 
@@ -17,3 +18,6 @@ ready: true
 
 {{site.mentors_list_full}}
 
+## Office Hours
+
+* Office hours time and location are available on [CMPSC 32 Office Hours](/w21/info/office_hours/)
