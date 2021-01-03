@@ -4,33 +4,22 @@ layout: default
 ready: true
 ---
 
-<h1><strong>CMPSC 32 Office Hours</strong></h1>
+# CMPSC 32 W21 Office Hours
 
-# Instructor
-Jedrzej Kozerawski
+Office hours will be held either on Zoom or on Discord; further information will be updated
+here, or on Gauchospace.
 
-* M 12PM,  F 10AM
+| Name                   | Role       | Office Hours| Pronouns |
+|------------------------|------------|-------------|----------|
+| Prof. Zoë Wood         | Instructor |   TBD       |          | 
+| Suriya Dakshina Murthy | TA         |   TBD       |          |
+| Aishwarya M Rameshbabu | TA         |   TBD       |          |
+| Alan Roddick           | LA         |   TBD       |          |
+| Bethany Long           | LA         |   TBD       |          |
+| Qiru Hu                | LA         |   TBD       |          |
 
-# TAs
+Abbreviations:
+* TA: Teaching Assistant (Graduate Student)
+* LA: Learning Assistant (Undergraduate) 
+* TBD: To be determined
 
-Aishwarya Manickam Rameshbabu 
-
-* T 10AM,  R 4PM
-
-Bowen Zhang
-
-* T 4PM,  W 4PM
-
-Suriya Dakshina Murthy
-
-* M 9AM,  R 9AM
-
-# Tutor Open Lab Hours
-
-Alan Roddick
-
-* T 12PM,  W 2:30PM
-
-Connor Rapelje
-
-* T 1PM,  R 1PM
