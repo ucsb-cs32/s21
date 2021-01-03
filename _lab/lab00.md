@@ -3,8 +3,9 @@ layout: lab
 num: lab00	
 ready: true
 desc: "Review of C++ basics, Makefiles, Gradescope"
-assigned: 2020-10-07 08:00:00.00-7
-due: 2020-10-13 23:59:00.00-7
+assigned: 2021-01-04 
+due: 2021-01-11 23:59
+github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
 Goals
@@ -13,12 +14,12 @@ Goals
 By the time you have finished this lab, you should have demonstrated
 your ability to:
 
--   Join the Github Organization <https://github.com/ucsb-cs32-f20-kozerawski/>
+-   Join the Github Organization <{{page.github_org_url}}> 
 -   Use some basic Unix commands, and learn about new Unix commands
 -   Create a basic Makefile from scratch
 -   Do some simple C++ programming as review of C++ basics, and as
     preliminary work towards understanding sorting algorithms
--   Learn how to submit work using the Gradescope system
+-   Submit work using the Gradescope system
 
 Step by Step
 ============
@@ -36,10 +37,8 @@ account:
 
 <strong>You should already know the following from CS16 / CS24. If not, alert your TA/instructor immediately:</strong>
 
--   How to login with your CoE/CSIL account
--   How to use the Linux computers in
-    -   <strong>Phelps 3525</strong> (where your discussion sections are scheduled), and
-    -   <strong>CSIL</strong>, the Computer Science Instructional Lab on the first floor of Harold Frank Hall (accessed through an outside door on the side facing the ocean.), which have an identical setup.
+-   How to login to `csil.cs.ucsb.edu` with your CoE/CSIL account
+
 
 ### Q: Can I work on my own computer? A: MAYBE. MAYBE NOT.
 
@@ -56,36 +55,61 @@ on your own computer", and then YOU ARE ON YOUR OWN.
 
 So, please be aware:
 
--   The primary computing environment for this course is the Phelps and CSIL labs.
--   The CSIL labs are open from early in the morning to late at night every day of the week.
--   Though many labs can be done from your own computer, there may be some that require you to work on CSIL (either over the internet, or coming in person.)
-
-If you are working from your own computer at home or in your dorm, i.e. in not in Phelps 3525, or the CSIL Lab, you may need information on:
-
--   [how to access CSIL from Windows](https://ucsb-cs8.github.io/topics/csil_via_windows/) OR
--   [how to access CSIL from Mac or Linux via ssh](https://ucsb-cs8.github.io/topics/csil_via_macos/)
+-   The primary computing environment for this course is the Linux environment on `csil.cs.ucsb.edu`
+-   Though many labs can be done from your own computer, there may be some that require you to work on
+    the `csil.cs.ucsb.edu` linux systems.
 
 ### Step 0b: Adding yourself to our GitHub organization
 
-We will be using github.com in this course. We have created an organization on github.com <https://github.com/ucsb-cs32-f20-kozerawski> where you can create repositories (repos) for your assignments in this course. You may be familiar with GitHub organizations from CS 16 and 24. The advantage of creating private repos under that organization is that the course staff (your instructors, TAs and mentors) will be able to see your code and provide you with help, without you having to do anything special.
+We will be using github.com in this course. We have created an organization on github.com
+<{{page.github_org_url}}>
+where you can create repositories (repos) for your assignments in this course.
+You may be familiar with GitHub organizations from CS 16 and 24.
+The advantage of creating private repos under that organization is that the course staff
+(your instructors, TAs and mentors) will be able to see your code and provide you with help,
+without you having to do anything special.
 
 To join this organization, you need to do four things.
 
-(1) If you don't already have a github.com account, create one on the "free" plan.
-(2) If you don't already have your @umail.ucsb.edu email address associated with your github.com account, go to "settings", add that email, and confirm that email address.
-(3) Visit <https://ucsb-cs-github-linker.herokuapp.com> and login with your github.com account. Click "Home", find this course, and click the "join course button". That will automatically send you an invitation to join the course organization. There is a link to the invitation for the GitHub organization for this course (<https://github.com/ucsb-cs32-f20-kozerawski>). 
-(4) Click on the invitation link and accept it. You can also go straight to <https://github.com/ucsb-cs32-f20-kozerawski> and accept the invitation there.
+1. If you don't already have a github.com account, create one on the "free" plan.
+2. If you don't already have your `@ucsb.edu` or `@umail.ucsb.edu`
+   email address associated with your github.com account, go to
+   "settings", add that email, and confirm that email address.
 
-If you are not familiar with git, I highly recommend learning this skill since this will be extremely valuable when collaborating on large software projects. More information on git can be found here: <https://ucsb-cs32.github.io/topics/git/>.
+3. Visit <https://ucsb-cs-github-linker.herokuapp.com> and login with
+   your github.com account. Click "Home", find this course, and click the
+   "join course button". That will automatically send you an invitation
+   to join the course organization. There is a link to the invitation for
+   the GitHub organization for this course
+4. Click on the invitation link and accept it. You can also go straight to <{{page.github_org_url}}>
+   and accept the invitation there.
+
+If you are not familiar with git, I highly recommend learning this
+skill since this will be extremely valuable when collaborating on
+large software projects. More information on git can be found here:
+<https://ucsb-cs32.github.io/topics/git/>.
 
 <b> IMPORTANT NOTE! </b>
-You can create your own repos under this organization when working on your labs. However, be sure to create your repo as *private*, since if it's public, then anyone can view its contents. Since all students are responsible for their own work, having your solutions visible to everyone creates a situation that is considered to be a form of academic dishonesty.
 
-If there are any issues or questions, please post them on Piazza and include any relevant screenshots, which may help us investigate any issues.
+You can create your own repos under this organization when working on
+your labs. However, be sure to create your repo as *private*, since if
+it's public, then anyone can view its contents. Since all students are
+responsible for their own work, having your solutions visible to
+everyone creates a situation that is considered to be a form of
+academic dishonesty.
+
+If there are any issues or questions, please post them on Piazza and
+include any relevant screenshots, which may help us investigate any
+issues.
 
 ### Step 0c: Creating your Gradescope account
 
-I have manually added everyone (using your @umail.ucsb.edu accounts) currently enrolled in the course to the Gradescope system. You should have received an email from the Gradescope system asking you to create a password. Once you follow the instructions to set your password, you should have access to the autograding system. You should see "CMPSC 32" in your Winter 2020 Courses.
+I have manually added everyone (using your UCSB email accounts)
+currently enrolled in the course to the Gradescope system. You should
+have received an email from the Gradescope system asking you to create
+a password. Once you follow the instructions to set your password, you
+should have access to the autograding system. You should see "CMPSC
+32" in your courses for this quarter.
 
 The lab assignment "Lab00" should appear in your Gradescope dashboard in CMPSC 32. 
 
@@ -116,21 +140,37 @@ The following arrangement is <strong>NOT OK</strong>.
 There are a few requirements you must follow if you decide to work with a partner:
 
 * Your partner must be enrolled in the same lab section as you.
-* You and your partner must agree to work together outside of lab section in case you do not finish the lab during your lab section. You must agree to reserve at least two hours outside of lab section to work together if needed (preferrably during an open lab hour where you can work in Phelps 3525 and ask a mentor for help). You are responsible for exchanging contact information in case you need to reach your partner.
-* If you choose to work with a partner for a future lab where pair programming is allowed, then you must choose a partner you have not worked with before.
-* You MUST add your partner on Gradescope when submitting your work <strong>*<u>EACH TIME</u>*</strong> you submit a file(s). After uploading your file(s) on Gradescope, there is a "Group Members" link at the bottom (or "Add Group Member" under "Groups") where you can select the partner you are working with. Whoever uploaded the submission must make sure your partner is part of your Group. Click on "Group Members" -> "Add Member" and select your partner from the list.
+
+* You and your partner must agree to work together outside of lab
+  section in case you do not finish the lab during your lab
+  section. You must agree to reserve at least two hours outside of lab
+  section to work together if needed.
+  You are responsible for exchanging contact information in
+  case you need to reach your partner.
+
+* If you choose to work with a partner for a future lab where pair
+  programming is allowed, then you must choose a partner you have not
+  worked with before.
+
+* You MUST add your partner on Gradescope when submitting your work <strong>*<u>EACH TIME</u>*</strong> you submit a file(s).
+  After uploading your file(s) on Gradescope, there is a "Group Members" link at the bottom (or "Add Group Member" under "Groups")
+  where you can select the partner you are working with. Whoever uploaded the submission must make sure your partner is part of
+  your Group. Click on "Group Members" -> "Add Member" and select your partner from the list.
+
 * <b> You must</b> write your Name(s) and Perm number on each file submitted to Gradescope.
 
 Once you and your partner are in agreement, choose an initial driver and navigator, and have the driver log into their account.
 
-### Step 0e: Create your \~/cs32/lab00 directory
+### Step 0e: Create your `~/cs32/lab00` directory
 
-Create a \~/cs32/lab00 directory and make it your current directory. You
+Create a `~/cs32/lab00` directory and make it your current directory. You
 should already know how to do this from previous courses, but in case you need a reminder:
 
+```
     mkdir ~/cs32
     mkdir ~/cs32/lab00
     cd ~/cs32/lab00
+```
 
 You are responsible for knowing the `mkdir` and `cd` commands—though these should be review, so they will not be covered in detail. Questions about their use, however, appear on any exam in this course. So if, up to this point, you've just "followed the instructions" without really understanding what you are doing, the time for that has passed.
 
@@ -142,23 +182,43 @@ Step 1: Copying some programs
 -----------------------------
 
 Visit the following web link—you may want to use "right click" (or "control-click" on Mac) to bring up a window where you can open this in a new window or tab:
+
 <http://cs.ucsb.edu/~richert/cs32/misc/lab00/>
-You should see a listing of several C++ programs. We are going to copy those into your ~/cs32/lab00 directory all at once with the following command:
+
+You should see a listing of several C++ programs. We are going to copy those into your `~/cs32/lab00` directory all at once with the following command:
+
 ```
 cp ~richert/public_html/cs32/misc/lab00/* ~/cs32/lab00
 ```
+
 Note: If you get the error message:
+
 ```
 cp: target '/cs/student/youruserid/cs32/lab00' is not a directory
 ```
 
-then it probably means you didn't create a `~/cs32/lab00` directory yet. So do that first. The `*` symbol in this command is a "wildcard" — it means that we want all of the files from the source directory copy be copied into the destination directory namely `~/cs32/lab00.` After doing this command, if you `cd` into `~/cs32/lab00` and use the `ls` command, you should see several files in your `~/cs32/lab00` directory — the same ones that you see if you visit the link <http://cs.ucsb.edu/~richert/cs32/misc/lab00/> If so, you are ready to move on to the next step. If you don't see those files, go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA and/or mentor for assistance.
+then it probably means you didn't create a `~/cs32/lab00` directory
+yet. So do that first. The `*` symbol in this command is a
+"wildcard"&mdash;it means that we want all of the files from the
+source directory copy be copied into the destination directory namely
+`~/cs32/lab00.`
+
+After doing this command, if you `cd` into `~/cs32/lab00` and use the
+`ls` command, you should see several files in your `~/cs32/lab00`
+directory — the same ones that you see if you visit the link
+<http://cs.ucsb.edu/~richert/cs32/misc/lab00/> If so, you are ready to
+move on to the next step. If you don't see those files, go back
+through the instructions and make sure you didn't miss a step. If you
+still have trouble, ask your TA and/or mentor for assistance.
 
 Step 2: Learn how to learn about some basic Linux commands
 ----------------------------------------------------------
 
 The `man` program can be used to find out details about commands,
-programs, standard library functions, and anything else for which a man page has been created. You just used `mkdir` and `cd` without any options, so why not learn more about those commands right now. First type:
+programs, standard library functions, and anything else for which a
+man page has been created. You just used `mkdir` and `cd` without any
+options, so why not learn more about those commands right now. First
+type:
 
     man mkdir
 
@@ -211,11 +271,11 @@ The first thing we should do is edit our Makefile using emacs or vim, or whateve
 
 On the first line of the file, put this, substituting your name (and that of your pair partner(s) if applicable, for YOUR NAME(S) HERE, as appropriate:
 
-    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F20
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, W21
 
 Then, leave a blank line, and add the following two lines shown here, so that you end up with this as the first four lines of your Makefile:
 
-    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F20
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, W21
 
     CXX=clang++
     # CXX=g++
@@ -278,7 +338,7 @@ Two important things:
 
 <!-- -->
 
-    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F20
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, W21
 
     CXX=clang++
     # CXX=g++
@@ -357,7 +417,7 @@ output. Do that now. Notice it is different from before:
 \(5) Now, edit your helloWorld.cpp program, changing the program by
 adding a comment with your name(s) between the first two comments:
 
-    // helloWorld.cpp  R. Wang for UCSB CS32 F20
+    // helloWorld.cpp  Z. Wood for UCSB CS32 W21
     // Edited by: YOUR NAME(S) HERE
     // minimal Hello World! program for testing Makefiles
 
@@ -774,7 +834,7 @@ I would hope this would be obvious, but I have to say it so that there is no amb
 Step 7: Submitting via Gradescope
 --------------------------------
 
-The lab assignment "Lab00" should appear in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.
+The lab assignment "lab00" should appear in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.
 
 For this lab, you will need to upload your modified files (i.e. **`Makefile`** and **`arrayFuncs.cpp`**). For this lab, you are <b>required</b> to submit your files with your github repo.
 
@@ -801,4 +861,6 @@ Gradescope automated
 Acknowledgements
 ================
 
-Some material in this lab is based on work originally written by Mike Costanzo and edited by Phill Conrad, and Richert Wang. Other parts are original work of Phill Conrad.
+Some material in this lab is based on work originally written by Mike
+Costanzo and edited by Phill Conrad, and Richert Wang. Other parts are
+original work of Phill Conrad.   Additional material and edits by Zoë Wood.
