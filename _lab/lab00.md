@@ -19,7 +19,7 @@ your ability to:
 -   Create a basic Makefile from scratch
 -   Do some simple C++ programming as review of C++ basics, and as
     preliminary work towards understanding sorting algorithms
--   Submit work using the Gradescope system
+-   (*)Submit work using the Gradescope system
 
 Step by Step
 ============
@@ -44,10 +44,10 @@ account:
 
 It MIGHT, SOMETIMES, be possible to do SOME of the course work on your own computer that is connected to the Internet. In lecture, I will give VERY brief demonstrations of how to access the CSIL machines over the internet using Windows, Mac, and Linux.
 
-But for some of the assignment, using CSIL is required. You might be able to access CSIL over the internet from your own machine rather than coming to CSIL in person.
+But for some of the assignment, using CSIL is required. You are welcome to work independently to set up your development environment on your own machine (you will likely want this eventually).  Otherwise you can access CSIL over the internet from your own machine.
 
 At the links below, we a "best effort" introduction to "how to do work
-on your own computer", and then YOU ARE ON YOUR OWN.
+on your own computer", and then you will need to work on your own or with your classmates to set up your own machine.
 
 -   There is no guarantee that this will always work.
 -   There are two many different OS versions, flavors, configurations, etc.for us to know the ins and outs of every single one.
