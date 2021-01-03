@@ -14,9 +14,9 @@ here, or on Gauchospace.
 | Prof. Zoë Wood         | Instructor |   TBD       |          | 
 | Suriya Dakshina Murthy | TA         |   TBD       |          |
 | Aishwarya M Rameshbabu | TA         |   TBD       |          |
-| Alan Roddick           | LA         |   TBD       |          |
-| Bethany Long           | LA         |   TBD       |          |
-| Qiru Hu                | LA         |   TBD       |          |
+| Alan Roddick           | LA         |   TBD       | he/him   |
+| Bethany Long           | LA         |   TBD       | she/her  |
+| Qiru Hu                | LA         |   TBD       | she/her  |
 
 Abbreviations:
 * TA: Teaching Assistant (Graduate Student)
