@@ -19,7 +19,7 @@ your ability to:
 -   Create a basic Makefile from scratch
 -   Do some simple C++ programming as review of C++ basics, and as
     preliminary work towards understanding sorting algorithms
--   Submit work using the Gradescope system
+-   (*)Submit work using the Gradescope system
 
 Step by Step
 ============
@@ -40,14 +40,14 @@ account:
 -   How to login to `csil.cs.ucsb.edu` with your CoE/CSIL account
 
 
-### Q: Can I work on my own computer? A: MAYBE. MAYBE NOT.
+### Q: Can I work on my own computer? A: likely (you will need to work out the final details)
 
-It MIGHT, SOMETIMES, be possible to do SOME of the course work on your own computer that is connected to the Internet. In lecture, I will give VERY brief demonstrations of how to access the CSIL machines over the internet using Windows, Mac, and Linux.
+You have a choice about how to work remotely.  You can either set up your own individual working environment (i.e. work locally on your machine).  However, you will always need to test your code on the CSIL machines.  Or you can remotely access the CSIL machines and work remotely logged into CSIL. In lecture, I will give VERY brief demonstrations of how to access the CSIL machines over the internet.
 
-But for some of the assignment, using CSIL is required. You might be able to access CSIL over the internet from your own machine rather than coming to CSIL in person.
+You will definitely need to be comfortable working on CSIL and transferring files between your local machine and CSIL (if you are choosing to work locally). You are welcome to work independently to set up your development environment on your own machine (you will likely want this eventually).  Otherwise you can access CSIL over the internet from your own machine.
 
 At the links below, we a "best effort" introduction to "how to do work
-on your own computer", and then YOU ARE ON YOUR OWN.
+on your own computer", and then you will need to work on your own or with your classmates to set up your own machine.
 
 -   There is no guarantee that this will always work.
 -   There are two many different OS versions, flavors, configurations, etc.for us to know the ins and outs of every single one.
@@ -139,8 +139,6 @@ The following arrangement is <strong>NOT OK</strong>.
 
 There are a few requirements you must follow if you decide to work with a partner:
 
-* Your partner must be enrolled in the same lab section as you.
-
 * You and your partner must agree to work together outside of lab
   section in case you do not finish the lab during your lab
   section. You must agree to reserve at least two hours outside of lab
@@ -149,7 +147,7 @@ There are a few requirements you must follow if you decide to work with a partne
   case you need to reach your partner.
 
 * If you choose to work with a partner for a future lab where pair
-  programming is allowed, then you must choose a partner you have not
+  programming is allowed, you may be required to choose a partner you have not
   worked with before.
 
 * You MUST add your partner on Gradescope when submitting your work <strong>*<u>EACH TIME</u>*</strong> you submit a file(s).
@@ -161,7 +159,7 @@ There are a few requirements you must follow if you decide to work with a partne
 
 Once you and your partner are in agreement, choose an initial driver and navigator, and have the driver log into their account.
 
-### Step 0e: Create your `~/cs32/lab00` directory
+### Step 0e: On CSIL, create your `~/cs32/lab00` directory
 
 Create a `~/cs32/lab00` directory and make it your current directory. You
 should already know how to do this from previous courses, but in case you need a reminder:
@@ -174,9 +172,9 @@ should already know how to do this from previous courses, but in case you need a
 
 You are responsible for knowing the `mkdir` and `cd` commands—though these should be review, so they will not be covered in detail. Questions about their use, however, appear on any exam in this course. So if, up to this point, you've just "followed the instructions" without really understanding what you are doing, the time for that has passed.
 
-You are responsible for knowing the the "shell" is the program that you type Unix commands into—commands such as mkdir, cd, etc.
+The "shell" is the program that you type Unix commands into—commands such as mkdir, cd, etc.
 
-You are also responsible for knowing that the tilde symbol (`~`) stands for "the user's home directory", but only in the shell. There are many contexts where you cannot use the `~` symbol—in fact, almost everywhere other than the Unix command line that a filename is needed, you actually CANNOT use the tilde.
+The tilde symbol (`~`) stands for "the user's home directory", but only in the shell. There are many contexts where you cannot use the `~` symbol—in fact, almost everywhere other than the Unix command line that a filename is needed, you actually CANNOT use the tilde.
 
 Step 1: Copying some programs
 -----------------------------
@@ -260,7 +258,7 @@ Step 3: Reviewing Makefiles
 
 We are now going to create a Makefile.
 
-In many previous labs in CS16 and CS24, you may have copied your Makefile from the instructors directory. However, for this lab, you are going to make it yourself from scratch. This is because now that you are in CS32, it is finally time, if you haven't yet, to learn **completely** how a Makefile works—every *single part of it*—and to be able to create, modify and debug your own Makefiles as needed.
+In many previous labs in CS16 and CS24, you may have copied your Makefile from the instructors directory. However, for this lab, you are going to make it yourself from scratch.
 
 ### Step 3a: Specifying which C++ compiler to use
 
