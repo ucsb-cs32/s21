@@ -19,20 +19,6 @@ title: CS32, Winter 2021 (Zoë Wood)
 {% include collapse-card-end.html %}
 <!-- end-labs -->
 
-<!-- hwk -->
-{% include collapse-card-begin.html label="Homework" id="hwk" %}
-## Hwk
-{% include hwk_table.html %}
-{% include collapse-card-end.html %}
-<!-- end-hwk -->
-
-<!-- exams -->
-{% include collapse-card-begin.html label="Exams" id="exams" %}
-## Exams
-{% include exam_table.html %}
-{% include collapse-card-end.html %}
-<!-- end-exams -->
-
 <!-- lectures -->
 {% include collapse-card-begin.html label="Lectures" id="lectures" %}
 ## Lectures
