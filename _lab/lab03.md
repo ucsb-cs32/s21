@@ -3,8 +3,8 @@ layout: lab
 num: lab03	
 ready: false
 desc: "Sorting"
-assigned: 2021-01-20 
-due: 2021-01-27 23:59
+assigned: 2021-01-27 
+due: 2021-02-03 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
