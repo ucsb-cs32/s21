@@ -3,8 +3,8 @@ layout: lab
 num: lab00	
 ready: true
 desc: "Review of C++ basics, Makefiles, Gradescope"
-assigned: 2021-01-04 
-due: 2021-01-11 23:59
+assigned: 2021-01-06 
+due: 2021-01-13 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
