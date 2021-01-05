@@ -1,6 +1,6 @@
 ---
 layout: lab
-num: lab05	
+num: lab06	
 ready: false
 desc: "Visitor Design Patern - Part 2"
 assigned: 2021-02-17 
