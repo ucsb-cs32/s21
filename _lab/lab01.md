@@ -11,13 +11,12 @@ github_org_url: https://github.com/ucsb-cs32-w21
 Goals
 =====
 
-Learning objectives
+Learning objectives.  At the end of this lab, students should be able to:
 
--   Exposure to C++ code to read CSV file
--   Do some simple C++ programming as review of C++ basics
-- 	Understand a C++ class representing county demographic data
-- 	Extend C++ class to support additional data and methods
--   (gradescope test?)
+-   read and understand  C++ code to read input from a file
+- 	read and understand  C++ code representing county demographic data
+- 	extend an exisiting C++ class to support additional data and methods
+-   (gradescope/testing?)
 
 Step by Step
 ============
@@ -26,3 +25,13 @@ Step 0: Getting Started
 -----------------------
 
 ### Download base code
+
+Step 1: Add comments to show understanding of code
+-----------------------
+
+### Add header comments to the following files:
+
+Step 2: Add data and methods to the demographicData class
+-----------------------
+
+### Add data and methods to the demographicData class
