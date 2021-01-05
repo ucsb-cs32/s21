@@ -18,8 +18,8 @@ your ability to:
 -   Use some basic Unix commands, and learn about new Unix commands
 -   Create a basic Makefile from scratch
 -   Do some simple C++ programming as review of C++ basics, and as
-    preliminary work towards understanding sorting algorithms
--   (*)Submit work using the Gradescope system
+    preliminary work towards understanding testing and arrays
+-   Submit work using the Gradescope system
 
 Step by Step
 ============
@@ -51,7 +51,7 @@ on your own computer", and then you will need to work on your own or with your c
 
 -   There is no guarantee that this will always work.
 -   There are two many different OS versions, flavors, configurations, etc.for us to know the ins and outs of every single one.
--   If/when you run into difficulties there, WE CANNOT BE YOUR TECH SUPPORT. If you have a simple question and we know the answer, we'll tell you, but if you don't, our answer will be: "ok, then do your work in CSIL until you figure it out."
+-   If/when you run into difficulties there, we cannot be your tech support. If you have a simple question and we know the answer, we'll tell you, but if you don't, our answer will be: "ok, then do your work in CSIL until you figure it out."
 
 So, please be aware:
 
@@ -103,6 +103,11 @@ include any relevant screenshots, which may help us investigate any
 issues.
 
 ### Step 0c: Creating your Gradescope account
+
+We will use gradescope for *some* of the labs this quarter, not all.
+Pay attention to whether an assignment is submitted to gradescope or github!
+
+*This lab will be auto graded with gradescope.*
 
 I have manually added everyone (using your UCSB email accounts)
 currently enrolled in the course to the Gradescope system. You should
@@ -186,7 +191,7 @@ Visit the following web link—you may want to use "right click" (or "control-cl
 You should see a listing of several C++ programs. We are going to copy those into your `~/cs32/lab00` directory all at once with the following command:
 
 ```
-cp ~richert/public_html/cs32/misc/lab00/* ~/cs32/lab00
+cp ~zjwood/32Public/lab00* ~/cs32/lab00
 ```
 
 Note: If you get the error message:
@@ -695,7 +700,7 @@ next:
 That is what we would do to tell the make utility how to create
 lab00Test.o from lab00Test.cpp, with the -c flag (compile only; don't
 link). The output file is automatically named by removing the .cpp and
-replacing it with .o. BUT WE DON'T HAVE TO DO THAT. (See the tip below
+replacing it with .o. But we don't have to do that. (See the tip below
 for an explanation as to why)
 
 Instead, just try typing `make lab00Test` and it should work:
@@ -761,13 +766,10 @@ to replace the stubs with working code.
 
 The instructions there should be self-explanatory, and the assignment
 should be super easy—this is essentially review from CS16, laying a
-foundation for a discussion of sorting algorithms.
+foundation for a discussion of sorting algorithms (later).
 
 We need to be sure we understand how to find the index of a minimum and
 maximum element, and how to swap two elements in an array.
-
-With those concepts down, we are ready (next week) to move on to both
-selection sort and insertion sort.
 
 When your code passes the tests, you are ready to try submitting it to
 Gradescope.
@@ -861,4 +863,4 @@ Acknowledgements
 
 Some material in this lab is based on work originally written by Mike
 Costanzo and edited by Phill Conrad, and Richert Wang. Other parts are
-original work of Phill Conrad.   Additional material and edits by Zoë Wood.
+original work of Phill Conrad.   Small language edits by Zoë Wood.
