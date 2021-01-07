@@ -191,7 +191,7 @@ Visit the following web link—you may want to use "right click" (or "control-cl
 You should see a listing of several C++ programs. We are going to copy those into your `~/cs32/lab00` directory all at once with the following command:
 
 ```
-cp ~zjwood/32Public/lab00* ~/cs32/lab00
+cp ~zjwood/32Public/lab00/* ~/cs32/lab00
 ```
 
 Note: If you get the error message:
