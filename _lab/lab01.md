@@ -18,6 +18,24 @@ Learning objectives.  At the end of this lab, students should be able to:
 - 	extend an exisiting C++ class to support additional data and methods
 -   be able to run provided test cases and understand the output to confirm code modifications work
 
+
+Orientation
+=====
+
+
+Working with real world data allows us to use computing to ask questions and learn about our world.  It also allows us to practice design and implementation of object oriented projects.  This week's lab is the first step in our larger project related to using various data sources to learn about the United States.
+This project and later additions using CORGIS datasets (The Collection of Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
+
+You will be provided with base code, written in C++ that reads in a CSV file representing county demographic data (demographic data relates to the structure of a population).  The data file we will use is included in the base code and is named  "county_demographics.csv."
+
+Before you do anything else, goto the web page and take a quick look at all the data this csv file includes:
+https://corgis-edu.github.io/corgis/csv/county_demographics/
+
+Which aspects of this demographic data is most interesting to you?
+
+We will only work with some of this data this quarter.  For today, we will only work with the data related to the age and education level of each county's
+population.
+
 Step by Step
 ============
 
@@ -25,18 +43,9 @@ Step 0: Getting Started
 -----------------------
 
 ### Download base code
-
-Working with real world data allows us to use computing to ask questions and learn about our world.  It also allows us to practice design and implementation of object oriented projects.  This week's lab is the first step in our larger project related to using various data sources to learn about the United States. This project and later additions using CORGIS datasets (The Collection og Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
-
-You are provided with base code, written in C++ that reads in a CSV file representing county demographic data.  The data file is included in the base 
-code and is named  "county_demographics.csv."
-
-Before you do anything else, goto the web page and take a quick look at all the data this csv file includes:
-https://corgis-edu.github.io/corgis/csv/county_demographics/
-
-Which aspects of this demographic data is most interesting to you?
-
-We will only work with some of this data this quarter.
+Download the base code.  It includes files related to our main data project and files related to testing our code.
+When you try to compile the code using the provided Makefile, it should be able to make the executable for our main data project:
+<b>dataProj</b>
 
 
 Step 1: Add comments to show understanding of code
