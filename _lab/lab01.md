@@ -13,10 +13,10 @@ Goals
 
 Learning objectives.  At the end of this lab, students should be able to:
 
--   read and understand  C++ code to read input from a file
+-   read and understand  C++ code to read input from a CSV file
 - 	read and understand  C++ code representing county demographic data
 - 	extend an exisiting C++ class to support additional data and methods
--   (gradescope/testing?)
+-   be able to run provided test cases and understand the output to confirm code modifications work
 
 Step by Step
 ============
@@ -26,10 +26,15 @@ Step 0: Getting Started
 
 ### Download base code
 
-This is the first step in our larger project.  It reads in CSV file from CORGIS (already in the base code named 
-"county_demographics.csv")
-Goto the web page and take a quick look at all the data this csv file includes!
+Working with real world data allows us to use computing to ask questions and learn about our world.  It also allows us to practice design and implementation of object oriented projects.  This week's lab is the first step in our larger project related to using various data sources to learn about the United States. This project and later additions using CORGIS datasets (The Collection og Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
+
+You are provided with base code, written in C++ that reads in a CSV file representing county demographic data.  The data file is included in the base 
+code and is named  "county_demographics.csv."
+
+Before you do anything else, goto the web page and take a quick look at all the data this csv file includes:
 https://corgis-edu.github.io/corgis/csv/county_demographics/
+
+Which aspects of this demographic data is most interesting to you?
 
 We will only work with some of this data this quarter.
 
