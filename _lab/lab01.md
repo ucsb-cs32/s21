@@ -15,7 +15,7 @@ Learning objectives.  At the end of this lab, students should be able to:
 
 -   read and understand  C++ code to read input from a CSV file
 - 	read and understand  C++ code representing county demographic data
-- 	extend an exisiting C++ class to support additional data and methods
+- 	extend an exisiting C++ class to support additional data and methods (including modifying related code to read in data)
 -   be able to run provided test cases and understand the output to confirm code modifications work
 
 
@@ -57,32 +57,32 @@ that it prints out county data.  You might see something like:
 
 ....
 
-County Demographics Info: Uinta County, WY
-Population info: 
-(% over 65): 11
-(% under 18): 29.8
-(% under 5): 7.6
-Education info: fix this for lab01
+County Demographics Info: Uinta County, WY <br>
+Population info: <br>
+(% over 65): 11<br>
+(% under 18): 29.8<br>
+(% under 5): 7.6<br>
+Education info: fix this for lab01<br>
+<br>
+County Demographics Info: Washakie County, WY<br>
+Population info: <br>
+(% over 65): 20.1<br>
+(% under 18): 23.9<br>
+(% under 5): 5.5<br>
+Education info: fix this for lab01<br>
+<br>
+County Demographics Info: Weston County, WY<br>
+Population info: <br>
+(% over 65): 18.1<br>
+(% under 18): 21.6<br>
+(% under 5): 6.5<br>
+Education info: fix this for lab01<br>
+***<br>
 
-County Demographics Info: Washakie County, WY
-Population info: 
-(% over 65): 20.1
-(% under 18): 23.9
-(% under 5): 5.5
-Education info: fix this for lab01
-
-County Demographics Info: Weston County, WY
-Population info: 
-(% over 65): 18.1
-(% under 18): 21.6
-(% under 5): 6.5
-Education info: fix this for lab01
-***
-
-You should also make sure that you can successfully run testDemog1 and see results like:
-[zjwood@csilvm-01 Lab01Base]$ ./testDemog1
-Testing class demogData...
-PASSED: c1.getName()
+You should also make sure that you can successfully run testDemog1 and see results like:<br>
+[zjwood@csilvm-01 Lab01Base]$ ./testDemog1<br>
+Testing class demogData...<br>
+PASSED: c1.getName()<br>
 
 
 Step 1: Add comments to show understanding of code
