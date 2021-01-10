@@ -130,8 +130,8 @@ Step 2: Small modifications to the code (adding additional data to demogData)
 
 Currently, the demogData class only stores data related to the age of the county's population.  
 For this first week, lets add some additional information, specifically, the data related to education:
-<tt>Education.Bachelor's Degree or Higher <br>	
-Education.High School or Higher</tt>
+<b>Education.Bachelor's Degree or Higher <br>	
+Education.High School or Higher</b>
 
 There are a few closely related steps in this process:
 1) add data to the class demogData to represent the percentage of the county population that have received an undergraduate degree and the percentage
@@ -150,7 +150,7 @@ Step 3: Make sure your output matches and now all test cases pass
 If you completed the steps above, you should now be able to compile all of the code and tests with <tt>make</tt>
 
 So that when you run testDemog2 you see:
-<tt>
+
 zwood$ ./testDemog2<br>	
 Testing class county demographics...<br>	
 PASSED: c1.getName()<br>	
@@ -160,7 +160,6 @@ PASSED: c1.getpopUnder18()<br>
 PASSED: c1.getpopUnder5()<br>	
 PASSED: c1.getBAup()<br>	
 PASSED: c1.getHSup()<br>	
-  </tt>
 
 Now, when you print all the county data it should look like:
 ...
