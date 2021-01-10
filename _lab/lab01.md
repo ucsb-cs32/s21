@@ -24,7 +24,7 @@ Orientation
 
 
 Working with real world data allows us to use computing to ask questions and learn about our world.  It also allows us to practice design and implementation of object oriented projects.  This week's lab is the first step in our larger project related to using various data sources to learn about the United States.
-This project and later additions using CORGIS datasets (The Collection of Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
+This project and later additions will use the CORGIS datasets (The Collection of Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
 
 You will be provided with base code, written in C++ that reads in a CSV file representing county demographic data (demographic data relates to the structure of a population).  The data file we will use is included in the base code and is named  "county_demographics.csv."
 
@@ -42,7 +42,7 @@ Step by Step
 Step 0: Getting Started
 -----------------------
 
-### Download base code
+### Download base code and test the executables dataProj and testDemog1
 Download the base code.  It includes files related to our main data project and files related to testing our code.
 When you try to compile the code using the provided Makefile, it should be able to make the executable for our main data project:
 <b>dataProj</b> and testDemog1.
@@ -53,7 +53,7 @@ definition - see later steps).
 You should confirm that when you run
 ./dataProj
 
-that it prints out county data.  You might see something like:
+that it prints out county data (lots of county data - so expect you console to be filled with print outs).  You might see something like:
 
 ....
 
@@ -78,6 +78,9 @@ Population info: <br>
 (% under 5): 6.5<br>
 Education info: fix this for lab01<br>
 ***<br>
+Note that with so much data, it will likely be useful to redirect the output to a file.  If you run: Lab01Full zwood$ ./dataProj > outputFile
+You can then open the text file "outputFile" to look at all the data using a text editor.
+Or for example use "more outputFile" to examine the data one screen at a time.
 
 You should also make sure that you can successfully run testDemog1 and see results like:<br>
 [zjwood@csilvm-01 Lab01Base]$ ./testDemog1<br>
@@ -85,10 +88,10 @@ Testing class demogData...<br>
 PASSED: c1.getName()<br>
 
 
-Step 1: Add comments to show understanding of code
+Step 1: Read and Understand the code
 -----------------------
 
-### Add header comments to the following files:
+### Lets take a look at the files (questions about these files is fair game for hw and quizzes this week)
 Now, take a moment to look at the various files.
 I suggest you start with main.cpp.
 In your own words, how would you describe what main.cpp is doing?
@@ -117,14 +120,17 @@ Take a quick look at the test files.  Test driven development helps us catch err
 in a dark corner (we still will have to debug but testing can help it be less painful).  
 As mentioned above testDemog2 does not compile this is because you have some work to do.
 
+Add comments to any of the files to help you remember what they do.  We will work with this code again this quarter so make sure to ask
+questions now.
 
-Step 2: Add data and methods to the demographicData class
+
+Step 2: Small modifications to the code (adding additional data to demogData)
 -----------------------
-### Add data and methods to the demographicData class
+### We will need to modify various files to add more demograpic data
 
 Currently, the demogData class only stores data related to the age of the county's population.  
 For this first week, lets add some additional information, specifically, the data related to education:
-<tt>Education.Bachelor's Degree or Higher 	
+<tt>Education.Bachelor's Degree or Higher <br>	
 Education.High School or Higher</tt>
 
 There are a few closely related steps in this process:
@@ -145,41 +151,42 @@ If you completed the steps above, you should now be able to compile all of the c
 
 So that when you run testDemog2 you see:
 <tt>
-zwood$ ./testDemog2
-Testing class county demographics...
-PASSED: c1.getName()
-PASSED: c1.getState()
-PASSED: c1.getpopOver65()
-PASSED: c1.getpopUnder18()
-PASSED: c1.getpopUnder5()
-PASSED: c1.getBAup()
-PASSED: c1.getHSup()
+zwood$ ./testDemog2<br>	
+Testing class county demographics...<br>	
+PASSED: c1.getName()<br>	
+PASSED: c1.getState()<br>	
+PASSED: c1.getpopOver65()<br>	
+PASSED: c1.getpopUnder18()<br>	
+PASSED: c1.getpopUnder5()<br>	
+PASSED: c1.getBAup()<br>	
+PASSED: c1.getHSup()<br>	
   </tt>
 
 Now, when you print all the county data it should look like:
 ...
-County Demographics Info: Uinta County, WY
-Population info: 
-(% over 65): 11
-(% under 18): 29.8
-(% under 5): 7.6
-Education info: 
-(% Bachelor degree or more): 18.9
-(% high school or more): 89.2
-County Demographics Info: Washakie County, WY
-Population info: 
-(% over 65): 20.1
-(% under 18): 23.9
-(% under 5): 5.5
-Education info: 
-(% Bachelor degree or more): 23.6
-(% high school or more): 90.5
-County Demographics Info: Weston County, WY
-Population info: 
-(% over 65): 18.1
-(% under 18): 21.6
-(% under 5): 6.5
-Education info: 
-(% Bachelor degree or more): 17.2
-(% high school or more): 90.2
+County Demographics Info: Uinta County, WY<br>	
+Population info: <br>	
+(% over 65): 11<br>	
+(% under 18): 29.8<br>	
+(% under 5): 7.6<br>	
+Education info: <br>	
+(% Bachelor degree or more): 18.9<br>	
+(% high school or more): 89.2<br>	
+County Demographics Info: Washakie County, WY<br>	
+Population info: <br>	
+(% over 65): 20.1<br>	
+(% under 18): 23.9<br>	
+(% under 5): 5.5<br>	
+Education info: <br>	
+(% Bachelor degree or more): 23.6<br>	
+(% high school or more): 90.5<br>	
+County Demographics Info: Weston County, WY<br>	
+Population info: <br>	
+(% over 65): 18.1<br>	
+(% under 18): 21.6<br>	
+(% under 5): 6.5<br>	
+Education info: <br>	
+(% Bachelor degree or more): 17.2<br>	
+(% high school or more): 90.2<br>	
 
+Consider using <b>diff</b> on the file you produce and the provided comparison file.
