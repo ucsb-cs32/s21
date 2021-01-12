@@ -91,7 +91,7 @@ Task 4: Testing - implement the dataAQ class exactly as specified for testing
 
 For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named <dataAQ>.  See testStates.cpp for example of how this class will be used.  Aain, the exact implementation is up to you, but your dataAQ class must support the following methods:
  
-<tt>
+<h3>
 //data aggregator and query for testing<br>
 class dataAQ {<br>
 &emsp  public:<br>
@@ -112,6 +112,7 @@ class dataAQ {<br>
     //additional methods AND data to support above methods.  You are allowed for data to be public<br>
     ...<br>
  }<br>
+ </h3>
 
 Again, see testStates.cpp for the use of the dataAQ class to test your implementation.
 
