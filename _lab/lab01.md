@@ -43,7 +43,17 @@ Step 0: Getting Started
 -----------------------
 
 ### Download base code and test the executables dataProj and testDemog1
-Download the base code.  It includes files related to our main data project and files related to testing our code.
+Download the base code.  It can be found here:
+
+https://github.com/ucsb-cs32-w21/lab01-STARTER
+
+If you are set up to use git from the command line, you will be cloning: git@github.com:ucsb-cs32-w21/lab01-STARTER.git
+
+As a reminder: If you are not familiar with git, I highly recommend learning this skill since this will be extremely valuable when collaborating on large software projects. More information on git can be found here: https://ucsb-cs32.github.io/topics/git/.
+
+Once you have the files (and have created a git repo for this lab like last week), take a look at the files.
+
+The starter code includes files related to our main data project and files related to testing our code.
 When you try to compile the code using the provided Makefile, it should be able to make the executable for our main data project:
 <b>dataProj</b> and testDemog1.
 
@@ -189,3 +199,22 @@ Education info: <br>
 (% high school or more): 90.2<br>	
 
 Consider using <b>diff</b> on the file you produce and the provided comparison file.
+
+Step 4: Submitting via Gradescope
+-----------------------
+### Submitting via Gradescope
+
+The lab assignment "Lab01" should appear in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.
+
+For this lab, you will need to upload a zip file of the entire project (just the .cpp, .h and Makefile - not the .o or executables). Submit your files with your github repo like last week.
+
+If you already submitted something on Gradescope, it will take you to their "Autograder Results" page. There is a "Resubmit" button on the bottom right that will allow you to update the files for your submission.
+
+For this lab, if everything is correct, you'll see a successful submission passing all of the autograder tests.
+
+This lab is based entirely on the grade assigned by Gradescope. There may be labs this quarter where code style is assessed, but this is not one of those labs.
+
+Gradescope automated
+
+    (20 pts) each for all 5 of the Gradescope tests
+
