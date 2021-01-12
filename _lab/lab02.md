@@ -54,7 +54,9 @@ given state <b>and</b> combine the county's demographic data to state level data
 Recall that when we think about a problem, one of the first tasks is to consider the 'data' associated with that problem (and then closely related, to consider what are the data structures 
 we can use to build up necessary data relationships).  There are multiple valid solutions here, but for this lab we do expect to see solutions to the following general tasks. You can tackle them in whatever order makes sense to you, but we will be looking for these aspects in your solution.
 
-Regardless of exactly how you solve the following tasks, you must support the specified queries as a part of the dataAQ class.  Makesure you understand exactly how your solution will be tested before you dive in too deep.
+Regardless of exactly how you solve the following tasks, you must support the specified queries as a part of the dataAQ class.  Make sure you understand exactly how your solution will be tested before you dive in too deep.
+
+Download testStates.cpp from:
 
 Do create a new github repo for this weeks lab.  We will be looking at your code via git hub.
 
