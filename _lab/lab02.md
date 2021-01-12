@@ -91,26 +91,28 @@ Task 4: Testing - implement the dataAQ class exactly as specified for testing
 
 For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named <dataAQ>.  See testStates.cpp for example of how this class will be used.  Aain, the exact implementation is up to you, but your dataAQ class must support the following methods:
   
-//data aggregator and query for testing
-class dataAQ {
-  public:
-    dataAQ();
-    //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map
-    void createStateData(std::vector<shared_ptr<demogData>> theData);
-    //return the name of the state with the largest population under age 5
-    string youngestPop();
-    //return the name of the state with the largest population under age 18
-    string teenPop();
-    //return the name of the state with the largest population over age 65
-    string wisePop();
-    //return the name of the state with the largest population who did not finish high school
-    string underServeHS();
-    //return the name of the state with the largest population who completed college
-    string collegeGrads();
-  
-    //additional methods AND data to support above methods.  You are allowed for data to be public
-    ...
- }
+//data aggregator and query for testing<br>
+class dataAQ {<br>
+  public:<br>
+    dataAQ();<br>
+    //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map<br>
+    void createStateData(std::vector<shared_ptr<demogData>> theData);<br>
+    //return the name of the state with the largest population under age 5<br>
+    string youngestPop();<br>
+    //return the name of the state with the largest population under age 18<br>
+    string teenPop();<br>
+    //return the name of the state with the largest population over age 65<br>
+    string wisePop();<br>
+    //return the name of the state with the largest population who did not finish high school<br>
+    string underServeHS();<br>
+    //return the name of the state with the largest population who completed college<br>
+    string collegeGrads();<br>
+  <br>
+    //additional methods AND data to support above methods.  You are allowed for data to be public<br>
+    ...<br>
+ }<br>
 
 Again, see testStates.cpp for the use of the dataAQ class to test your implementation.
+
+You are encouraged to write additional test cases for each of the required queries in dataAQ
 
