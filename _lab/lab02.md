@@ -17,7 +17,7 @@ Learning objectives. At the end of this lab, students should be able to:
 -   Use STL hashmaps to aggregate 'county' level data to 'state' data (including computing the average)
 - 	Design and implement a C++ class representing state demographic data
 -   Utilize data aggregated into a hashmap to answer questions about the data (e.g. state with the youngest population)
--   (gradescope test?)
+-   practice using a testing framework, including writing additional tests
 
 
 Orientation
@@ -26,9 +26,13 @@ Last week, we developed code to read in county demographic data (age and educati
 
 The first step is deciding what regional level we want to look at our data.  With over three thousand counties, we want to consider larger regions (by grouping counties).  There are lots of ways to understand regional data, but for this week, we will look at state level data. Thus, one of the first tasks is to start aggregating county data together into states.  
 
-Once we have the data aggregated together, we will use various methods to identify extremes in the data (minimums and maximums) of various demographic fields.
+Once we have the data aggregated together, we will use various methods to identify extremes in the data (minimums and maximums) of various demographic fields.  *Although you have choices about the core tasks, you will need to wrap your solution in a class that we will use for testing.*
 
-This week's lab is a bit different in that you will have choices about how to solve aspects of the solution and then your code will be reviewed by one of the teaching assistants or instructor.  In general, C++ has many tools to solve this problem, it is just important that you
+This week's lab is a bit different in that you will have choices about how to solve the primary aspects of the problem and then you will need
+to implement a very specific class to help with testing.  Part of your lab grade will depend upon passing tests and another portion of grade
+depends on your code will being reviewed by one of the teaching assistants or instructor.  
+
+In general, C++ has many tools to solve various aspects of this problem, it is just important that you
 undrestand the tools you are using in your solution.  You can implement a solution to each of these tasks with the material that
 has already been discussed in lecture.  Make sure you understand your solution as you will/may be asked to discuss your solution.
 
@@ -42,13 +46,15 @@ Step 0: Getting Started - think about the problem
 There are various ways to tackle this problem.  To start, make sure you understand the problem.  Given county level data, we want to average all
 the county data for a given state together and then be able to query the maximums and minimums of any of the data fields.
 
-There are some clear cut tasks, but the order and exact implmentation is somewhat up to you.  
+There are some clear cut tasks, but the order and exact implmentation is somewhat up to you, with the exception of the <b>dataAQ class</b>, for which you *must* implement the specified functions for use in testing. 
 
 In general, to solve this problem, we must aggregate county data into states.  This means having an implmentation to collect all the counties for a 
 given state <b>and</b> combine the county's demographic data to state level data.  For this assignment, to combine the data, we will be averaging any county data in our data set for its associated state.
 
 Recall that when we think about a problem, one of the first tasks is to consider the 'data' associated with that problem (and then closely related, to consider what are the data structures 
 we can use to build up necessary data relationships).  There are multiple valid solutions here, but for this lab we do expect to see solutions to the following general tasks. You can tackle them in whatever order makes sense to you, but we will be looking for these aspects in your solution.
+
+Regardless of exactly how you solve the following tasks, you must support the specified queries as a part of the dataAQ class.  Makesure you understand exactly how your solution will be tested before you dive in too deep.
 
 Do create a new github repo for this weeks lab.  We will be looking at your code via git hub.
 
@@ -79,15 +85,32 @@ Your solution should be general, i.e. we should be able to ask for you to be abl
 expect we will do this during your code review).
 
 
-Task 4: Testing - specific cases that must match output
+Task 4: Testing - implement the dataAQ class exactly as specified for testing
 -----------------------
-### (e.g. state with the youngest population)
+### specific cases that must match output (e.g. state with the youngest population)
 
-For the sake of testing please submit a solution to gradescope that matches the provided test cases.  Specifically, this means your main code
-needs to be able to print out:
-The state with the youngest population (that is the state with the largest population of both those under 5 and under 18)
-and state  with most backelor's degrees.  
+For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named <dataAQ>.  See testStates.cpp for example of how this class will be used.  Aain, the exact implementation is up to you, but your dataAQ class must support the following methods:
+  
+//data aggregator and query for testing
+class dataAQ {
+  public:
+    dataAQ();
+    //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map
+    void createStateData(std::vector<shared_ptr<demogData>> theData);
+    //return the name of the state with the largest population under age 5
+    string youngestPop();
+    //return the name of the state with the largest population under age 18
+    string teenPop();
+    //return the name of the state with the largest population over age 65
+    string wisePop();
+    //return the name of the state with the largest population who did not finish high school
+    string underServeHS();
+    //return the name of the state with the largest population who completed college
+    string collegeGrads();
+  
+    //additional methods AND data to support above methods.  You are allowed for data to be public
+    ...
+ }
 
-Output should match:
+Again, see testStates.cpp for the use of the dataAQ class to test your implementation.
 
-...
