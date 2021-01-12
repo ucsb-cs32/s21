@@ -118,55 +118,56 @@ Again, see testStates.cpp for the use of the dataAQ class to test your implement
 
 You are encouraged to write additional test cases for each of the required queries in dataAQ.
 
-The output for dataProj should include a complete version of the following (your code would fill in for <BLANKS>):
- *** the state that needs the most pre-schools**
-State Info: UT
-Number of Counties: 29
-Population info: 
-(over 65): 13.7414
-(under 18): 29.9069
-(under 5): 7.67931
-Education info: 
-(Bachelor or more): 23.5586
-(high school or more): 90.531
-*** the state that needs the most high schools**
-State Info: <BLANK>
-Number of Counties: <BLANK>
-Population info: 
-(over 65): <BLANK>
-(under 18): <BLANK>
-(under 5): <BLANK>
-Education info: 
-(Bachelor or more): <BLANK>
-(high school or more): <BLANK>
-*** the state that needs the most vaccines**
-State Info: <BLANK>
-Number of Counties: <BLANK>
-Population info: 
-(over 65): <BLANK>
-(under 18): <BLANK>
-(under 5): <BLANK>
-Education info: 
-(Bachelor or more): <BLANK>
-(high school or more): <BLANK>
-*** the state that needs the most help with education**
-State Info: <BLANK>
-Number of Counties: <BLANK>
-Population info: 
-(over 65): <BLANK>
-(under 18): <BLANK>
-(under 5): <BLANK>
-Education info: 
-(Bachelor or more): <BLANK>
-(high school or more): <BLANK>
-*** the state with most college grads**
-State Info: <BLANK>
-Number of Counties: <BLANK>
-Population info: 
-(over 65): <BLANK>
-(under 18): <BLANK>
-(under 5): <BLANK>
-Education info: 
-(Bachelor or more): <BLANK>
-(high school or more): <BLANK>
+The output for dataProj should include a complete version of the following (your code would fill in for <b>BLANK</b>):
+
+ *** the state that needs the most pre-schools**<br>
+State Info: UT<br>
+Number of Counties: 29<br>
+Population info: <br>
+(over 65): 13.7414<br>
+(under 18): 29.9069<br>
+(under 5): 7.67931<br>
+Education info: <br>
+(Bachelor or more): 23.5586<br>
+(high school or more): 90.531<br>
+*** the state that needs the most high schools**<br>
+State Info: <BLANK><br>
+Number of Counties: <b>BLANK</b><br>
+Population info: <b>BLANK</b><br>
+(over 65): <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br>
+Education info: <br>
+(Bachelor or more): <b>BLANK</b><br>
+(high school or more):<b>BLANK</b><br>
+*** the state that needs the most vaccines**<br>
+State Info: <BLANK><br>
+Number of Counties: <b>BLANK</b><br>
+Population info: <b>BLANK</b><br>
+(over 65): <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br>
+Education info: <br>
+(Bachelor or more): <b>BLANK</b><br>
+(high school or more):<b>BLANK</b><br>
+*** the state that needs the most help with education**<br>
+State Info: <BLANK><br>
+Number of Counties: <b>BLANK</b><br>
+Population info: <b>BLANK</b><br>
+(over 65): <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br>
+Education info: <br>
+(Bachelor or more): <b>BLANK</b><br>
+(high school or more):<b>BLANK</b><br>
+*** the state with most college grads**<br>
+State Info: <BLANK><br>
+Number of Counties: <b>BLANK</b><br>
+Population info: <b>BLANK</b><br>
+(over 65): <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br>
+Education info: <br>
+(Bachelor or more): <b>BLANK</b><br>
+(high school or more):<b>BLANK</b><br>
 
