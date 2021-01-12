@@ -56,7 +56,8 @@ we can use to build up necessary data relationships).  There are multiple valid 
 
 Regardless of exactly how you solve the following tasks, you must support the specified queries as a part of the dataAQ class.  Make sure you understand exactly how your solution will be tested before you dive in too deep.
 
-Download testStates.cpp from:
+Download testStates.cpp from: https://github.com/ucsb-cs32-w21/Lab02-STARTER
+You will need all the code (including tddFuncs.h and .cpp) from Lab01
 
 Do create a new github repo for this weeks lab.  We will be looking at your code via git hub.
 
@@ -172,4 +173,12 @@ Population info: <b>BLANK</b><br>
 Education info: <br>
 (Bachelor or more): <b>BLANK</b><br>
 (high school or more):<b>BLANK</b><br>
+
+Grading
+-----------------------
+(50) tests passed (GS)
+(20) reasonable state data design
+(20) reasonable aggregation computation
+(10) reasonable reporting of mins and max in dataAQ
+
 
