@@ -91,10 +91,10 @@ Task 4: Testing - implement the dataAQ class exactly as specified for testing
 
 For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named <dataAQ>.  See testStates.cpp for example of how this class will be used.  Aain, the exact implementation is up to you, but your dataAQ class must support the following methods:
  
-<h3>
+<p style="font-family:'Courier New'">
 //data aggregator and query for testing<br>
 class dataAQ {<br>
-&emsp  public:<br>
+  public:<br>
     dataAQ();<br>
     //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map<br>
     void createStateData(std::vector<shared_ptr<demogData>> theData);<br>
