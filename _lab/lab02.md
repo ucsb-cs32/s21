@@ -69,8 +69,10 @@ Design a class to represent state level demographic data.  Again, there are mult
 
 <b>At this point we ask that you do not use inheritence or polymorphism</b> - that will come in future weeks. Designing a solution without them will help motivate their use in later labs.
 
-The state data should have the same demographic information that the county data has, that is age and education  State data will need additional data to what is stored in a county (especially associated with averaging the county data). But, yes, this does mean you will have 
+The state data should have the same demographic information that the county data has, that is age and education.  State data will need additional data to what is stored in a county (especially associated with averaging the county data). But, yes, this does mean you will have 
 two classes that are very similar but represent different regional zones and store different data (as mentioned above, we will revisit this design as we expand our data project).
+
+This class should be implemented in the emptry provided files stateDemog.h and stateDemog.cpp.
 
 Task 2: Design and Implement a solution to aggregate data (using an STL hashmap)
 -----------------------
@@ -82,7 +84,7 @@ Depending on the order you tackle these tasks, don't forget that one task is to 
 Task 3: Use data represenation (STL hashmap) to be able to answer queries about data
 -----------------------
 
-Once ou have a colletion of state level data, we should be able to identify extremems (maximum and minimums) for any of the data fields (or combination of data fields).
+Once you have a colletion of state level data, we should be able to identify extremems (maximum and minimums) for any of the data fields (or combination of data fields).
 
 Your solution should be general, i.e. we should be able to ask for you to be able to find extremes of <b>any</b> of the data fields (and you should
 expect we will do this during your code review).
@@ -92,7 +94,7 @@ Task 4: Testing - implement the dataAQ class exactly as specified for testing
 -----------------------
 ### specific cases that must match output (e.g. state with the youngest population)
 
-For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named <dataAQ>.  See testStates.cpp for example of how this class will be used.  Aain, the exact implementation is up to you, but your dataAQ class must support the following methods:
+For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named `dataAQ'.  This class should be filled in using the blank dataAQ and dataAQ.cpp files provided.  See testStates.cpp for example of how this class will be used.  Again, the exact implementation is up to you, but your dataAQ class must support the following methods:
  
 <p style="font-family:'Courier New'">
 `//data aggregator and query for testing<br>
