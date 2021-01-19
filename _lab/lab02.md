@@ -52,18 +52,19 @@ the county data for a given state together and then be able to query the maximum
 <p>In general, to solve this problem, we must aggregate county data into states.  This means having an implementation to collect all the counties for a 
 given state <b>and</b> combine the county’s demographic data to state level data.  For this assignment, to combine the data, we will be averaging any county data in our data set for its associated state.</p>
 
+<p>Download all the new files from: <ahref="https://github.com/ucsb-cs32-w21/Lab02-STARTER">https://github.com/ucsb-cs32-w21/Lab02-STARTER</a>
+  Note that some of them are blank, but you need to use these files (for naming convention for testing).
+You will need all the code (including tddFuncs.h and .cpp) from Lab01</p>. Put all the files (those from the lab02-starter) and all your code from lab01 into one 
+folder. (You will not need testDemog1.cpp or testDemog2.cpp)
+
 <p>Recall that when we think about a problem, one of the first tasks is to consider the ‘data’ associated with that problem (and then closely related, to consider the data structures 
 we can use to build up necessary data relationships).  There are multiple valid solutions here, but for this lab we do expect to see solutions to the following general tasks. You can tackle them in whatever order makes sense to you, but we will be looking for these aspects in your solution.</p>
 
 <p>Regardless of exactly how you solve the following tasks, you must support the specified queries as a part of the dataAQ class.  Make sure you understand exactly how your solution will be tested before you dive in too deep.</p>
 
-<p>Download all the new files from: https://github.com/ucsb-cs32-w21/Lab02-STARTER
-  Note that some of them are blank, but you need to use these files (for naming convention for testing).
-You will need all the code (including tddFuncs.h and .cpp) from Lab01</p>
-
 <p>Do create a new github repo for this weeks lab.  We will be looking at your code via github.</p>
 
-Task 1: Design and Implement a class to represent 'state' data
+Task 1: Representing 'state' data
 -----------------------
 <h3 id="design-and-implement-a-class-to-represent-state-data">Design and Implement a class to represent ‘state’ data</h3>
 <p>Ultimately, we will want to conduct simple data analysis on state level data (i.e. which state has the most people with Bachelor’s degrees), etc. 
@@ -74,10 +75,10 @@ Design a class to represent state level demographic data.  Again, there are mult
 <p>The state data should have the same demographic information that the county data has, that is age and education.  State data will need data in addition to what is stored in a county (especially associated with averaging the county data). But, yes, this does mean you will have 
 two classes that are very similar but represent different regional zones and store different data (as mentioned above, we will revisit this design as we expand our data project).</p>
 
-<p>This class should be implemented in the emptry provided files stateDemog.h and stateDemog.cpp.</p>
+<p>This class should be implemented in the empty provided files stateDemog.h and stateDemog.cpp.</p>
 
 <h3 id="create-and-propogate-data-into-a-hashmap-to-aggregate-county-data-to-state-data">Create and propagate data into a hashmap to aggregate county data to state data</h3>
-<p>Use an STL hashmap in order to associate any county data with it’s state (i.e. recall our demogData class has a string which is the name of the state where that county is located).  Again you have choices here.  Do what makes sense for you solution.</p>
+<p>Use an STL hashmap in order to associate any county data with it’s state (i.e. recall our demogData class has a string which is the name of the state where that county is located).  Again you have choices here.  Do what makes sense for your solution.</p>
 
 <p>Depending on the order you tackle these tasks, don’t forget that one task is to average the demographic data for all counties into state level demographic data.</p>
 
