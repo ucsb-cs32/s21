@@ -173,11 +173,21 @@ Education info: <br>
 (Bachelor or more): <b>BLANK</b><br>
 (high school or more):<b>BLANK</b><br>
 
+----
+For clarity, the questions in main, refer to the queries in dataAQ (i.e. 'most' refers to a ranking in proportion to the state's whole population, not
+total count).  Thus:<br>
+-the state that needs the most pre-schools: should be the state with the largest percentage of its population under age 5<br>
+-the state that needs the most high schools: should be the state with the largest population under age 18<br>
+-the state that needs the most vaccines: should be the state with the largest population over age 65<br>
+-the state that needs the most help with education: should be the state with the largest population who did not finish high school<br>
+-the state with most college grads: should be the state with the largest population who completed college<br>
+
+
 Grading
 -----------------------
-(50) tests passed (GS)
-(20) reasonable state data design
-(20) reasonable aggregation computation
-(10) reasonable reporting of mins and max in dataAQ
+(50) tests passed (GS)<br>
+(20) reasonable state data design<br>
+(20) reasonable aggregation computation<br>
+(10) reasonable reporting of mins and max in dataAQ<br>
 
 
