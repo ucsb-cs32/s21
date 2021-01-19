@@ -94,28 +94,29 @@ expect we will do this during your code review).</p>
 
 <p>For the sake of testing please implement a class that can aggregate data and print out results from specific queries, named `dataAQ’.  This class should be filled in using the blank dataAQ and dataAQ.cpp files provided.  See testStates.cpp for example of how this class will be used.  Again, the exact implementation is up to you, but your dataAQ class must support the following methods:</p>
 
-<p style="font-family:'Courier New'">
-`//data aggregator and query for testing<br />
-class dataAQ {<br />
-  public:<br />
-    dataAQ();<br />
-    //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map<br />
-    void createStateData(std::vector&lt;shared_ptr<demogData>&gt; theData);<br />
-    //return the name of the state with the largest population under age 5<br />
-    string youngestPop();<br />
-    //return the name of the state with the largest population under age 18<br />
-    string teenPop();<br />
-    //return the name of the state with the largest population over age 65<br />
-    string wisePop();<br />
-    //return the name of the state with the largest population who did not finish high school<br />
-    string underServeHS();<br />
-    //return the name of the state with the largest population who completed college<br />
-    string collegeGrads();<br />
-  <br />
-    //additional methods AND data to support above methods.  You are allowed for data to be public<br />
-    ...<br />
- }'<br />
- </demogData></p>
+
+```
+//data aggregator and query for testing<br />
+class dataAQ {
+  public:
+    dataAQ();
+    //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map
+    void createStateDemogData(std::vector&lt;shared_ptr<demogData>&gt; theData);
+    //return the name of the state with the largest population under age 5
+    string youngestPop();
+    //return the name of the state with the largest population under age 18
+    string teenPop();
+    //return the name of the state with the largest population over age 65
+    string wisePop();
+    //return the name of the state with the largest population who did not finish high school
+    string underServeHS();
+    //return the name of the state with the largest population who completed college
+    string collegeGrads();
+
+    //additional methods AND data to support above methods.  You are allowed for data to be public
+    ...
+ };
+```
 
 <p>Again, see testStates.cpp for the use of the dataAQ class to test your implementation.</p>
 
