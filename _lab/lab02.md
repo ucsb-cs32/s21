@@ -57,7 +57,8 @@ we can use to build up necessary data relationships).  There are multiple valid 
 
 <p>Regardless of exactly how you solve the following tasks, you must support the specified queries as a part of the dataAQ class.  Make sure you understand exactly how your solution will be tested before you dive in too deep.</p>
 
-<p>Download testStates.cpp from: https://github.com/ucsb-cs32-w21/Lab02-STARTER
+<p>Download all the new files from: https://github.com/ucsb-cs32-w21/Lab02-STARTER
+  Note that some of them are blank, but you need to use these files (for naming convention for testing).
 You will need all the code (including tddFuncs.h and .cpp) from Lab01</p>
 
 <p>Do create a new github repo for this weeks lab.  We will be looking at your code via github.</p>
