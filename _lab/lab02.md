@@ -64,7 +64,7 @@ we can use to build up necessary data relationships).  There are multiple valid 
 
 <p>Do create a new github repo for this weeks lab.  We will be looking at your code via github.</p>
 
-Task 1: Representing 'state' data
+Task 1 and 2: Representing 'state' data
 -----------------------
 <h3 id="design-and-implement-a-class-to-represent-state-data">Design and Implement a class to represent ‘state’ data</h3>
 <p>Ultimately, we will want to conduct simple data analysis on state level data (i.e. which state has the most people with Bachelor’s degrees), etc. 
