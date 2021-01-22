@@ -2,7 +2,7 @@
 layout: lab
 num: lab03	
 ready: false
-desc: "Sorting"
+desc: "New types with operator overload and predicates (for sorting)"
 assigned: 2021-01-27 
 due: 2021-02-03 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
