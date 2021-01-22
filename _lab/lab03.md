@@ -13,10 +13,10 @@ Goals
 
 Learning objectives. At the end of this lab, students should be able to:
 
-- read C++ code and understand how data representation
-- design a data representation (rating), including practice implementing operator overloading
-- aggregate city data to county region (hosptial data)
-- implement sort on a collection of data (selection sort)(?)(*implement code to list top ten states for earning bachelors)
+- read example C++ code and understand the data representations used in the base code
+- design, implment and use a new data representation (rating), including implementing operator overload to aggregate and compare ratings
+- aggregate city hospital data to state region hosptial data
+- implement various comparisons on state hospital data such that the associated state demographic data can be printed *for example find the state with the highest rated hospitals and print out the demographic data for this state
 
 Orientation
 ============
