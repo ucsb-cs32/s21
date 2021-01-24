@@ -45,7 +45,8 @@ Step 0: Getting Started - think about the problem
 
 <h3 id="starting-from-your-code-last-week">Starting from your code last week</h3>
 <p>There are various ways to tackle this problem.  To start, make sure you understand the problem.  Given county level data, we want to average all
-the county data for a given state together and then be able to query the maximums and minimums of any of the data fields.</p>
+the county data for a given state together and then be able to query the maximums and minimums of any of the data fields. See below note about averaging
+percentages and necessary moifications to demogData class.</p>
 
 <p>There are some clear cut tasks, but the order and exact implementation is somewhat up to you, with the exception of the <b>dataAQ class</b>, for which you <em>must</em> implement the specified functions for use in testing.</p>
 
@@ -64,6 +65,17 @@ we can use to build up necessary data relationships).  There are multiple valid 
 
 <p>Do create a new github repo for this weeks lab.  We will be looking at your code via github.</p>
 
+Task 0: prepare for averaging percentages of populations
+-----------------------
+*Note that we can not just average our population values because they are percentages, and each county could have a different number of samples.*</p>
+Thus, one of the first changes you will need to make is to add data to demogData in order to store and represent the county population.  Parse.cpp
+is one of the updated files and it now reads the 2014 population number from the csv file and calls a constructor for demogData that passes in this value.
+Modify your demogData to support storing this value.
+
+Then when designing your state data, also store a total state population and think about how to aggregate the county data (for example, converting
+the percentages into actual counts and then computing those counts as percentages of the total state population).
+
+
 Task 1 and 2: Representing 'state' data
 -----------------------
 <h3 id="design-and-implement-a-class-to-represent-state-data">Design and Implement a class to represent ‘state’ data</h3>
@@ -80,7 +92,9 @@ two classes that are very similar but represent different regional zones and sto
 <h3 id="create-and-propogate-data-into-a-hashmap-to-aggregate-county-data-to-state-data">Create and propagate data into a hashmap to aggregate county data to state data</h3>
 <p>Use an STL hashmap in order to associate any county data with it’s state (i.e. recall our demogData class has a string which is the name of the state where that county is located).  Again you have choices here.  Do what makes sense for your solution.</p>
 
-<p>Depending on the order you tackle these tasks, don’t forget that one task is to average the demographic data for all counties into state level demographic data.</p>
+<p>Depending on the order you tackle these tasks, don’t forget that one task is to average the demographic data for all counties into state level demographic data.  
+  
+
 
 <h2 id="task-3-use-data-represenation-stl-hashmap-to-be-able-to-answer-queries-about-data">Task 3: Use data representation (STL hashmap) to be able to answer queries about data</h2>
 
@@ -124,55 +138,60 @@ class dataAQ {
 
 <p>The output for dataProj should include a complete version of the following (your code would fill in for <b>BLANK</b>):</p>
  *** the state that needs the most pre-schools**<br>
-State Info: UT<br>
-Number of Counties: 29<br>
-Population info: <br>
-(over 65): 13.7414<br>
-(under 18): 29.9069<br>
-(under 5): 7.67931<br>
-Education info: <br>
-(Bachelor or more): 23.5586<br>
-(high school or more): 90.531<br>
-*** the state that needs the most high schools**<br>
-State Info: <BLANK><br>
+State Info: UT
+Number of Counties: 29
+Population info: 
+(over 65): 10.03% and total: 295145
+(under 18): 30.71% and total: 903829
+(under 5): 8.58% and total: 252377
+Education info: 
+(Bachelor or more): 30.54% and total: 898887
+(high school or more): 91.01% and total: 2678411
+Total population: 2942902
+*** the state that needs the most high schools**
+State Info: <b>BLANK</b><br>
 Number of Counties: <b>BLANK</b><br>
-Population info: <b>BLANK</b><br>
-(over 65): <b>BLANK</b><br>
-(under 18): <b>BLANK</b><br>
-(under 5): <b>BLANK</b><br>
-Education info: <br>
-(Bachelor or more): <b>BLANK</b><br>
-(high school or more):<b>BLANK</b><br>
-*** the state that needs the most vaccines**<br>
-State Info: <BLANK><br>
+Population info: 
+(over 65): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Education info: 
+(Bachelor or more): <b>BLANK</b><br>and total: <b>BLANK</b><br>
+(high school or more): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Total population: <b>BLANK</b><br>
+*** the state that needs the most vaccines**
+State Info: <b>BLANK</b><br>
 Number of Counties: <b>BLANK</b><br>
-Population info: <b>BLANK</b><br>
-(over 65): <b>BLANK</b><br>
-(under 18): <b>BLANK</b><br>
-(under 5): <b>BLANK</b><br>
-Education info: <br>
-(Bachelor or more): <b>BLANK</b><br>
-(high school or more):<b>BLANK</b><br>
-*** the state that needs the most help with education**<br>
-State Info: <BLANK><br>
+Population info: 
+(over 65): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Education info: 
+(Bachelor or more): <b>BLANK</b><br>and total: <b>BLANK</b><br>
+(high school or more): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Total population: <b>BLANK</b><br>
+*** the state that needs the most help with education**
+State Info: <b>BLANK</b><br>
 Number of Counties: <b>BLANK</b><br>
-Population info: <b>BLANK</b><br>
-(over 65): <b>BLANK</b><br>
-(under 18): <b>BLANK</b><br>
-(under 5): <b>BLANK</b><br>
-Education info: <br>
-(Bachelor or more): <b>BLANK</b><br>
-(high school or more):<b>BLANK</b><br>
-*** the state with most college grads**<br>
-State Info: <BLANK><br>
+Population info: 
+(over 65): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Education info: 
+(Bachelor or more): <b>BLANK</b><br>and total: <b>BLANK</b><br>
+(high school or more): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Total population: <b>BLANK</b><br>
+*** the state with most college grads**
+State Info: <b>BLANK</b><br>
 Number of Counties: <b>BLANK</b><br>
-Population info: <b>BLANK</b><br>
-(over 65): <b>BLANK</b><br>
-(under 18): <b>BLANK</b><br>
-(under 5): <b>BLANK</b><br>
-Education info: <br>
-(Bachelor or more): <b>BLANK</b><br>
-(high school or more):<b>BLANK</b><br>
+Population info: 
+(over 65): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 18): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+(under 5): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Education info: 
+(Bachelor or more): <b>BLANK</b><br>and total: <b>BLANK</b><br>
+(high school or more): <b>BLANK</b><br> and total: <b>BLANK</b><br>
+Total population: <b>BLANK</b><br>
 
 ----
 For clarity, the questions in main, refer to the queries in dataAQ (i.e. 'most' refers to a ranking in proportion to the state's whole population, not
