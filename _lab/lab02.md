@@ -4,7 +4,7 @@ num: lab02
 ready: true
 desc: "Using STL to aggregate data and query"
 assigned: 2021-01-20 
-due: 2021-01-27 23:59
+due: 2021-01-28 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
