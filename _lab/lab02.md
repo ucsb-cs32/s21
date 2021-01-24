@@ -72,9 +72,7 @@ Thus, one of the first changes you will need to make is to add data to demogData
 is one of the updated files and it now reads the 2014 population number from the csv file and calls a constructor for demogData that passes in this value.
 Modify your demogData to support storing this value.
 
-Then when designing your state data, also store a total state population and think about how to aggregate the county data (for example, converting
-the percentages into actual counts and then computing those counts as percentages of the total state population).
-
+Then when designing your state data, also store a total state population and think about how to aggregate the county data (for example, during aggregation convert the percentages into actual counts and then compute those counts as percentages of the total state population, after all county data has been aggregated together).
 
 Task 1 and 2: Representing 'state' data
 -----------------------
