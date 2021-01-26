@@ -16,8 +16,8 @@ Learning objectives. At the end of this lab, students should be able to:
 - read example C++ code and understand the data representations used in the base code
 - design and implment a new class to represent state region hospital data
 - design, implement and use a new data representation (for a hospital `rating'), including implementing operator overload to aggregate and compare ratings
-- aggregate city hospital data to state region hosptial data
-- implement various compare predicates to sort state hospital data and state demographic data on various data fields *for example, list the top 5 states with the highest rated hospitals and print out the demographic data for this state or list the 5 states with the highest median income and the associated states hospital rating information
+- aggregate city hospital data to state region hosptial data using a hashmap
+- implement various *compare predicates* to sort state hospital data and state demographic data on various data fields *for example, list the top 5 states with the highest rated hospitals and print out the demographic and hospital data for these state or list the 5 states with the highest median income and the associated states hospital rating information
 
 Orientation
 ============
@@ -76,17 +76,23 @@ Next we want to aggregate the full hospital data (including overall rating, mort
 To accomplish this, you need to design and implement a 'rating' class that will allow our program to represent and aggregate both the numeric and string valued representation of hospital ratings.
 
 To accomplish this, you need to think about the class design.  A rating needs to have a numeric value (for example using the scale used for overall rating) and 
-be able to be printed as string rating (using the words already associated and assigned to the data).  In addition, the string rating "below", "same" and "above" need to be able to be aggregated together.  Think about this problem.  We basically need a mapping between strings and a data type that is easier to aggregate.  There are many possible solutions, but for this assignment, associated the same numerical scale (used for overall rating) to the string rating.
+be able to be printed as string rating (using the words already associated and assigned to the data).  In addition, the string rating "below", "same" and "above" need to be able to be aggregated together.  Think about this problem.  We basically need a mapping between strings and a data type that is easier to aggregate.  There are many possible solutions, but for this assignment, associate a resonable numerical scale (I recommend a subset of the same range used for the overall rating) to the string ratings (just be careful with edge cases).  
+These values should be in  linear increments (i.e. if "below" has a value of n, "same" has a value of n+1.0, etc.).  
+When aggregating these values, they should be averaged normally with a floating point remainder kept until converted to a string with the following rules (assuming you map "below" to a numerical value of 'n'), report:<br>
+n <  "below" <= n+0.5<br>
+n+.5 <  "same" <= n+1.5<br>
+n+1.5 <  "above" <= n+2.5<br>
 
 One way to acccomplish some of
-the tasks we want when aggregating the data is by overloading mathematical operators.  Specifically, think about the mathematical operators that will need to compute an average rating for the various hospital ratings we have identified.
+the tasks we want when aggregating the data is by overloading mathematical operators.  Specifically, think about the mathematical operators that will need to compute an average rating for the various hospital ratings we have identified. In particular, for averaging, overload '+=', '/' and then for later comparisons, 
+overload the relational '<' and/or '>'.
 
-You also need to be very careful about edge cases, i.e. data that is unknown should not be included in any aggregation.  This is both in terms of summing the rating and in dividing by the total count of the data.
+You also need to be very careful about edge cases, i.e. there are various ways the data is represented as unknown and thus should not be included in any aggregation.  This is both in terms of summing the rating and in dividing by the total count of the data (you can consider keeping a count of all hospitals
+per state and the number of hospitals with known data values for example).
 
 Task 3
 ============
-DRAFT (need to decide on these)
-Similar to in lab02, we want to now compare the data in various ways.  We will do this via writing predicates and using some of the built in C++ algorithms, such as max_element and min_element and sort().
+Similar to in lab02, we want to now compare the data in various ways.  We will do this via writing *compare predicates* and using some of the built in C++ algorithms, such as max_element and min_element and sort().
 
 Specificaly, you will need to add support to dataAQ to support the following queries.
 
@@ -95,6 +101,11 @@ Specificaly, you will need to add support to dataAQ to support the following que
     string HighHospRating();
     string HighMortHospRating();
     string HighReadmitHospRating();
+```
+In addition, you will also implement sort on hospital overall hospital rating and median income as:
+```
+void sortStateHospHighLow();
+void sortStateDemogIncomeHighLow();
 ```
 
 Once you have identified a state with these values, you need to then print that state's demographic data.  For example:
