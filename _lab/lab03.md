@@ -14,9 +14,10 @@ Goals
 Learning objectives. At the end of this lab, students should be able to:
 
 - read example C++ code and understand the data representations used in the base code
+- design and implment a new class to represent state region hospital data
 - design, implement and use a new data representation (for a hospital `rating'), including implementing operator overload to aggregate and compare ratings
 - aggregate city hospital data to state region hosptial data
-- implement various comparisons on state hospital data such that the associated state demographic data can be printed *for example find the state with the highest rated hospitals and print out the demographic data for this state
+- implement various compare predicates to sort state hospital data and state demographic data on various data fields *for example, list the top 5 states with the highest rated hospitals and print out the demographic data for this state or list the 5 states with the highest median income and the associated states hospital rating information
 
 Orientation
 ============
