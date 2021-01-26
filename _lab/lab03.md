@@ -32,23 +32,26 @@ Rating.Mortality: String: 'Above', 'Same', 'Below', or 'Unknown' comparison to n
 ...
 Rating.Readmission: String: 'Above', 'Same', 'Below', or 'Unknown' comparison to national hospital safety 	<br>
 
-As our focus this week is not class design, I have provided you with a partial class to represent hospital data.  Please take a look at:
-'HospitalData.h/cpp' - very similar to lab01, this includes some of the basics, but you need to add the final three peices of data (overall rating,
-mortality rating and readmission rating *note for now we are skipping safety rating).
+You are provided with a partial class to represent hospital data.  Please take a look at:
+'HospitalData.h/cpp' - These files includes some of the basics. Very similar to what you completed in lab01 (for demogData), you need to add the final three pieces of data (overall rating,
+mortality rating and readmission rating *note for now we are skipping safety rating).  You will not be able to add this data until you have designed an auxiliary class to represent 'rating' (see below)*.
 
 One of the interesting aspects of hospital data is that 'rating' is represented both numerically and as a word (or string in CS), depending upon the category.  
-This makes our job of aggregating data more complex. 
+This makes our job of aggregating data more complex. Re-read the description above for the overall rating (numeric) and for mortality and readmission (string).
 
-This will be one of your first tasks, to create a data type for hosptial rating, that can be used as either numeric data or as a string.  Building this
+In order for our software (yur program) to use and work with this data, one of your first tasks is to create a data type for hosptial rating.
+This type needs to be abe to be used in your program both numerically (think about aggregation) and as a string (for reporting purposes).  Building this
 type and its supporting operators is one of your key activities this lab (as you need to think about edge cases).  This task is described in detail below.
 
 Next, take a moment and consider at what regional level hospital data resides, then consider the
-problem that if we want to correlate hospital data with demographic data, how can we do this.  This will be one of your second challenges (which is very much
+problem that if we want to correlate hospital data with demographic data, how we can do this.  This will be one of your second challenges (which is very much
 like your lab02).
+
+Finally, we will practice using the standard sorting algorithm, by writing some specified *compare predicates* to sort the data on various fields.
 
 Note that the hospital data from CORGIS is stored in a csv file: hosptials.csv
 To support reading in this data, there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design the rating data type). 
-*Note that if you look carefully at parse.cpp you will
+To allow for economic comparisons as well, demogData has two new econmic fiels (median income and percentage of the population below the poverty line).  The new parse.cpp now also reads in this data for you.  *Note that if you look carefully at parse.cpp you will
 see that there is a good deal of redundancy in the functions for reading hospital data or demographic data.  
 This is something we will strive to fix next week.  
 
@@ -58,21 +61,27 @@ Decide if you want to work with your lab02 code or from the starter code (either
 some of the updated and new files in the starter code).  At this point the code will not run until you aggregate the hospital data to the state level (very much like you did in lab02.  
 
 Like in Lab02, this will involve creating the state level hospital data class (fill in stateHosp.h and stateHosp.cpp).  Write the necessary code in dataAQ.h to
-support the aggregation. Your goal is to get the code to compile without the full hospital data, just aggregate and count how many hospitals there are for each state (to test your data structure choices).  Right now hospitals only have identifying information (Name, city, state, and type as given to you). 
+support the aggregation (similar to lab02). Your goal at this stage is to get the code to compile without the full hospital data, just aggregate and count how many hospitals there are for each state (to test your data structure choices).  Right now hospitals only have identifying information (Name, city, state, and type as given to you). 
 For now your state data should not include name and type.  Think about why (how do we aggregate names? how could we aggregate types)? 
-What other designs might make sense.
+What other designs might make sense?
 
-As with lab02, there are many correct solutions.  I recommend using a hashmap of statenames to state hospital data.  We won't be able to fully aggregate the data until you build up your 'rating' class, but get the code to work at this point so you can feel confident about what needs to happen next.  
+As with lab02, there are many correct solutions.  I recommend using a hashmap of statenames to state hospital data.  You will not be able to fully aggregate the data until you build up your 'rating' class, but get the code to work at this point so you can feel confident about what needs to happen next.  
 
-This task is very remniscent of lab02.  It isn't meant to be boring, but an opportunity to practice the same skills again.
+This first task is very remniscent of lab02 and is meant as an opportunity to practice the same skills.
 
 Task 2
 ============
-Now, what gets interesting about aggregating hospital data is their ratings (and specifically the challenge of aggregating those ratings).
-Design and implement a 'rating' class that will allow our program the represent and aggregate both the numeric and string valued representation of hospital ratings.
+Next we want to aggregate the full hospital data (including overall rating, mortality and readmission rates).  
 
-To accomplish this, you need to think about your design.  A rating needs to simultaneously have a numeric and string rating.  One way to acccomplish some of
+To accomplish this, you need to design and implement a 'rating' class that will allow our program to represent and aggregate both the numeric and string valued representation of hospital ratings.
+
+To accomplish this, you need to think about the class design.  A rating needs to have a numeric value (for example using the scale used for overall rating) and 
+be able to be printed as string rating (using the words already associated and assigned to the data).  In addition, the string rating "below", "same" and "above" need to be able to be aggregated together.  Think about this problem.  We basically need a mapping between strings and a data type that is easier to aggregate.  There are many possible solutions, but for this assignment, associated the same numerical scale (used for overall rating) to the string rating.
+
+One way to acccomplish some of
 the tasks we want when aggregating the data is by overloading mathematical operators.  Specifically, think about the mathematical operators that will need to compute an average rating for the various hospital ratings we have identified.
+
+You also need to be very careful about edge cases, i.e. data that is unknown should not be included in any aggregation.  This is both in terms of summing the rating and in dividing by the total count of the data.
 
 Task 3
 ============
