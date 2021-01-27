@@ -62,6 +62,9 @@ some of the updated and new files in the starter code).  At this point the code 
 Note that we have also added income data to the demogData.  If you do not use the example files, you will want to update so the parse.cpp 
 works with this new field.
 
+Prior to the lab02 deadline, the starter code you have access to is: https://github.com/ucsb-cs32-w21/Lab03-STARTER
+
+
 Like in Lab02, this will involve creating the state level hospital data class (fill in stateHosp.h and stateHosp.cpp).  Write the necessary code in dataAQ.h to
 support the aggregation (similar to lab02). Your goal at this stage is to get the code to compile without the full hospital data, just aggregate and count how many hospitals there are for each state (to test your data structure choices).  Right now hospitals only have identifying information (Name, city, state, and type as given to you). 
 For now your state data should not include name and type.  Think about why (how do we aggregate names? how could we aggregate types)? 
