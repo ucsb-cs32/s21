@@ -94,18 +94,14 @@ Task 3
 ============
 Similar to in lab02, we want to now compare the data in various ways.  We will do this via writing *compare predicates* and using some of the built in C++ algorithms, such as max_element and min_element and sort().
 
-Specificaly, you will need to add support to dataAQ to support the following queries.
+<b>Part a)</b>
+First for extremums, use min_element and max element to return the state name for the following queries.
 
 ```
     string LowHospRating();
     string HighHospRating();
     string HighMortHospRating();
     string HighReadmitHospRating();
-```
-In addition, you will also implement sort on hospital overall hospital rating and median income as:
-```
-void sortStateHospHighLow();
-void sortStateDemogIncomeHighLow();
 ```
 
 Once you have identified a state with these values, you need to then print that state's demographic data.  For example:
@@ -127,6 +123,19 @@ Population info:
 Education info: 
 (Bachelor or more): 20.25
 (high school or more): 86.2159
+
+<b>Part b)</b>
+In addition, you will also implement sort on state hospitals overall hospital rating and sort on state demographic data on poverty level.
+Because our goal is to print out the top ten values in these sorted ranges, you will need to use an additional container.  In main, declare
+vectors to store the sorted results and pass a reference to those contrainers:
+```
+    void sortStateHospRatingHighLow(std::vector<stateHosp *>& hospHighToLow);
+    void sortStateHospRatingLowHigh(std::vector<stateHosp *>& hospLowToHigh);
+    void sortStateDemogPovLevelLowHigh(std::vector<stateDemog *>& incomeHighLow);
+    void sortStateDemogPovLevelHighLow(std::vector<stateDemog *>& povLevelHighLow);
+```
+Stay tuned for test cases for the sorted data.
+
 
 ------
 50 points autograding
