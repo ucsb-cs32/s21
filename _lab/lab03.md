@@ -138,26 +138,34 @@ vectors to store the sorted results and pass a reference to those contrainers:
 
 In general, output should look something like:<br>
 the 10 states with highest hospital ratings sorted on overall: <br>
-0 WI overall hospital rating: 3.88889<br>
-1 SD overall hospital rating: 3.84211<br>
+0 WI overall hospital rating: 3.89<br>
+1 SD overall hospital rating: 3.84<br>
 2 - overall hospital rating: -<br>
 ...<br>
+9 - overall hospital rating: -<br>
+<br>
 the 10 states with lowest hospital ratings sorted on overall: <br>
-0 DC overall hospital rating: 1.42857<br>
+0 DC overall hospital rating: 1.43<br>
 1 NY overall hospital rating: 2.18<br>
 2 - overall hospital rating: -<br>
 ...<br>
+9 - overall hospital rating: -<br>
 the 10 states with lowest level of persons below the poverty line: <br>
-0 NH persons below poverty level: 8.1531<br>
-1 AK persons below poverty level: 9.17752<br>
+0 NH persons below poverty level: 8.69<br>
+1 MD persons below poverty level: 9.81<br>
 2 - persons below poverty level: -<br>
 ....<br>
+9 - persons below poverty level: -
 the 10 states with highest level of persons below the poverty line: <br>
-0 MS persons below poverty level: 22.1417<br>
-1 NM persons below poverty level: 20.2031<br>
+0 MS persons below poverty level: 22.63<br>
+1 NM persons below poverty level: 20.40<br>
 2 - persons below poverty level: -<br>
 ....<br>
 
+For testing, you must implement a getState() for all state level data (demographic and hospital) that returns the two letter state name.
+This function will be used in testing and autograing. Make sure the one example testSort.cpp works as written.
+
 ------
-50 points autograding
-50 point code review
+40 points autograding of extremums for hospital data
+40 points autograding for sorting
+20 point code review (rating.h and rating.cpp)
