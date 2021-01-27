@@ -136,27 +136,27 @@ vectors to store the sorted results and pass a reference to those contrainers:
 ```
 
 
-In general, output should look something like:
-the 10 states with highest hospital ratings sorted on overall: 
-0 WI overall hospital rating: 3.88889
-1 SD overall hospital rating: 3.84211
-2 - overall hospital rating: -
-...
-the 10 states with lowest hospital ratings sorted on overall: 
-0 DC overall hospital rating: 1.42857
-1 NY overall hospital rating: 2.18
-2 - overall hospital rating: -
-...
-the 10 states with lowest level of persons below the poverty line: 
-0 NH persons below poverty level: 8.1531
-1 AK persons below poverty level: 9.17752
-2 - persons below poverty level: -
-....
-the 10 states with highest level of persons below the poverty line: 
-0 MS persons below poverty level: 22.1417
-1 NM persons below poverty level: 20.2031
-2 - persons below poverty level: -
-....
+In general, output should look something like:<br>
+the 10 states with highest hospital ratings sorted on overall: <br>
+0 WI overall hospital rating: 3.88889<br>
+1 SD overall hospital rating: 3.84211<br>
+2 - overall hospital rating: -<br>
+...<br>
+the 10 states with lowest hospital ratings sorted on overall: <br>
+0 DC overall hospital rating: 1.42857<br>
+1 NY overall hospital rating: 2.18<br>
+2 - overall hospital rating: -<br>
+...<br>
+the 10 states with lowest level of persons below the poverty line: <br>
+0 NH persons below poverty level: 8.1531<br>
+1 AK persons below poverty level: 9.17752<br>
+2 - persons below poverty level: -<br>
+....<br>
+the 10 states with highest level of persons below the poverty line: <br>
+0 MS persons below poverty level: 22.1417<br>
+1 NM persons below poverty level: 20.2031<br>
+2 - persons below poverty level: -<br>
+....<br>
 
 ------
 50 points autograding
