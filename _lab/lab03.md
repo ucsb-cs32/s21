@@ -17,7 +17,7 @@ Learning objectives. At the end of this lab, students should be able to:
 - design and implment a new class to represent state region hospital data
 - design, implement and use a new data representation (for a hospital `rating'), including implementing operator overload to aggregate and compare ratings
 - aggregate city hospital data to state region hosptial data using a hashmap
-- implement various *compare predicates* to sort state hospital data and state demographic data on various data fields *for example, list the top 5 states with the highest rated hospitals and print out the demographic and hospital data for these state or list the 5 states with the highest median income and the associated states hospital rating information
+- implement various *compare predicates* to sort state hospital data and state demographic data on various data fields *for example, list the top 5 states with the highest rated hospitals and print out the demographic and hospital data for these state or list the 5 states with the least number of people below the poverty line and the associated states hospital rating information
 
 Orientation
 ============
@@ -58,7 +58,9 @@ This is something we will strive to fix next week.
 Task 1
 ============
 Decide if you want to work with your lab02 code or from the starter code (either is fine, just know that if you work with your lab02 code you will want to integrate
-some of the updated and new files in the starter code).  At this point the code will not run until you aggregate the hospital data to the state level (very much like you did in lab02.  
+some of the updated and new files in the starter code).  At this point the code will not run until you aggregate the hospital data to the state level (very much like you did in lab02).  
+Note that we have also added income data to the demogData.  If you do not use the example files, you will want to update so the parse.cpp 
+works with this new field.
 
 Like in Lab02, this will involve creating the state level hospital data class (fill in stateHosp.h and stateHosp.cpp).  Write the necessary code in dataAQ.h to
 support the aggregation (similar to lab02). Your goal at this stage is to get the code to compile without the full hospital data, just aggregate and count how many hospitals there are for each state (to test your data structure choices).  Right now hospitals only have identifying information (Name, city, state, and type as given to you). 
@@ -68,6 +70,7 @@ What other designs might make sense?
 As with lab02, there are many correct solutions.  I recommend using a hashmap of statenames to state hospital data.  You will not be able to fully aggregate the data until you build up your 'rating' class, but get the code to work at this point so you can feel confident about what needs to happen next.  
 
 This first task is very remniscent of lab02 and is meant as an opportunity to practice the same skills.
+
 
 Task 2
 ============
@@ -106,23 +109,25 @@ First for extremums, use min_element and max element to return the state name fo
 
 Once you have identified a state with these values, you need to then print that state's demographic data.  For example:
 
-The state with the highest hospital readmission rating is: ID<br>
-State Hospital info: ID<br>
-  Number of hospitals: 42<br>
-  overall rating: 3.72<br>
+The state with the lowest hospital rating is: DC<br>
+State Hospital info: DC<br>
+ Number of hospitals: 8<br>
+  overall rating: 1.43<br>
   mortality rating: same<br>
-  readmission rating: above<br>
+  readmission rating: below<br>
 <br>
-Demographic data for that state is:<br>
-State Info: ID<br>
-Number of Counties: 44<br>
+Demographic data for that state is: <br>
+State Info: DC<br>
+Number of Counties: 1<br>
 Population info: <br>
-(over 65): 17.1659<br>
-(under 18): 25.3705<br>
-(under 5): 25.3705<br>
+(over 65): 11.30% and total: 74454<br>
+(under 18): 17.50% and total: 115306<br>
+(under 5): 6.50% and total: 42828<br>
 Education info: <br>
-(Bachelor or more): 20.25<br>
-(high school or more): 86.2159<br>
+(Bachelor or more): 52.40% and total: 345259<br>
+(high school or more): 88.40% and total: 582461 <br>
+persons below poverty: 18.60% and total: 122554<br>
+Total population: 658893<br>
 
 <b>Part b)</b>
 In addition, you will also implement sort on state hospitals overall hospital rating and sort on state demographic data on poverty level.
