@@ -134,8 +134,29 @@ vectors to store the sorted results and pass a reference to those contrainers:
     void sortStateDemogPovLevelLowHigh(std::vector<stateDemog *>& incomeHighLow);
     void sortStateDemogPovLevelHighLow(std::vector<stateDemog *>& povLevelHighLow);
 ```
-Stay tuned for test cases for the sorted data.
 
+
+In general, output should look something like:
+the 10 states with highest hospital ratings sorted on overall: 
+0 WI overall hospital rating: 3.88889
+1 SD overall hospital rating: 3.84211
+2 - overall hospital rating: -
+...
+the 10 states with lowest hospital ratings sorted on overall: 
+0 DC overall hospital rating: 1.42857
+1 NY overall hospital rating: 2.18
+2 - overall hospital rating: -
+...
+the 10 states with lowest level of persons below the poverty line: 
+0 NH persons below poverty level: 8.1531
+1 AK persons below poverty level: 9.17752
+2 - persons below poverty level: -
+....
+the 10 states with highest level of persons below the poverty line: 
+0 MS persons below poverty level: 22.1417
+1 NM persons below poverty level: 20.2031
+2 - persons below poverty level: -
+....
 
 ------
 50 points autograding
