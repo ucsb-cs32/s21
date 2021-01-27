@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab03	
-ready: false
+ready: true
 desc: "New types with operator overload and predicates (for sorting)"
 assigned: 2021-01-27 
 due: 2021-02-03 23:59
