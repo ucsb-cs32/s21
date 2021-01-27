@@ -14,34 +14,35 @@ Goals
 Learning objectives. At the end of this lab, students should be able to:
 
 - read example C++ code and understand the data representations used in the base code
-- design and implment a new class to represent state region hospital data
+- design and implement a new class to represent state region hospital data
 - design, implement and use a new data representation (for a hospital `rating'), including implementing operator overload to aggregate and compare ratings
-- aggregate city hospital data to state region hosptial data using a hashmap
+- aggregate city hospital data to state region hospital data using a hashmap
 - implement various *compare predicates* to sort state hospital data and state demographic data on various data fields *for example, list the top 5 states with the highest rated hospitals and print out the demographic and hospital data for these state or list the 5 states with the least number of people below the poverty line and the associated states hospital rating information
+
 
 Orientation
 ============
 In order to expand the questions/queries about the US data we have been working with, we will be adding additional data from CORGIS.
 Specifically, we will be adding hospital data: https://corgis-edu.github.io/corgis/csv/hospitals/
 
-Like before, take a look at the full list of data at the above link.  There are lots of intersting statistics, but to keep things simple, we will be working 
-with just a subset of this data, related to hospital 'Rating'.  Specifically, in addition to identifying information about a hospital 
+Like before, take a look at the full list of data at the above link.  There are lots of interesting statistics, but to keep things simple, we will be working
+with just a subset of this data, related to hospital 'Rating'.  Specifically, in addition to identifying information about a hospital
 (Name, city, state, and type), we will look  at:<br>
-Rating.Overall: Integer: Overall rating between 1 and 5 stars, with 5 stars being the highest rating; -1 represents no rating. 	<br>
+Rating.Overall: Integer: Overall rating between 1 and 5 stars, with 5 stars being the highest rating; -1 represents no rating.     <br>
 Rating.Mortality: String: 'Above', 'Same', 'Below', or 'Unknown' comparison to national hospital mortality <br>
 ...
-Rating.Readmission: String: 'Above', 'Same', 'Below', or 'Unknown' comparison to national hospital safety 	<br>
+Rating.Readmission: String: 'Above', 'Same', 'Below', or 'Unknown' comparison to national hospital safety     <br>
 
 You are provided with a partial class to represent hospital data.  Please take a look at:
-'HospitalData.h/cpp' - These files includes some of the basics. Very similar to what you completed in lab01 (for demogData), you need to add the final three pieces of data (overall rating,
+'HospitalData.h/cpp' - These files include some of the basics. Very similar to what you completed in lab01 (for demogData), you need to add the final three pieces of data (overall rating,
 mortality rating and readmission rating *note for now we are skipping safety rating).  You will not be able to add this data until you have designed an auxiliary class to represent 'rating' (see below)*.
 
 One of the interesting aspects of hospital data is that 'rating' is represented both numerically and as a word (or string in CS), depending upon the category.  
 This makes our job of aggregating data more complex. Re-read the description above for the overall rating (numeric) and for mortality and readmission (string).
 
-In order for our software (yur program) to use and work with this data, one of your first tasks is to create a data type for hosptial rating.
-This type needs to be abe to be used in your program both numerically (think about aggregation) and as a string (for reporting purposes).  Building this
-type and its supporting operators is one of your key activities this lab (as you need to think about edge cases).  This task is described in detail below.
+In order for our software (your program) to use and work with this data, one of your first tasks is to create a data type for hospital rating.
+This type needs to be able to be used in your program both numerically (think about aggregation) and as a string (for reporting purposes).  Building this
+type and its supporting operators is one of your key activities for this lab (as you need to think about edge cases).  This task is described in detail below.
 
 Next, take a moment and consider at what regional level hospital data resides, then consider the
 problem that if we want to correlate hospital data with demographic data, how we can do this.  This will be one of your second challenges (which is very much
@@ -50,10 +51,11 @@ like your lab02).
 Finally, we will practice using the standard sorting algorithm, by writing some specified *compare predicates* to sort the data on various fields.
 
 Note that the hospital data from CORGIS is stored in a csv file: hosptials.csv
-To support reading in this data, there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design the rating data type). 
-To allow for economic comparisons as well, demogData has two new econmic fiels (median income and percentage of the population below the poverty line).  The new parse.cpp now also reads in this data for you.  *Note that if you look carefully at parse.cpp you will
+To support reading in this data, there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design the rating data type).
+To allow for economic comparisons as well, demogData has one new economic field (percentage of the population below the poverty line).  The new parse.cpp now also reads in this data for you.  *Note that if you look carefully at parse.cpp you will
 see that there is a good deal of redundancy in the functions for reading hospital data or demographic data.  
-This is something we will strive to fix next week.  
+This is something we will strive to fix next week. 
+
 
 Task 1
 ============
@@ -72,7 +74,7 @@ What other designs might make sense?
 
 As with lab02, there are many correct solutions.  I recommend using a hashmap of statenames to state hospital data.  You will not be able to fully aggregate the data until you build up your 'rating' class, but get the code to work at this point so you can feel confident about what needs to happen next.  
 
-This first task is very remniscent of lab02 and is meant as an opportunity to practice the same skills.
+This first task is very  reminiscent of lab02 and is meant as an opportunity to practice the same skills.
 
 
 Task 2
@@ -82,14 +84,14 @@ Next we want to aggregate the full hospital data (including overall rating, mort
 To accomplish this, you need to design and implement a 'rating' class that will allow our program to represent and aggregate both the numeric and string valued representation of hospital ratings.
 
 To accomplish this, you need to think about the class design.  A rating needs to have a numeric value (for example using the scale used for overall rating) and 
-be able to be printed as string rating (using the words already associated and assigned to the data).  In addition, the string rating "below", "same" and "above" need to be able to be aggregated together.  Think about this problem.  We basically need a mapping between strings and a data type that is easier to aggregate.  There are many possible solutions, but for this assignment, associate a resonable numerical scale (I recommend a subset of the same range used for the overall rating) to the string ratings (just be careful with edge cases).  
+be able to be printed as string rating (using the words already associated and assigned to the data).  In addition, the string rating "below", "same" and "above" need to be able to be aggregated together.  Think about this problem.  We basically need a mapping between strings and a data type that is easier to aggregate.  There are many possible solutions, but for this assignment, associate a reasonable numerical scale (I recommend a subset of the same range used for the overall rating) to the string ratings (just be careful with edge cases).  
 These values should be in  linear increments (i.e. if "below" has a value of n, "same" has a value of n+1.0, etc.).  
 When aggregating these values, they should be averaged normally with a floating point remainder kept until converted to a string with the following rules (assuming you map "below" to a numerical value of 'n'), report:<br>
 n <  "below" <= n+0.5<br>
 n+.5 <  "same" <= n+1.5<br>
 n+1.5 <  "above" <= n+2.5<br>
 
-One way to acccomplish some of
+One way to accomplish some of
 the tasks we want when aggregating the data is by overloading mathematical operators.  Specifically, think about the mathematical operators that will need to compute an average rating for the various hospital ratings we have identified. In particular, for averaging, overload '+=', '/' and then for later comparisons, 
 overload the relational '<' and/or '>'.
 
@@ -134,8 +136,9 @@ Total population: 658893<br>
 
 <b>Part b)</b>
 In addition, you will also implement sort on state hospitals overall hospital rating and sort on state demographic data on poverty level.
-Because our goal is to print out the top ten values in these sorted ranges, you will need to use an additional container.  In main, declare
-vectors to store the sorted results and pass a reference to those contrainers:
+Use an additional (auxiliary) container (vector) to sort and then print out the top ten values in these sorted ranges.  For example, in main, 
+you can declare vectors to store the sorted results and pass a reference to that vector (sort will not work on the state data in a hashmap,
+so you need to create a copy of the data in container that can be sorted):
 ```
     void sortStateHospRatingHighLow(std::vector<stateHosp *>& hospHighToLow);
     void sortStateHospRatingLowHigh(std::vector<stateHosp *>& hospLowToHigh);
@@ -170,10 +173,10 @@ the 10 states with highest level of persons below the poverty line: <br>
 2 - persons below poverty level: -<br>
 ....<br>
 
-For testing, you must implement a getState() for all state level data (demographic and hospital) that returns the two letter state name.
-This function will be used in testing and autograing. Make sure the one example testSort.cpp works as written.
+For testing, you must implement a getState() method for all state level data (demographic and hospital) that returns the two letter state name.
+This function will be used in testing and autograing (see testSort.cpp). Make sure the one example testSort.cpp works as written.
 
 ------
-40 points autograding of extremums for hospital data
-40 points autograding for sorting
-20 point code review (rating.h and rating.cpp)
+40 points autograding of extremums for hospital data<br>
+40 points autograding for sorting<br>
+20 point code review (rating.h and rating.cpp)<br>
