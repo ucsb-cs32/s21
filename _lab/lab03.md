@@ -106,23 +106,23 @@ First for extremums, use min_element and max element to return the state name fo
 
 Once you have identified a state with these values, you need to then print that state's demographic data.  For example:
 
-The state with the highest hospital readmission rating is: ID
-State Hospital info: ID
-  Number of hospitals: 42
-  overall rating: 3.72
-  mortality rating: same
-  readmission rating: above
-
-Demographic data for that state is:
-State Info: ID
-Number of Counties: 44
-Population info: 
-(over 65): 17.1659
-(under 18): 25.3705
-(under 5): 25.3705
-Education info: 
-(Bachelor or more): 20.25
-(high school or more): 86.2159
+The state with the highest hospital readmission rating is: ID<br>
+State Hospital info: ID<br>
+  Number of hospitals: 42<br>
+  overall rating: 3.72<br>
+  mortality rating: same<br>
+  readmission rating: above<br>
+<br>
+Demographic data for that state is:<br>
+State Info: ID<br>
+Number of Counties: 44<br>
+Population info: <br>
+(over 65): 17.1659<br>
+(under 18): 25.3705<br>
+(under 5): 25.3705<br>
+Education info: <br>
+(Bachelor or more): 20.25<br>
+(high school or more): 86.2159<br>
 
 <b>Part b)</b>
 In addition, you will also implement sort on state hospitals overall hospital rating and sort on state demographic data on poverty level.
