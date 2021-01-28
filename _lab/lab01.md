@@ -216,3 +216,7 @@ Gradescope automated
 
     (20 pts) each for all 5 of the Gradescope tests
 
+Acknowledgements
+================
+
+Winter `21 vesion: Zoë Wood. Editing, autograder and sanity checking from my teaching team: AMR, SDM, QH, AR, BL
