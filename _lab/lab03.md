@@ -177,6 +177,7 @@ For testing, you must implement a getState() method for all state level data (de
 This function will be used in testing and autograing (see testSort.cpp). Make sure the one example testSort.cpp works as written.
 
 ------
-40 points autograding of extremums for hospital data<br>
-40 points autograding for sorting<br>
-20 point code review (rating.h and rating.cpp)<br>
+20 points autograding of extremums for hospital data (testStates)<br>
+30 points autograding for sorting on hospital income (high and low) (testSort1 and testSort2) <br>
+30 points autograding for sorting on demogrographic income (high and low) (testSort3 and testSort4) <br>
+20 point code review (rating.h and rating.cpp and general sanity in code)<br>
