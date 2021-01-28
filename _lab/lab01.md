@@ -219,4 +219,4 @@ Gradescope automated
 Acknowledgements
 ================
 
-Winter `21 vesion: Zoë Wood. Editing, autograder and sanity checking from my teaching team: AMR, SDM, QH, AR, BL
+Winter `21 vesion: Zoë Wood.  Thank you to the original CORGIS crew for their work sharing this data (https://corgis-edu.github.io/corgis/) and to Aaron Keen for curriuclum review. Editing, autograder and general support to thanks to: AMR, SDM, QH, AR, BL
