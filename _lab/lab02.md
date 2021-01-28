@@ -209,3 +209,7 @@ Grading
 (10) reasonable reporting of mins and max in dataAQ<br>
 
 
+Acknowledgements
+================
+
+Winter `21 vesion: Zoë Wood.  Thank you to the original CORGIS crew for their work sharing this data (https://corgis-edu.github.io/corgis/) and to Aaron Keen for curriuclum review. Editing, autograder and general support to thanks to: AMR, SDM, QH, AR, BL
