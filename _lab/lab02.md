@@ -137,16 +137,16 @@ class dataAQ {
 <p>The output for dataProj should include a complete version of the following (your code would fill in for <b>BLANK</b>):</p>
  *** the state that needs the most pre-schools**<br>
 State Info: UT
-Number of Counties: 29
-Population info: 
-(over 65): 10.03% and total: 295145
-(under 18): 30.71% and total: 903829
-(under 5): 8.58% and total: 252377
-Education info: 
-(Bachelor or more): 30.54% and total: 898887
-(high school or more): 91.01% and total: 2678411
-Total population: 2942902
-*** the state that needs the most high schools**
+Number of Counties: 29<br>
+Population info: <br>
+(over 65): 10.03% and total: 295145<br>
+(under 18): 30.71% and total: 903829<br>
+(under 5): 8.58% and total: 252377<br>
+Education info: <br>
+(Bachelor or more): 30.54% and total: 898887<br>
+(high school or more): 91.01% and total: 2678411<br>
+Total population: 2942902<br>
+*** the state that needs the most high schools**<br>
 State Info: <b>BLANK</b><br>
 Number of Counties: <b>BLANK</b><br>
 Population info: 
