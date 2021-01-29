@@ -21,7 +21,7 @@ Learning objectives. At the end of this lab, students should be able to:
 
 Orientation
 ============
-At this point, we have a healthy amount of code (most of your lab03 solutions are over a 1K lines of code -- which is still a very small software project, but 
+At this point, we have a healthy amount of code (most of your lab03 solutions are over 1K lines of code -- which is still a very small software project, but 
 is growing in complexity).  Assuming we would like to add yet another data source to build up more information in our software, it is worth taking a moment now
 to reflect on the code we have and how to *simplify* that code.
 
