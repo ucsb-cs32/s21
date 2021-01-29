@@ -21,18 +21,21 @@ Learning objectives. At the end of this lab, students should be able to:
 
 Orientation
 ============
-At this point, we have a health amount of code (most of you lab03 solutions are over a 1K lines of code -- which is still a very small software project, but 
+At this point, we have a healthy amount of code (most of your lab03 solutions are over a 1K lines of code -- which is still a very small software project, but 
 is growing in complexity).  Assuming we would like to add yet another data source to build up more information in our software, it is worth taking a moment now
 to reflect on the code we have and how to *simplify* that code.
 
-Good questions to consider are: Where is there redundancy in my code?   What data is repeated of very similar? (that could potentially be simplified) and where are there unique differences that must be preserved.
+Good questions to consider are: <br>
+Where is there redundancy in my code?<br>
+What data is repeated of very similar? (that could potentially be simplified)<br>
+where are there unique differences that must be preserved.
 
 If we look at parse.cpp for example, there are two functions that do almost the same thing:
 ```
 std::vector<shared_ptr<demogData>> read_csv(std::string filename, typeFlag fileType);
 std::vector<shared_ptr<hospitalData> > read_csvHospital(std::string filename, typeFlag fileType);
 ```
-The biggest difference in these functions is that they return a vector of different types demogData versus hospitalData.  The other difference is that based
+The biggest difference in these functions is that they return a vector of different types, either demogData or hospitalData.  The other difference is that based
 on the type of data, the function either calls:
 ```
 shared_ptr<demogData> readCSVLineDemog(std::string theLine);
@@ -43,10 +46,14 @@ shared_ptr<hospitalData> readCSVLineHopstial(std::string theLine);
 ```
 
 Our goal is to use a powerful idea from OO programming, inheritence, to rethink our data types (demogData and hospitalData) and consider what they
-have in common and/or very similar *and* whether that commonality can be lifted into a new *parent* type unifying their representation.  Specifically,
+have in common and/or very similar *and* whether that commonality can be lifted into a new *parent* type unifying their representation.  
+
+Specifically,
 we will introduce a new data type to represent *region data* as a more abstract concept.  Both hospital data and demographic data are examples of *region data*.
-Introducing this new type and using inheritence to codify the relationship between these two kinds of data, will allow up to simplify our code (and ultimately
-make it easier to add any other new data that likewise is associated with a region!).  This abstraction will also allow us to remove some redundancy 
+
+Introducing this new type and using inheritence to codify the relationship between these two kinds of data, will allow up to simplify our code, 
+and ultimately
+make it easier to add any other new data that likewise is associated with a region!  This abstraction will also allow us to remove some redundancy 
 between city, county or state level data.
 
 
