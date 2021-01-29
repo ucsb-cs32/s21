@@ -113,7 +113,7 @@ class dataAQ {
   public:
     dataAQ();
     //function to aggregate the data - this CAN and SHOULD vary per student - depends on how they map
-    void createStateDemogData(std::vector< shared_ptr<demogData> > theData);
+    void createStateData(std::vector< shared_ptr<demogData> > theData); (*)
     //return the name of the state with the largest population under age 5
     string youngestPop();
     //return the name of the state with the largest population under age 18
@@ -129,7 +129,9 @@ class dataAQ {
     ...
  };
 ```
-
+(\*) note that this used to say,   void createStateDemogData(std::vector< shared_ptr<demogData> > theData);
+  but the autograder is configured with 'createStateData' so use that at this point*
+  
 <p>Again, see testStates.cpp for the use of the dataAQ class to test your implementation.</p>
 
 <p>You are encouraged to write additional test cases for each of the required queries in dataAQ.</p>
