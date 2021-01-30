@@ -72,7 +72,7 @@ review the solution.  To get the code, you need to log into csil.  On csil, make
 
 
 ```
-cp ~zjwood/32Public/Lab03Starter2.zip ~/cs32/llab03/.
+cp ~zjwood/32Public/Lab03Starter2.zip ~/cs32/lab03/.
 ```
 *Refer to the lab00 instructions if you have forgotten how to do any of these steps.*
 **NOTE you must copy these files by Monday 2/1 by 3pm.  After that time, they will no longer be available**
