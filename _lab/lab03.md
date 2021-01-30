@@ -66,6 +66,17 @@ works with this new field.
 
 Prior to the lab02 deadline, the starter code you have access to is: https://github.com/ucsb-cs32-w21/Lab03-STARTER
 
+**Time dependent**
+Now that lab02 deadline has passed, you may also use the below version that includes a lab02 solution.  We will discuss this solution next week in lecture to 
+review the solution.  To get the code, you need to log into csil.  On csil, make a directory in your cs32 folder named lab03, then you can copy this files into your directory:
+
+
+```
+cp ~zjwood/32Public/Lab03Starter2.zip ~/cs32/llab03/.
+```
+*Refer to the lab00 instructions if you have forgotten how to do any of these steps.*
+**NOTE you must copy these files by Monday 2/1 by 3pm.  After that time, they will no longer be available**
+
 
 Like in Lab02, this will involve creating the state level hospital data class (fill in stateHosp.h and stateHosp.cpp).  Write the necessary code in dataAQ.h to
 support the aggregation (similar to lab02). Your goal at this stage is to get the code to compile without the full hospital data, just aggregate and count how many hospitals there are for each state (to test your data structure choices).  Right now hospitals only have identifying information (Name, city, state, and type as given to you). 
