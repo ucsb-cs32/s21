@@ -27,7 +27,7 @@ to reflect on the code we have and how to *simplify* that code.  The `spirit of 
 
 Good questions to consider are: <br>
 Where is there redundancy in my code?<br>
-What data is repeated of very similar? (that could potentially be simplified)<br>
+What data is repeated or very similar? (that could potentially be simplified)<br>
 where are there unique differences that must be preserved.
 
 There are many ways we could re-write our current project, however, we will ask you to mostly follow a specific re-structuring, but we hope that this 
@@ -48,22 +48,50 @@ or
 shared_ptr<hospitalData> readCSVLineHopstial(std::string theLine);
 ```
 
-In addition to the above redundancy,
+In addition to the above redundancy, there is likewise a fair amount of redudancy in the state level representation of both hospital and demographic data.
+
 Our goal is to use a powerful idea from OO programming, inheritance, to rethink our data types (demogData and hospitalData) and consider what they
 have in common and/or very similar *and* whether that commonality can be lifted into a new *parent* type unifying their representation.  
 
 Specifically,
-we will introduce a new data type to represent *region data* as a more abstract concept.  Both hospital data and demographic data are examples of *region data*.
+we will introduce several new data types to represent relationships in our data (t reduce redundant code).  Beginning with the introduction of *region data* as a more abstract concept, of which both hospital data and demographic data are examples of *region data*.
 
-Introducing this new type and using inheritence to codify the relationship between these two kinds of data, will allow up to simplify our code, 
+Introducing these new types and using inheritence to codify the relationship between data, will allow up to simplify our code, 
 and ultimately
-make it easier to add any other new data that likewise is associated with a region!  This abstraction will also allow us to remove some redundancy 
-between city, county or state level data.
+make it easier to add any other new data that likewise is associated with a region!  
 
+This will involve moving around much of the code you have.  Work slowly and use git to keep track of prior versions.
 
-Step by Step
+Tasks
 ============
 
-Working from your lab03, introduce a new type *region data* that will be a parent class to our primary data.
+Again, there are many ways we could restructure our code, but to keep us all on the same page, we will all restructure in the following way.  
+Note that you can tackle these re-writes in various order.
+
+Task 0 - Introduce new data types
+============
+Overall, you will be introducing new datatypes:
+1) A base class: region data (this base class will be very light weight for lab04 and store a region name)
+2) A derived class of region data that abstractly represents demographic data, `demogData' (only demographic data, no region identifiers)
+3) A derived class of demographic data, `comboDemogData' that represents combinations (aggregated) regions of demographic data (for this lab, we will
+only use combo data at the state level for demographic data, but this representation could be used for larger regions like 'the southwest', etc.)
+4) A derived class of demographic data, `demogCounty' that represents the base raw CORGIS data, i.e. demographic data in a place (county) (not combined)
+5) A derived class of region data that bstractly represents hospital data,`hospitalData' (only hospital data, no region identifiers)
+6) A derived class of hospital data, `comboHospitalData' that represents combinations (aggregated) regions of hospital data (for this lab, we will
+use combo data at the county and the state level for hospital data - this representation could also be used for larger regions such as the 'southwest')
+7) A derived class of hospital data, `hospitalCity' that represents the base raw CORGIS data, ie.e. hospital data in a place (city) (not combined)
+
+Given this data and its relationships, you need to move data and getters/setters to their appropriate locations.  You should not have *any* repeated
+data members in these classes.  You should have the minimal set of getters/setters.  You should only have certain methods (such as `addXtoRegion' in the combo level of the data representations).
+
+Once thi is complete, you will then need to tackle:
+
+1) modify parse.cpp to only have one
+```
+std::vector<shared_ptr<placeData>> read_csv(std::string filename, typeFlag fileType);
+```
+In main.cpp, instead of vectors of hospital and demographic data, create a vector of placeData and call read_csv (pass the appropriate type and in read_csv, depending upon the type, call the correct readCSVLine.  *Modify the constructor to call the correct constructor for the appropriate type*
+
+2) modify
 
 
