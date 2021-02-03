@@ -109,6 +109,8 @@ overload the relational '<' and/or '>'.
 You also need to be very careful about edge cases, i.e. there are various ways the data is represented as unknown and thus should not be included in any aggregation.  This is both in terms of summing the rating and in dividing by the total count of the data (you can consider keeping a count of all hospitals
 per state and the number of hospitals with known data values for example).
 
+You are required to represent the mortality and readmission as a type 'rating' but may choose how you would like to represent overall.
+
 Task 3
 ============
 Similar to in lab02, we want to now compare the data in various ways.  We will do this via writing *compare predicates* and using some of the built in C++ algorithms, such as max_element and min_element and sort().
