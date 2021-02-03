@@ -27,7 +27,7 @@ to reflect on the code we have and how to *simplify* that code.
 
 Good questions to consider are: <br>
 Where is there redundancy in my code?<br>
-What data is repeated of very similar? (that could potentially be simplified)<br>
+What data is repeated or very similar? (that could potentially be simplified)<br>
 where are there unique differences that must be preserved.
 
 If we look at parse.cpp for example, there are two functions that do almost the same thing:
