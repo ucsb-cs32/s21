@@ -84,14 +84,25 @@ use combo data at the county and the state level for hospital data - this repres
 Given this data and its relationships, you need to move data and getters/setters to their appropriate locations.  You should not have *any* repeated
 data members in these classes.  You should have the minimal set of getters/setters.  You should only have certain methods (such as `addXtoRegion' in the combo level of the data representations).
 
-Once thi is complete, you will then need to tackle:
+Task 1 - Use the new data types
+============
+Once this is complete, you will then need to tackle:
 
-1) modify parse.cpp to only have one
+1) modify parse.cpp to only have one function that reads in csv data into a vector of placeData
 ```
 std::vector<shared_ptr<placeData>> read_csv(std::string filename, typeFlag fileType);
 ```
 In main.cpp, instead of vectors of hospital and demographic data, create a vector of placeData and call read_csv (pass the appropriate type and in read_csv, depending upon the type, call the correct readCSVLine.  *Modify the constructor to call the correct constructor for the appropriate type*
 
-2) modify
+2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Test that your code works as expected in that it can produce the same output as lab03
+
+3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital and demographic data for the county with the lowest and highest rated hospitals.  See example print out.
+
+*Note that the new base code includes a new csv file that can be used to map city name to county.  Note that because the same city name can appear in multiple states, make sure you understand how this data is being put into the hashmap so that you can use it.  Also, there are some unincorporated areas that have hospitals that when trying to map, do not work (and likewise some city names that do not match due to spelling variations, etc.  At this time, when looping through all hospital data, 244 `cities' are not found in the map, however, 2450 are found.
+
+----
+Grading:
+(10) autograde from lab03 still work
+(90) code review - make sure to sign up for a time.  We will look for the defined types and their use!
 
 
