@@ -72,10 +72,11 @@ Task 0 - Introduce new data types
 ============
 Overall, you will be introducing new datatypes:
 1) A base class: place data (this base class will be very light weight for lab04 and store a region/place name)
-2) A derived class of place data that abstractly represents demographic data, `demogData' (only demographic data, no region/place identifiers)
-3) A derived class of demographic data, `comboDemogData' that represents combinations (aggregated) regions of demographic data (for this lab, we will
-only use combo data at the state level for demographic data, but this representation could be used for larger regions like 'the southwest', etc.)
-4) A derived class of demographic data, `demogCounty' that represents the base raw CORGIS data, i.e. demographic data in a place (county) (not combined)
+2) A derived class of place data that abstractly represents demographic data, `demogData' (only demographic data, no region/place identifiers).  This is the data that previously was repeated in both the county and state data.
+3) A derived class of demographic data, `comboDemogData' that represents combinations/aggregated regions of demographic data .  This should include any additional data, other than just demographic
+data in order to represent aggregated data and should include regionplace identifiers. For this lab, we will
+only use combo data at the state level for demographic data, but this representation should be able to be used for larger regions like 'the southwest', etc.)
+4) A derived class of demographic data, `demogCounty' that represents the base raw CORGIS data, i.e. demographic data in a place (county) (not combined).  This likewise can contain any region/place identifiers.
 5) A derived class of place data that abstractly represents hospital data,`hospitalData' (only hospital data, no region/place identifiers)
 6) A derived class of hospital data, `comboHospitalData' that represents combinations (aggregated) regions of hospital data (for this lab, we will
 use combo data at the county and the state level for hospital data - this representation could also be used for larger regions such as the 'southwest')
@@ -99,8 +100,21 @@ your code as general as possible.  Test that your code works as expected in that
 
 3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital and demographic data for the county with the lowest and highest rated hospitals.  See example print out.
 
-*Note that the new base code includes a new csv file that can be used to map city name to county.  Note that because the same city name can appear in multiple states, make sure you understand how this data is being put into the hashmap so that you can use it.  Also, there are some unincorporated areas that have hospitals that when trying to map, do not work (and likewise some city names that do not match due to spelling variations, etc.  At this time, when looping through all hospital data, 244 `cities' are not found in the map, however, 2450 are found.
-
+*Note that the new base code includes a new csv file that can be used to map city name to county.  The code also includes a method to read in this data into a helper hasmap in dataAQ:
+```
+    //helper to create aggregates from city -> county
+    std::map<string, string> cityToCounty;
+    ```
+The helper to read in this data is not in parse (because it is more a helper method to dataAQ).  Its signature is
+```
+void dataAQ::read_csvCityCounty(std::string filename) 
+```
+And note that a city is entered into the helper map as:
+```
+   string cityKey = city+state;
+   cityToCounty[cityKey] = county;
+```
+Note that because the same city name can appear in multiple states, make sure you understand how this data is being put into the hashmap (see above code snippet) so that you can use it.  Also, there are some unincorporated areas that have hospitals that when trying to map, do not work (and likewise some city names that do not match due to spelling variations, etc.  At this time, when looping through all hospital data, 244 `cities' are not found in the map, however, 2450 are found.
 ----
 Grading:<br>
 (10) autograde from lab03 still work<br>
