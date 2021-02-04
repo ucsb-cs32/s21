@@ -114,6 +114,7 @@ And note that a city is entered into the helper map as:
    string cityKey = city+state;
    cityToCounty[cityKey] = county;
 ```
+
 Note that because the same city name can appear in multiple states, make sure you understand how this data is being put into the hashmap (see above code snippet) so that you can use it.  Also, there are some unincorporated areas that have hospitals that when trying to map, do not work (and likewise some city names that do not match due to spelling variations, etc.  At this time, when looping through all hospital data, 244 `cities' are not found in the map, however, 2450 are found.
 ----
 Grading:<br>
