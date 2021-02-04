@@ -104,7 +104,7 @@ your code as general as possible.  Test that your code works as expected in that
 ```
     //helper to create aggregates from city -> county
     std::map<string, string> cityToCounty;
-    ```
+```
 The helper to read in this data is not in parse (because it is more a helper method to dataAQ).  Its signature is
 ```
 void dataAQ::read_csvCityCounty(std::string filename) 
