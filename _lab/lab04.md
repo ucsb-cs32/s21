@@ -62,6 +62,10 @@ make it easier to add any other new data that likewise is associated with a regi
 
 This will involve moving around much of the code you have.  Work slowly and use git to keep track of prior versions.
 
+Very skeleton base code to fill in:
+
+https://github.com/ucsb-cs32-w21/Lab04-STARTER
+
 Tasks
 ============
 
