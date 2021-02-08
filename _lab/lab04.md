@@ -98,7 +98,7 @@ In main.cpp, instead of vectors of hospital and demographic data, create two vec
 2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Carefully think about which type of the data various operations need to be.  Try to make
 your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab03
 
-3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital and demographic data for the county with the lowest and highest rated hospitals.  See example print out.
+3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital and demographic data for the county with highest rated hospitals in California.  See example print out.
 
 *Note that the new base code includes a new csv file that can be used to map city name to county.  The code also includes a method to read in this data into a helper hasmap in dataAQ:
 ```
@@ -116,6 +116,27 @@ And note that a city is entered into the helper map as:
 ```
 
 Note that because the same city name can appear in multiple states, make sure you understand how this data is being put into the hashmap (see above code snippet) so that you can use it.  Also, there are some unincorporated areas that have hospitals that when trying to map, do not work (and likewise some city names that do not match due to spelling variations, etc.  At this time, when looping through all hospital data, 244 *cities* are not found in the map, however, 2450 are found.
+-----
+Example print out for California counties with best hospitals:
+
+the California counties with highest hospital ratings sorted on overall: <br>
+Combined hospital data at level: Amador County in CA<br>
+includes num hospitals: 1<br>
+Overall rating (out of 5): 4.00<br>
+mortality rating: same num 2.00<br>
+readmit rating: above num 3.00<br>
+Combined hospital data at level: Lassen County in CA<br>
+includes num hospitals: 1<br>
+Overall rating (out of 5): 4.00<br>
+mortality rating: same num 2.00<br>
+readmit rating: above num 3.00<br>
+Combined hospital data at level: Placer County in CA<br>
+includes num hospitals: 3<br>
+Overall rating (out of 5): 4.00<br>
+mortality rating: error num 1.00<br>
+readmit rating: above num 3.00<br>
+...
+be able to print the top ten.
 
 ----
 Grading:<br>
