@@ -98,7 +98,7 @@ In main.cpp, instead of vectors of hospital and demographic data, create two vec
 2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Carefully think about which type of the data various operations need to be.  Try to make
 your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab03
 
-3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital and demographic data for the county with highest rated hospitals in California.  See example print out.
+3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital  data for the county with highest rated hospitals in California.  See example print out.
 
 *Note that the new base code includes a new csv file that can be used to map city name to county.  The code also includes a method to read in this data into a helper hasmap in dataAQ:
 ```
@@ -141,6 +141,7 @@ be able to print the top ten.
 ----
 Grading:<br>
 (10) autograde from lab03 still work<br>
-(90) code review - make sure to sign up for a time.  We will look for the defined types and their use!<br>
+(10) autograde from lab04 county hospital data for California<br>
+(80) code review - make sure to sign up for a time.  We will look for the defined types and their use!<br>
 
 
