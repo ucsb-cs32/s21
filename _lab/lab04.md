@@ -98,7 +98,17 @@ In main.cpp, instead of vectors of hospital and demographic data, create two vec
 2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Carefully think about which type of the data various operations need to be.  Try to make
 your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab03
 
-3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital  data for the county with highest rated hospitals in California.  See example print out.
+3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital  data for the county with highest rated hospitals in California.  Please name the method:
+```
+    void sortHospRatingHighLowForState(std::vector<comboHospitalData *>& hospHighToLow, string state);
+```
+Where state is a two letter state designator.  Sepcifically, for lab04 sort for California, the call would be:
+```
+    /* NEW - sorted hospital county info by state - Specifically, CA */
+    std::vector<comboHospitalData*> CAhospHighToLow;
+    theAnswers.sortHospRatingHighLowForState((std::vector<comboHospitalData *>& )CAhospHighToLow, "CA");
+```
+Propogate the county hospital data for the given state into the array 'hospHighToLow' inside the method in dataAQ.  See example print out below (new test case in autograder).
 
 *Note that the new base code includes a new csv file that can be used to map city name to county.  The code also includes a method to read in this data into a helper hasmap in dataAQ:
 ```
@@ -116,6 +126,7 @@ And note that a city is entered into the helper map as:
 ```
 
 Note that because the same city name can appear in multiple states, make sure you understand how this data is being put into the hashmap (see above code snippet) so that you can use it.  Also, there are some unincorporated areas that have hospitals that when trying to map, do not work (and likewise some city names that do not match due to spelling variations, etc.  At this time, when looping through all hospital data, 244 *cities* are not found in the map, however, 2450 are found.
+
 -----
 Example print out for California counties with best hospitals:
 
