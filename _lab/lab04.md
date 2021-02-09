@@ -112,7 +112,7 @@ Where state is a two letter state designator.  Sepcifically, for lab04 sort for 
     std::vector<comboHospitalData*> CAhospHighToLow;
     theAnswers.sortHospRatingHighLowForState((std::vector<comboHospitalData *>& )CAhospHighToLow, "CA");
 ```
-Propogate the county hospital data for the given state into the array 'hospHighToLow' inside the method in dataAQ.  See example print out below (new test case in autograder).
+Propogate the county hospital data for the given state into the array 'hospHighToLow' inside the method in dataAQ.  See example print out below (new test case in autograder). Your main.cpp should use this function and print out `the California counties with highest hospital ratings sorted on overall:'.
 
 *Note that the new base code includes a new csv file that can be used to map city name to county.  The code also includes a method to read in this data into a helper hasmap in dataAQ:
 ```
