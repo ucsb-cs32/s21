@@ -36,7 +36,7 @@ Introduce and modify the following classes as follows to support printing a comb
     virtual void accept(class Visitor &v) = 0;
 ```
 3) Implement the accept method for hospitalData and demogData.  It should just call visit on the visitor for the given type.
-4) Define a visitorReport class that implements the visit method for each of the two types.  For this week's lab, the visit method just print a subset of each type's data (match example data)
+4) Define a visitorReport class that implements the visit method for each of the two types.  For this week's lab, the visit method just prints a subset of each type's data (match example data)
 5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria.  Start with the state data for any state with a percentage of the population below the poverty line above a threshold:
 ```
 void dataAQ::stateReport(double thresh);
