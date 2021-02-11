@@ -100,7 +100,7 @@ std::vector<shared_ptr<placeData>> read_csv(std::string filename, typeFlag fileT
 In main.cpp, instead of vectors of hospital and demographic data, create two vector of placeData and call read_csv (pass the appropriate type and in read_csv, depending upon the type, call the correct readCSVLine).  *Modify the constructor to call the correct constructor for the appropriate type.*. Note we are still using two separate vectors but their type in main and when passed to the function should both be placeData.
 
 2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Carefully think about which type of the data various operations need to be.  Try to make
-your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab03
+your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab03.  You will need to include two specific getters for the autograder, getRegion and getState.
 
 3) Now write the new method in dataAQ to aggregate hospital data to county level hospital data (represent it as a `comboHospitalData'). See below comment about the new csv file that you can use.* Once you have county level hospital data, be able to support sort and print the county level hospital  data for the county with highest rated hospitals in California.  Please name the method:
 ```
@@ -112,7 +112,7 @@ Where state is a two letter state designator.  Sepcifically, for lab04 sort for 
     std::vector<comboHospitalData*> CAhospHighToLow;
     theAnswers.sortHospRatingHighLowForState((std::vector<comboHospitalData *>& )CAhospHighToLow, "CA");
 ```
-Propogate the county hospital data for the given state into the array 'hospHighToLow' inside the method in dataAQ.  See example print out below (new test case in autograder). Your main.cpp should use this function and print out `the California counties with highest hospital ratings sorted on overall:'.
+Propogate the county hospital data for the given state into the array 'hospHighToLow' inside the method in dataAQ.  As there are some coutnies with the same ratng, please sot based on rating then alphabetical. See example print out below (and there is a new test case in autograder - note that you will need to include two specific getters for the autograder, comboHospitalData::getRegion and getState.  comboHospitalDat::getRegion returns the region name (county if a county and state if a state). Your main.cpp should use this function and print out `the California counties with highest hospital ratings sorted on overall:'.
 
 *Note that the new base code includes a new csv file that can be used to map city name to county.  The code also includes a method to read in this data into a helper hasmap in dataAQ:
 ```
