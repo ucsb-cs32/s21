@@ -19,7 +19,7 @@ This is a two part lab.  This first half is meant to be a a very simple first pa
 Orientation
 ============
 At this point, we have a fairly complex program to read in regional data (demographic and hospital) and aggreagate that data to various levels (county and state).  
-For this week, we will introduce minor changes as an introduction to the visitor pattern.  This first pass is intended a very simple addition with minor changes to our code design (and the next lab will explore the concepts in more detail with larger code revisions). 
+For this week, we will introduce minor changes as an introduction to the visitor pattern.  This first pass is intended a very simple addition with minimal changes to our code (and the next lab will explore the concepts in more detail with larger code revisions). 
 
 With OO programming, there are some design patterns that can be used 'to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse' (https://en.wikipedia.org/wiki/Design_Patterns).  This is a rich topic which is difficult to explore in a short time.  To get a taste for the design patterns we will explore integrating the visitor design pattern into our exisiting code.  This first pass will be very simple (and not take full advantage of this pattern), and we will do further revisions next week.
 
