@@ -28,7 +28,7 @@ For this week, the goal is to make minor modifications to use the visitor patter
 
 Steps
 ============
-Introduce and modify the following classes as follows to support printing a combined report.
+Introduce and modify the following classes as follows to support printing a combined report, using the visitors pattern.
 1) Create a visitor class to be used as an interface.  This should only define pure virtual methods to visit the two types: hospitalData and demogData
 2) Modify placeData to also include a pure virtual function:
 ```
