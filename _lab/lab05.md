@@ -30,7 +30,7 @@ Steps
 ============
 Introduce and modify the following classes as follows to support printing a combined report, using the visitors pattern.
 1) Create a visitor class to be used as an interface.  This should only define pure virtual methods to visit the two types: hospitalData and demogData
-2) Modify placeData to also include a pure virtual function:
+2) Modify placeData to also include a pure virtual function (so that derived classes can accept a visitor):
 ```
     //Lab05 anything that is place data must accept a visitor (aka must be visitable)
     virtual void accept(class Visitor &v) = 0;
@@ -65,6 +65,8 @@ Hosptial Info: NM
 Overall rating (out of 5): 2.73
 -----Generated a report for a total of: 2
 ```
+
+The visitors pattern is most useful with many differnt types and different types of visitors.  We will play with these ideas next week.
 
 ------
 Scoring
