@@ -23,7 +23,7 @@ For this week, we will introduce minor changes as an introduction to the visitor
 
 With OO programming, there are some design patterns that can be used 'to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse' (https://en.wikipedia.org/wiki/Design_Patterns).  This is a rich topic which is difficult to explore in a short time.  To get a taste for the design patterns we will explore integrating the visitor design pattern into our exisiting code.  This first pass will be very simple (and not take full advantage of this pattern), and we will do further revisions next week.
 
-For this week, the goal is to make minor modifications to use the visitor pattern to print a report combining demographic and hospital data for specified data.  You could accomplish this without the visitor pattern, but our goal is to practice this pattern to explore the technologies.
+For this week, the goal is to make minor modifications to use the visitor pattern to print a report combining demographic and hospital data for specified data.  You could accomplish this without the visitor pattern, but our goal is to practice this pattern.
 
 
 Steps
