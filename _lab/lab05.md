@@ -11,11 +11,9 @@ github_org_url: https://github.com/ucsb-cs32-w21
 Goals
 =====
 
-Learning objectives. At the end of this lab, students should be able to:
+This is a two part lab.  This first half is meant to be a a very simple first pass at looking at the visitor pattern.  The purpose is to practice the pattern and associated techology (and the next lab will explore the concepts in more detail with larger code revisions).  Learning objectives. At the end of this lab, students should be able to:
 
--  Implement the visitor design pattern for the exisiting code to support two different visitors (one to report data, the other to collect data)
--  In conjunction with the visitor implementation, use helper functions to compute various statistics for the region data (mean, standard deviation and correlation coefficient)
-- Practice writing test cases to confirm the functionality of provided code
+-  Implement the visitor design pattern for the exisiting code to support a simple visitors pattern to create a combined report for data
 
 
 Orientation
