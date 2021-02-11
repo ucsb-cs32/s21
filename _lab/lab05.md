@@ -37,7 +37,7 @@ Introduce and modify the following classes as follows to support printing a comb
 ```
 3) Implement the accept method for hospitalData and demogData.  It should just call visit on the visitor for the given type.
 4) Define a visitorReport class that implements the visit method for each of the two types.  For this week's lab, the visit method just prints a subset of each type's data (match example data)
-5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria.  Start with the state data for any state with a percentage of the population below the poverty line above a threshold:
+5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria.  You must implement this by creating a visitor reporter and calling accept with this visitor on a collection of demogData and hospitalData that meets the given criteria. (You may create the selection first then call accept on all values in the collection.  The first report to create is for state data for any state with a percentage of the population below the poverty line above a threshold (stay tuned for additional reports):
 ```
 void dataAQ::stateReport(double thresh);
 ```
@@ -66,13 +66,13 @@ Overall rating (out of 5): 2.73
 -----Generated a report for a total of: 2
 ```
 
-The visitors pattern is most useful with many differnt types and different types of visitors.  We will play with these ideas next week.
+The visitor pattern is most useful with many differnt types and different types of visitors.  We will play with these ideas next week.
 
 ------
 Scoring
 --------
-This lab is meant to be simple so is worth half credit.  We will expand these technologies and do a more detailed re-design next week.
-Autograding (stay tuned) 30
-Code review/design matching lab spec 20
+This lab is meant to be simple so is worth half credit.  We will expand these technologies and do a more detailed re-design next week.<br>
+Autograding (stay tuned) 30<br>
+Code review/design matching lab spec 20<br>
 
 
