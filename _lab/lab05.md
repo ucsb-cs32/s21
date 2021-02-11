@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab05	
-ready: false
+ready: true
 desc: "Visitor Design Patern - Part 1"
 assigned: 2021-02-10
-due: 2021-02-17 23:59
+due: 2021-02-20 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
