@@ -138,19 +138,15 @@ the California counties with highest hospital ratings sorted on overall: <br>
 Combined hospital data at level: Amador County in CA<br>
 includes num hospitals: 1<br>
 Overall rating (out of 5): 4.00<br>
-mortality rating: same num 2.00<br>
-readmit rating: above num 3.00<br>
+mortality rating: same <br>
+readmit rating: above <br>
 Combined hospital data at level: Lassen County in CA<br>
 includes num hospitals: 1<br>
 Overall rating (out of 5): 4.00<br>
-mortality rating: same num 2.00<br>
-readmit rating: above num 3.00<br>
+mortality rating: same<br>
+readmit rating: above<br>
 Combined hospital data at level: Placer County in CA<br>
-includes num hospitals: 3<br>
-Overall rating (out of 5): 4.00<br>
-mortality rating: error num 1.00<br>
-readmit rating: above num 3.00<br>
-...
+...<br>
 be able to print the top ten.
 
 ----
