@@ -48,6 +48,58 @@ One of your first tasks is to make sure you understand and validate the new stat
 In addition, when given new tools, it is always good to make sure you understand the tool and validate the tool.  To do this, edit testStats1.cpp and uncomment the final 3 asserts.  You will need to find an online statistical calculator or use an external method to  compute what the correct values should be and then test the tool to make sure it is working as expected.
 
 
-Tasks - step two *Redisn *
+Tasks - step two *Redesign *
 ============
+
+The heart of this lab is to redesign the way we create aggregate data.  
+First, we will take advantage of the shared type 'placeData' and create one large shared vector of raw data:
+```
+    std::vector<shared_ptr<placeData>> pileOfData;
+```
+
+Re-write read_csv in parse.cpp to take in a reference to a vector of place data, so that you can add onto the one vector of data:
+```
+   //read in the hospital data
+    read_csv(pileOfData, "hospitals.csv", HOSPITAL);
+   
+    //read in the demographic data
+    read_csv(pileOfData, "county_demographics.csv", DEMOG); 
+```
+
+Now that we have one big pile of data, we will use the visitor design pattern to create two new visitors that we can use on the big pile of data to 
+do the correct computation for the two different types of data (hospital and demog).  For example, once you are done, the code in testStatsData1.cpp should be able to work, which just loops through the pile of data and calls accept with the two different visitor types:
+```
+  //create a visitor to combine the state data
+  visitorCombineState theStates;
+  //use visitor pattern to be able to aggregate
+  for (const auto &obj : pileOfData) {
+        obj->accept((visitorCombineState&)theStates);
+  }
+  visitorCombineCounty theCounties("simple_uscities.csv");
+  //use visitor pattern to be able to aggregate
+  for (const auto &obj : pileOfData) {
+        obj->accept((visitorCombineCounty&)theCounties);
+  }
+```
+You will need to implement these two new classes
+```
+class visitorCombineCounty : public Visitor
+class visitorCombineState : public Visitor 
+```
+As their name suggests these visitors will combine data into either state level data or county level data.  Your job is to write these classes and their associated methods.
+
+
+Tasks - step three compute statistics using the aggregate data
+============
+Once we have the aggregate data at the county and state level, we want to make vectors of specific data members to compute interesting statistics.  (You may write a gatherer visitor if you'd like).  
+
+In general, fill two vectors with matching data (ie same state or same county) and compute the mean, standard deviation and correlation coefficient to be able to fill in the table at Lab06-worksheet.  
+
+Use testStatsData1.cpp as an example to help demonstrate the general goal.
+
+Grading
+============
+(20) worksheet<br>
+(30) autograder (4 tests) <br>
+(50) code review (using visitor pattern as specified)<br>
 
