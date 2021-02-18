@@ -47,7 +47,7 @@ You will need to build this lab from a working version of lab05.
 There are new files (including the stats functions and example test cases) that can be found here: https://github.com/ucsb-cs32-w21/Lab06-STARTER
 Start by adding your files from lab05 to a new lab06 directory and add these new files as well and try to compile.  Resolve any compilation issues and complete this first task before moving on.
 
-One of your first tasks is to make sure you understand and validate the new statistical functions provided to you in stats.h/cpp.  Looking at the base code, read through the code and answer the questions at: Lab06-worksheet.  
+One of your first tasks is to make sure you understand and validate the new statistical functions provided to you in stats.h/cpp.  Looking at the base code, read through the code and answer the questions at: Lab06-worksheet (see gauchospace).  
 
 In addition, when given a new tool or set of code, it is always good to make sure you understand the tool and validate the tool is behaving as expected.  
 In particular, since our data represents population information represented as both counts and percentages, we need to make sure we use the right data with each of the tools.  In general, for the mean, you need to use the demographic counts (and pass in the total population) for the various regions.  *The mean for any given demographic data should be the same at both a county and state level.*
