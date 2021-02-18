@@ -42,6 +42,10 @@ Once you have completed the re-design, you will write additional code to then ga
 
 Tasks - step one validate statistical tool
 ============
+You will need to build this lab from a working version of lab05.
+
+There are new files (including the stats functions and example test cases) that can be found here: https://github.com/ucsb-cs32-w21/Lab06-STARTER
+Start by adding your files from lab05 to a new lab06 directory and add these new files as well and try to compile.  Resolve any compilation issues and complete this first task before moving on.
 
 One of your first tasks is to make sure you understand and validate the new statistical functions provided to you in stats.h/cpp.  Looking at the base code, read through the code and answer the questions at: Lab06-worksheet.  
 
