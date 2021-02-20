@@ -14,6 +14,7 @@ Goals
 Learning objectives. At the end of this lab, students should be able to:
 
 - Use helper functions to compute various statistics for collections (mean, standard dev. and correlation coefficient)(including a basic understanding the use of modern C++ standard algorithms used in the stats tools provided)
+- Use helper code to gather data from our exisiting classes into vectors (understand and use function pointer and function objects).
 - Understand the basic ideas of these statistics and write test cases to confirm the provided tool works as expected (including understanding when to use population)
 - Implement the visitor design pattern (part 2) to combine raw data to state and county level (re-design)
 - Use your code to answer questions about the data (specifically focused on computing correlation coefficients for various pairs of data values)
@@ -31,21 +32,21 @@ Orientation
 ============
 At this point, we have a fairly complex program to read in regional data (demographic and hospital) and aggregate that data to various levels (county and state).  
 We have considered extremums of the data and sorted the data and to understand the data, we can use some statistical methods to report information about the data.
-Specifically, you are provided with code to compute the mean, standard deviation and correlation coefficient for vectors of data.  Note that computing the correlation coefficient between two variables can indicate whether there is a relationship between those data variables.
+Specifically, you are provided with code to compute the mean, standard deviation and correlation coefficient for vectors of data.  You are also provided with a tool to gather data from pur aggregated data into vectors for ease of use when computing statistics.  Note that computing the correlation coefficient between two variables can indicate whether there is a relationship between those data variables.
 For a basic explanation see: https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/
 
 You are provided with implementations of these statistical tools that use modern standard algorithms (accumulate, inner_product, for_each and llambdas).  You should be able to read the provided code and understand how to identify the iterators and llambdas and basic functionality.  You will be asked to fill in an associated worksheet to demonstrate this knowledge. You will also be asked to write test cases to make sure these tools are behaving as expected.
 
-In addition to this new statistical tool (stats.h/cpp), for this lab we will extend our basic understanding of the visitor pattern to re-design our code to create two new visitors that allow us to combine the raw data into either state level regions or county level regions that can then be compared using the statistical tool.  This redesign will completely remove dataAQ and encapsulate the computation needed to aggregate data for the different types.  The primary task of this lab is to re-design our code and use the visitor pattern to separate the algorithm to aggregate regional data into concrete visitor algorithms.
+In addition to this new statistical tool (stats.h/cpp), the heart of this lab is to extend our basic understanding of the visitor pattern to re-design our code to create two new visitors that allow us to combine the raw data into either state level regions or county level regions that can then be compared using the statistical tool.  This redesign will completely remove dataAQ and encapsulate the computation needed to aggregate data for the different types.  The primary task of this lab is to re-design our code and use the visitor pattern to separate the algorithm to aggregate regional data into concrete visitor algorithms.
 
-Once you have completed the re-design, you will write additional code to then gather vectors of the data (at various regional levels) and compare the correlation coefficient of various data pairings.  You will fill in a table with your results
+Once you have completed the re-design, you can use the additional new tools (statTool.h/cpp and statGatherer.h) to gather vectors of the data (at various regional levels) and compare the correlation coefficient of various data pairings.  You will need to use these tools to fill out a works sheet with specific information.
 
-Tasks - step one validate statistical tool
+Tasks - step one validate the basic statistical tool
 ============
 You will need to build this lab from a working version of lab05.
 
 There are new files (including the stats functions and example test cases) that can be found here: https://github.com/ucsb-cs32-w21/Lab06-STARTER
-Start by adding your files from lab05 to a new lab06 directory and add these new files as well and try to compile.  Resolve any compilation issues and complete this first task before moving on.
+Start by adding your files from lab05 to a new lab06 directory and add these new files as well and try to compile.  Resolve any compilation issues and complete this first task before moving on. Note for the statTool and statGatherer you may need to wait until you're redesign is complete.
 
 One of your first tasks is to make sure you understand and validate the new statistical functions provided to you in stats.h/cpp.  Looking at the base code, read through the code and answer the questions at: Lab06-worksheet (see gauchospace).  
 
@@ -93,16 +94,79 @@ You will need to implement these two new classes
 class visitorCombineCounty : public Visitor
 class visitorCombineState : public Visitor 
 ```
-As their name suggests these visitors will combine data into either state level data or county level data.  Your job is to write these classes and their associated methods.  Note that for county data, we need to be able to create vectors of data for matching counties, so think about what you will need to do for demogData, to organize the counties in a way that you can pair the data with the associated aggregate hospital data.
+As their name suggests these visitors will combine data into either state level data or county level data.  Your job is to write these classes and their associated methods.  
+You will want to move the hashmaps that represent the aggregate data into these visitors, but not make the data public. So for example, for the visitorCombineState, it should include:
+```
+    private:
+    	//state maps
+        std::map<string, comboDemogData*> allStateDemogData;
+        std::map<string, comboHospitalData*> allStateHospData;
+```
+Along with getter methods returning the appropriate types needed to access this data named:
+```
+stateDmap()
+stateDmapEntry(string stateN) 
+stateHmap() const
+stateHmapEntry(string stateN) 
+````
+Note that for county data, we need to be able to create vectors of data for matching counties, so think about what you will need to do for demogData, to organize the counties in a way that you can pair the data with the associated aggregate hospital data.  For county data, you will also need to use the city->county map. Thus the complete data for visitorCombineCounty would include:
+```
+    private:
+        //map for county hospital data
+        std::map<string, comboHospitalData*> allCountyHData;
+        //map for county name to demog data
+        std::map<string, comboDemogData*> allCountyDData;
 
+        //helper map to create aggregates from city -> county
+        std::map<string, string> cityToCounty;
+```
+This visitor can and should include any method to read in the city -> county map and getters for the county data similar to the visitorCombineState (again with appropriate return types specified:
+```
+countyDmap() 
+countyDmapEntry(string countyN)
+countyHmap() 
+countyHmapEntry(string countyN)
+```
 
 Tasks - step three compute statistics using the aggregate data
 ============
-Once we have the aggregate data at the county and state level, we want to make vectors of specific data members to compute interesting statistics.  (You may write a gatherer visitor if you'd like).  
+Once we have the aggregate data at the county and state level, we want to make vectors of specific data members to compute interesting statistics.  
 
-In general, fill two vectors with matching data (ie same state or same county) and compute the mean, standard deviation and correlation coefficient to be able to fill in the table at Lab06-worksheet.  
+To help with this task, you can use statTool.h/cpp and statGatherer.h. 
+statGather.h defines functors that operate at either the county or the state level.  The included methods can be used to fill in vectors with data using function pointers.
+These methods, in turn call the appropriate
+stats method depending on if the data is only dmeographic (population) or if it is mixed demographic and hospital (sample).
 
-Use testStatsData1.cpp as an example to help demonstrate the general goal.
+```
+/*
+helper parent functor to simplify stats gathering - the role of this functor is to gather data
+into two arrays.
+Takes in:
+ -a regional level (county or state) visitor
+ -vectors to fill in
+ -varying number of function pointers for the class methods to use to fill in data
+ */
+class statGatherer {
+  public:
+    //function to gather mixed data (demographic and hospital)
+    virtual void gatherPerStats(Visitor* Regions, vector<double> &XPer, vector<double> &YPer, 
+                double (demogData::*f1)() const, double (comboHospitalData::*f2)() const) = 0;
+    //function to gather two demog datas
+    virtual void gatherPerStats(Visitor* Regions, vector<double> &XPer, vector<double> &YPer, 
+                double (demogData::*f1)() const, double (demogData::*f2)() const) = 0;
+    //function to gather two demog datas (percentages and counts - for accuracy with populations)
+    virtual int gatherBothStats(Visitor* Regions, vector<double> &XPer, vector<double> &YPer,
+                                    vector<double> &XCount, vector<double> &Ycount,
+                                    double (demogData::*f1)() const, double (demogData::*f2)() const,
+                                    int (demogData::*f3)() const, int (demogData::*f4)() const) = 0;
+};
+
+```
+
+See the code in statTool that uses these functors to fill in vectors and then call the appropriate stat functions on the data and print them out.  The example, main.cpp has two example calls (showing the instantiation of the functor and passing function pointers to class member getter functions).  You can use this example 
+to EXTEND main.cpp in orer to fill in the required work sheet for this lab.
+
+In addition, testStatsData1.cpp as an example of directly filling in data, but in general, using the model shown in main.cpp using statTool and statGatherer will make it easier for you to fill in the worksheet.  Expect additional test cases.
 
 Grading
 ============
