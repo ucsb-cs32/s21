@@ -171,6 +171,6 @@ In addition, testStatsData1.cpp as an example of directly filling in data, but i
 Grading
 ============
 (20) worksheet<br>
-(30) autograder (4 tests) <br>
+(30) autograder (3 tests - youmust provide the complete testStats1.cpp) <br>
 (50) working code + code review (using visitor pattern as specified)<br>
 
