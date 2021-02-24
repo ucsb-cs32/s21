@@ -15,7 +15,7 @@ Learning objectives. At the end of this lab, students should be able to:
 
 - Use gdb to debug buggy C++ code
 - Use valgrind to check for memory leaks
-- Use various performance metrics to measure different performance metrics (memory and timing)
+
 
 Orientation
 ============
@@ -176,15 +176,16 @@ Remember to pass in your umail address when running through gdb in order to obta
 -----
 ## Step 2: valgrind 
 
-After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind. We talked a bit about valgrind, but there's more to learn, so please now read about valgrind here at the [tools: valgrind]({{page.tools_valgrind_url}}) article on the <https://ucsb-cs32.github.io> website.
+After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind. Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
 
 
 ....
-Run `memcheck` on your <tt>{{page.prior_lab}}</tt> and ensure that you don't have any memory leaks or errors that were detected by valgrind. You should fix any errors that valgrind reports in <tt>{{page.prior_lab}}</tt>. (Note that if your program doesn't use `new` and/or `delete`, there probably won't be any.)
-
-Run each test with --leak-check=full 
+Starting with the provided versions of lecture code.  Run valgrind on both version1 and version2
 <pre>
-valgrind --leak-check=full ./testStudent00
-valgrind --leak-check=full ./testStudentRoll00
+valgrind --leak-check=full version1/a.out 300 300 out.ppm
+valgrind --leak-check=full version2/a.out 300 300 out.ppm
 etc...
 </pre>
+Report on the difference between these two code bases.
+
+Next, fix the code in version3 - you must leave the data as raw pointers (do not swap them to smart pointers). Note that it will be fairly straight forward to address many of the issues, however, one issue will require making sure that the correct destructor is used for each of the shapes.
