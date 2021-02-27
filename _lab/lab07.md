@@ -144,6 +144,7 @@ Remember to pass in your umail address when running through gdb in order to obta
 * Then think about how many of those stack frames are <em>actually</em> for the recursive function, as opposed to other functions that have been put on stack before or after.
 
 
+## Step 3: Debugging given code (further gdb exploration)
 Now grab the next set of files:
 
 and execute the following commands:
@@ -172,8 +173,7 @@ Fill in the blank with what is printed here:
 Explain in your own words what is happening with this code:
 (gdb) print exp->other->a
 
------
-## Step 2: valgrind 
+## Step 3: valgrind 
 
 After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind. Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
 
