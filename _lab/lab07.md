@@ -49,7 +49,7 @@ Step by Step
 
 The GNU debugger (a.k.a. gdb) is a very powerful tool for analyzing what your program is doing at run-time. 
 
-There is a useful tutorial at the general CS32 course website (<https://ucsb-cs32.github.io>). <b>. Referring to this tutorial will directly help you respond to the first 4 questions for this lab.
+There is a useful tutorial at the general CS32 course website (<https://ucsb-cs32.github.io>). Referring to this tutorial will directly help you respond to the first 4 questions for this lab.
 
 In general to have the output of gdb be useful, you will need to compile with the `-g` option. Add `-g` to the `CXXFLAGS` in your `Makefile`. 
 
