@@ -13,8 +13,8 @@ Goals
 
 Learning objectives. At the end of this lab, students should be able to:
 
-- Use gdb to examine buggy C++ code
-- Use valgrind to check for memory leaks
+- Use gdb to examine and fix buggy C++ code
+- Use valgrind to check for memory leaks and explore memory use
 
 Modality
 ============
