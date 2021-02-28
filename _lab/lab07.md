@@ -30,12 +30,12 @@ The tools we will play with this week include gnu's debugger gdb and valgrind.  
 1) gdb is a debugger allowing you to examine the state of your program during execution (or at the moment it crashes): https://www.gnu.org/software/gdb/
 "GDB can do four main kinds of things (plus other things in support of these) to help you catch bugs in the act:
 
-    Start your program, specifying anything that might affect its behavior.
-    Make your program stop on specified conditions.
-    Examine what has happened, when your program has stopped.
-    Change things in your program, so you can experiment with correcting the effects of one bug and go on to learn about another. 
+    Start your program, specifying anything that might affect its behavior.<br>
+    Make your program stop on specified conditions.<br>
+    Examine what has happened, when your program has stopped.<br>
+    Change things in your program, so you can experiment with correcting the effects of one bug and go on to learn about another. <br>
 
-Those programs might be executing on the same machine as GDB (native), on another machine (remote), or on a simulator. GDB can run on most popular UNIX and Microsoft Windows variants, as well as on Mac OS X."
+    Those programs might be executing on the same machine as GDB (native), on another machine (remote), or on a simulator. GDB can run on most popular UNIX and         Microsoft Windows variants, as well as on Mac OS X."
 
 A useful reference about gdb that we recommend you read: 
 https://ucsb-cs32.github.io/topics/tools_gdb/
@@ -92,6 +92,8 @@ Or copy from here:
 ###  Guidelines for Answering 
 
 Use the associated gradescope online tool to answer questions for this lab.  Note that this lab is about giving you experience with these tools.  'Cheating' really only cheats you of the opportunity to learn.
+
+https://www.gradescope.com/courses/222015/assignments/1060116
 
 
 ### Question 1
@@ -189,6 +191,7 @@ Explain in your own words what is happening for this line of code:
 Now look at the code and fix it so that when it compiles and runs it works - i.e. it does not segfault and will ouput a number. NO NOT EDIT main at ALL. 
 (Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code an modifying one other).  Submit the fixed code for autograding at the lab07Lab gradescope assignment.
 
+<stay tuned for link>
 
 ## Step 3: valgrind 
 
@@ -215,17 +218,21 @@ Next, fix the code.  Make a copy of the version2 code - you must leave the data 
 
 You will need to turn in your working solution and expect that valgrind will be run on your solution to confirm your solution.
 
+https://www.gradescope.com/courses/222015/assignments/1060111
+
 #### valgrind task 3
 
 Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Make a version4 of the code and change the loops in main to generate 1000 shapes total.  Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind.  Report the memory use and reflect briefly on why there is a change in the overall memory use.
+
+<stay tuned for possible gradescope autograder>
 
 ### Question 9
 Copy the valgrind reports and your reflections to the gradescope assignment.
 
 ------
 Grade:<br>
-gradescope worksheet (9 questions: total X)<br>
-gradescope autograder (2 autograder tests: total X)<br>
+gradescope worksheet (9 questions)<br>
+gradescope autograder (2-3 autograder tests)<br>
 
 ------
 Acknowledgements:
