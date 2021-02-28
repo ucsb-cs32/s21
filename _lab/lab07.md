@@ -140,7 +140,7 @@ Remember to pass in your umail address when running through gdb in order to obta
 * Then think about how many of those stack frames are <em>actually</em> for the recursive function, as opposed to other functions that have been put on stack before or after.
 
 
-## Step 3: Debugging given code (further gdb exploration)
+## Step 3: Debugging and fixing given code (further gdb exploration)
 
 Now grab the next set of files:
 https://github.com/ucsb-cs32-w21/lab07-STARTER
@@ -186,7 +186,8 @@ Explain in your own words what is happening for this line of code:
 ```
 
 #### submit fixed file
-Now look at the code and fix it so that when it compiles and runs it works (Consider the easiest simpliest fix so that the code works - this can be done by adding one line of code an modifying one other).  Submit the fixed code.  for autograding at the lab07Lab gradescope assignment.
+Now look at the code and fix it so that when it compiles and runs it works - i.e. it does not segfault and will ouput a number. NO NOT EDIT main at ALL. 
+(Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code an modifying one other).  Submit the fixed code for autograding at the lab07Lab gradescope assignment.
 
 
 ## Step 3: valgrind 
@@ -223,7 +224,7 @@ Copy the valgrind reports and your reflections to the gradescope assignment.
 
 ------
 Grade:<br>
-gradescope worksheet (7 questions: total X)<br>
+gradescope worksheet (9 questions: total X)<br>
 gradescope autograder (2 autograder tests: total X)<br>
 
 ------
