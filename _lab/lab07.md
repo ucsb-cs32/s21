@@ -141,26 +141,34 @@ Remember to pass in your umail address when running through gdb in order to obta
 
 
 ## Step 3: Debugging given code (further gdb exploration)
-Now grab the next set of files:
 
-and execute the following commands:
+Now grab the next set of files:
+https://github.com/ucsb-cs32-w21/lab07-STARTER
+
+or on csil:
+
+```
+cp ~zjwood/32Public/lab07GDB.zip .
+````
+
+For the code in lab07GDB compile the code and you will be executing the following commands (*Q* denotes a question to answer on the corresponding gradescope assignment):
 ```
 % gdb example
 ...
 (gdb) b example.c:33
 (gdb) r
 (gdb) print exp
-(gdb) print *exp
+*Q5* (gdb) print *exp
 (gdb) print exp->c
 (gdb) print exp->other
 (gdb) print *exp->other
-(gdb) print exp->other->a
+*Q6* (gdb) print exp->other->a
 (gdb) c
 (gdb) list
-(gdb) back <----- how did we get here?
+(gdb) back 
 (gdb) quit
 ```
-For 
+
 ### Question 5
 Fill in the blank with what is printed here:
 (gdb) print exp->other->a
@@ -169,20 +177,41 @@ Fill in the blank with what is printed here:
 Explain in your own words what is happening with this code:
 (gdb) print exp->other->a
 
+#### submit fixed file
+From this exercise.  Now look at the code and fix it so that when it compiles and runs it works.  Submit for autograding at the lab07Lab gradescope assignment.
+
+
 ## Step 3: valgrind 
 
-After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind. Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
+Once you feel comfortable with debugging, another useful tool is valgrind.
 
+Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
 
-....
-Starting with the provided versions of lecture code.  Run valgrind on both version1 and version2
+#### valgrind task 1
+Starting with the provided versions of lecture code, from: https://github.com/ucsb-cs32-w21/lab07-STARTER
+or
+```
+cp ~zjwood/32Public/testValgrindBase.zip
+````
+Compile the versions of the code in both version1 and version2 and run valgrind and copy their report into the gradescope worksheet.
 <pre>
 valgrind --leak-check=full version1/a.out 300 300 out.ppm
 valgrind --leak-check=full version2/a.out 300 300 out.ppm
-etc...
 </pre>
-Again use the gradescope form to report on the difference between these two code bases.
 
-Next, fix the code in version3 - you must leave the data as raw pointers (do not swap them to smart pointers). Note that it will be fairly straight forward to address many of the issues, however, one issue will require making sure that the correct destructor is used for each of the shapes.
+#### valgrind task 2
+Next, fix the code.  Make a copy of the version2 code - you must leave the data as raw pointers (do not swap them to smart pointers) and fix the code so that no memory is left on the heap. *Note that it will be fairly straight forward to address many of the issues, however, one issue will require making sure that the correct destructor is used for each of the shapes.*
+
+You will need to turn in your working solution and expect that valgrind will be run on your solution to confirm your solution.
+
+#### valgrind task 3
+
+Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Make a version4 of the code and change the loops in main to generate 1000 shapes total.  Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind.  Report the memory use and reflect briefly on why there is a change in the overall memory use.
 
 -----
+Grade
+gradescope worksheet (X)
+gradescope autograder (Y)
+
+Acknowledgements:
+Some of this lab is from R. Wang, some from A. Keen, some from me (Z. Wood)
