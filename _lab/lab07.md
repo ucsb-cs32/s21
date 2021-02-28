@@ -155,7 +155,7 @@ For the code in lab07GDB compile the code and you will be executing the followin
 ```
 % gdb example
 ...
-(gdb) b example.c:33
+(gdb) b example.cpp:33
 (gdb) r
 (gdb) print exp
 *Q5* (gdb) print *exp
