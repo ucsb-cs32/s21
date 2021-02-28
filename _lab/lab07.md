@@ -72,7 +72,7 @@ Before moving on, may want to just experiment with each of the following gdb com
 * `backtrace`
 * `watch` 
 
-There are examples for these commands on the [[tools: gdb]({{ page.tools_gdb_url }} page. Since you might not always know what you are looking for when debugging, experimentation is very important. 
+There are examples for these commands on the gdb entry on this (<https://ucsb-cs32.github.io>) page. Since you might not always know what you are looking for when debugging, experimentation is very important. 
 
 
 ## Step 2: Debugging someone else's code 
@@ -171,20 +171,27 @@ For the code in lab07GDB compile the code and you will be executing the followin
 
 ### Question 5
 Fill in the blank with what is printed here:
-(gdb) print exp->other->a
-
+```
+(gdb) print *exp
+```
 ### Question 6
-Explain in your own words what is happening with this code:
+Fill in the blank with what is printed here:
+```
 (gdb) print exp->other->a
+```
+### Question 7
+Explain in your own words what is happening for this line of code:
+```
+(gdb) print exp->other->a
+```
 
 #### submit fixed file
-From this exercise.  Now look at the code and fix it so that when it compiles and runs it works.  Submit for autograding at the lab07Lab gradescope assignment.
+Now look at the code and fix it so that when it compiles and runs it works (Consider the easiest simpliest fix so that the code works - this can be done by adding one line of code an modifying one other).  Submit the fixed code.  for autograding at the lab07Lab gradescope assignment.
 
 
 ## Step 3: valgrind 
 
 Once you feel comfortable with debugging, another useful tool is valgrind.
-
 Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
 
 #### valgrind task 1
