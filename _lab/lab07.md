@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab07	
-ready: false
+ready: true
 desc: "Practicing with development Tools: gdb and valgrind"
 assigned: 2021-02-24
 due: 2021-03-04 23:59
