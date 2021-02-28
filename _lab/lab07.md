@@ -206,6 +206,9 @@ valgrind --leak-check=full version1/a.out 300 300 out.ppm
 valgrind --leak-check=full version2/a.out 300 300 out.ppm
 </pre>
 
+### Question 8
+Copy the valgrind reports to the gradescope assignment.
+
 #### valgrind task 2
 Next, fix the code.  Make a copy of the version2 code - you must leave the data as raw pointers (do not swap them to smart pointers) and fix the code so that no memory is left on the heap. *Note that it will be fairly straight forward to address many of the issues, however, one issue will require making sure that the correct destructor is used for each of the shapes.*
 
@@ -215,10 +218,14 @@ You will need to turn in your working solution and expect that valgrind will be 
 
 Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Make a version4 of the code and change the loops in main to generate 1000 shapes total.  Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind.  Report the memory use and reflect briefly on why there is a change in the overall memory use.
 
-------
-Grade
-gradescope worksheet (X)
-gradescope autograder (Y)
+### Question 9
+Copy the valgrind reports and your reflections to the gradescope assignment.
 
+------
+Grade:<br>
+gradescope worksheet (7 questions: total X)<br>
+gradescope autograder (2 autograder tests: total X)<br>
+
+------
 Acknowledgements:
 Some of this lab is from R. Wang, some from A. Keen, some from me (Z. Wood)
