@@ -109,8 +109,8 @@ Now run the program with the `run` command followed by your <b>umail address</b>
 
 It will stop as soon as it encounters the segfault. Note that when you use the command `run [args]`, it takes `[args]` as the command line argument (i.e. the value of `argv[1]`). This is a necessary step in order to produce the answer Gradescope is expecting.
 
-* <b>q1a: </b>What index of the array is the program trying to access? Write your answer in <code>q1a</code>. 
-* <b>q1b: </b>What value is the program trying to store in the array when the fault occurred? Write your answer in file <code>q1b</code>
+* <b>q1a: </b>What index of the array is the program trying to access? Write your answer in <code>q1 'free response'</code>. 
+* <b>q1b: </b>What value is the program trying to store in the array when the fault occurred? Write your answer in file <code>q1 'free response'</code>
 
 ### Question 2
 
@@ -119,7 +119,6 @@ For the remainder of the questions use the debugProgram executable.
 ```
 gdb ./debugProgram 
 ```
-
 Remember to pass in your umail address when running through gdb in order to obtain the correct values.
 
 ```
@@ -127,13 +126,10 @@ Remember to pass in your umail address when running through gdb in order to obta
 ```
 
 <b>q2: </b> What is the value of the string 'a' when debugFunction1 is called?
-<br>Remember to omit the quotation marks in your answer. Write your answer to a file named <code>q2</code>.
 <br>Hint: use the <code>break</code> feature to stop the program 
 
 ### Question 3
 <b>q3: </b> What is the value of the string 'a' when debugFunction1 is called a second time?
-
-<br>Remember to omit the quotation marks in your answer. Write your answer to a file named <code>q3</code>.
 
 ### Question 4
 <b>q4: </b> How many recursive calls to recursiveFunction are in the backtrace (also called a stack trace) when variable <code> a == 100 </code> in `recursiveFunction`? Put your answer in <code>q4</code>.
