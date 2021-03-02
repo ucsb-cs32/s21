@@ -23,4 +23,5 @@ Orientation
 As C++ is (mostly) a strongly typed language, however there are often computations we would like to apply to various types, templates give us the ability to apply general compute to a variey of types.  
 
 In particular, we started this quarter with a lecture project that wrote out asci files to represent shapes (remember way back then).
+![](labImages/asciFace.png)
 
