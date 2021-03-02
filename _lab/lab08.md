@@ -50,7 +50,7 @@ void createImage
 ```
 in order to preserve the colors of shapes.
 
-The tests that the autograder will run will be included, but in genernal, make sure you can output all four image types.
+The tests that the autograder will run will be included, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown due to size!). These outputs were produced with ./a.out 200 200 out
 
 ![](labImages/outPPM.jpg)
 ![](labImages/outPGM.jpg)
