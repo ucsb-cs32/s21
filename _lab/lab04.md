@@ -89,6 +89,8 @@ use combo data at the county and the state level for hospital data - this repres
 Given this data and its relationships, you need to move data and getters/setters to their appropriate locations.  You should not have *any* repeated
 data members in these classes.  You should have the minimal set of getters/setters.  You should only have certain methods (such as *addXtoRegion* in the combo level of the data representations).
 
+![](labImages/Lab04.jpg)
+
 Task 1 - Use the new data types
 ============
 Once this is complete, you will then need to tackle:
