@@ -25,3 +25,14 @@ As C++ is (mostly) a strongly typed language, however there are often computatio
 In particular, we started this quarter with a lecture project that wrote out asci files to represent shapes (remember way back then).
 ![](labImages/asciFace.png)
 
+At this point, we are creating drawings with color data:
+![](labImages/movablejpg.jpg)
+
+However, we certainly can represent the same 'image' data as either a character (asci), black and white (boolean), greyscale (integer) or color (r, g, b).  Our first goal for this lab is to use templates to support these varous output types for our drawing program.
+
+The next big idea we are playing with is that many times when our program is running things can go wrong.  We can use assert and debugging and hope our user (and other software engineers) will be well behaved, however, we can also plan to have our programs fail gracefully if all else fails.  We will do this using exceptions.  Exception design is an art that we will only just start to experiment with.  The second half of this lab involves adding exception handling for when we issues in the drawing program.
+
+Orientation
+============
+
+
