@@ -25,7 +25,7 @@ As C++ is (mostly) a strongly typed language, however there are often computatio
 In particular, we started this quarter with a lecture project that wrote out asci files to represent shapes (remember way back then).
 ![](labImages/asciFace.png)
 
-At this point, we are creating drawings with color data:
+At this point, we are creating drawings with color data:<br>
 ![](labImages/movablejpg.jpg)
 
 However, we certainly can represent the same 'image' data as either a character (asci), black and white (boolean), greyscale (integer) or color (r, g, b).  Our first goal for this lab is to use templates to support these varous output types for our drawing program.
@@ -35,4 +35,25 @@ The next big idea we are playing with is that many times when our program is run
 Orientation
 ============
 
+Download the base code.  It is a version of our lecture code with a class to write out a color image (as we have been doing) - see image.h.
+
+You need to modify this class so that it is templated in terms of the type that the image stores.  Change all methods that operate on a 'color' to instead work on a templated type.
+
+As we will need some methods to vary for the different types, use template specialization for the following methods (only):
+```
+writeHeader
+writePixel
+```
+Modify main to test your code (test each type - see sample main) - you will also need to use template specialization in main for
+```
+void createImage
+```
+in order to preserve the colors of shapes.
+
+The tests that the autograder will run will be included, but in genernal, make sure you can output all four image types.
+
+![](labImages/outPPM.jpg)
+![](labImages/outPGM.jpg)
+![](labImages/outPBM.jpg)
+![](labImages/partialASCI.jpg)
 
