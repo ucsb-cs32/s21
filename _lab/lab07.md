@@ -230,14 +230,15 @@ Valgrind is also useful for measuring overall memory use.  This is a fun topic t
 ### Question 9
 Copy the valgrind reports and your reflections to the gradescope assignment.
 
-------
+<p>
+------<br>
 Grade:<br>
 gradescope worksheet (9 questions): <br>
 https://www.gradescope.com/courses/222015/assignments/1060116<br>
 gradescope autograder (2 autograder tests - fixed seg fault and fixed memory leak):<br>
 https://www.gradescope.com/courses/222015/assignments/1066844<br>
 https://www.gradescope.com/courses/222015/assignments/1060111<br>
-
-------
-Acknowledgements:
+<p>
+------<br>
+Acknowledgements:<br>
 Some of this lab is from R. Wang, some from A. Keen, some from me (Z. Wood)
