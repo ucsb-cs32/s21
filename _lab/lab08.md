@@ -32,7 +32,7 @@ However, we certainly can represent the same 'image' data as either a character 
 
 The next big idea we are playing with is that many times when our program is running things can go wrong.  We can use assert and debugging and hope our user (and other software engineers) will be well behaved, however, we can also plan to have our programs fail gracefully if all else fails.  We will do this using exceptions.  Exception design is an art that we will only just start to experiment with.  The second half of this lab involves adding exception handling for when we issues in the drawing program.
 
-Orientation
+Task 1
 ============
 
 Download the base code.  It is a version of our lecture code with a class to write out a color image (as we have been doing) - see image.h.
@@ -55,5 +55,14 @@ The tests that the autograder will run will be included, but in genernal, make s
 ![](labImages/outPPM.jpg)
 ![](labImages/outPGM.jpg)
 ![](labImages/outPBM.jpg)
-![](labImages/partialASCI.jpg)
+![](labImages/partialAsci.png)
+
+Task 2
+============
+
+Introduce exception handling for bad file and for polygon without enough vertices.
+
+
+
+
 
