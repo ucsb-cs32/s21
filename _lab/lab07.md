@@ -191,7 +191,8 @@ Explain in your own words what is happening for this line of code:
 Now look at the code and fix it so that when it compiles and runs it works - i.e. it does not segfault and will ouput a number. NO NOT EDIT main at ALL. 
 (Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code an modifying one other).  Submit the fixed code for autograding at the lab07Lab gradescope assignment.
 
-<stay tuned for link>
+Turn inyour fixed code here:
+https://www.gradescope.com/courses/222015/assignments/1066844
 
 ## Step 3: valgrind 
 
@@ -231,8 +232,11 @@ Copy the valgrind reports and your reflections to the gradescope assignment.
 
 ------
 Grade:<br>
-gradescope worksheet (9 questions)<br>
-gradescope autograder (2-3 autograder tests)<br>
+gradescope worksheet (9 questions): <br>
+https://www.gradescope.com/courses/222015/assignments/1060116<br>
+gradescope autograder (2 autograder tests - fixed seg fault and fixed memory leak):<br>
+https://www.gradescope.com/courses/222015/assignments/1066844<br>
+https://www.gradescope.com/courses/222015/assignments/1060111<br>
 
 ------
 Acknowledgements:
