@@ -189,7 +189,8 @@ Explain in your own words what is happening for this line of code:
 
 #### submit fixed file
 Now look at the code and fix it so that when it compiles and runs it works - i.e. it does not segfault and will ouput a number. NO NOT EDIT main at ALL. 
-(Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code an modifying one other).  Submit the fixed code for autograding at the lab07Lab gradescope assignment.
+Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code and modifying one other.  The ideal solution will preserve all functions, including parameter types and calls.  Think of this as an oportunity to practice with understanding pointers and memory allocation/management (as those are topics that often lead to seg faults).
+Submit the fixed code for autograding at the lab07Lab gradescope assignment.
 
 Turn inyour fixed code here:
 https://www.gradescope.com/courses/222015/assignments/1066844
