@@ -36,6 +36,7 @@ Task 1
 ============
 
 Download the base code.  It is a version of our lecture code with a class to write out a color image (as we have been doing) - see image.h.
+https://github.com/ucsb-cs32-w21/Lab08STARTER
 
 You need to modify this class so that it is templated in terms of the type that the image stores.  Change all methods that operate on a 'color' to instead work on a templated type.
 
