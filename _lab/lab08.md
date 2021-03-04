@@ -45,7 +45,10 @@ As we will need some methods to vary for the different types, use template speci
 writeHeader
 writePixel
 ```
-Modify main to test your code (test each type - see sample main) - you will also need to use template specialization in main for
+For the header information, see: http://paulbourke.net/dataformats/ppm/
+for an example of the difference in the header for the different image types (PPM, PGM, PBM).
+
+Modify main to test your code (test each type - see sample main) - you will also need to use template specialization in main for:
 ```
 void createImage
 ```
