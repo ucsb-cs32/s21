@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab08	
-ready: false
-desc: "Exceptions and Template Classes"
+ready: true
+desc: "Template Classes and Exceptions"
 assigned: 2021-03-03
-due: 2021-03-10 23:59
+due: 2021-03-11 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
@@ -63,8 +63,10 @@ The tests that the autograder will run will be released, but in genernal, make s
 
 Task 2
 ============
-Next, we will add some exception handling to the code.  
-Introduce exception handling for bad file and for polygon without enough vertices.
+Next, we will add some exception handling to the code. Stay tuned for exact details, but in general we will be  
+introducing exception handling for issues with output file specification and for trying to draw a polygon without enough vertices.
+
+
 
 
 
