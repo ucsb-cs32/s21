@@ -30,7 +30,7 @@ At this point, we are creating drawings with color data:<br>
 
 However, we certainly can represent the same 'image' data as either a character (asci), black and white (boolean), greyscale (integer) or color (r, g, b).  Our first goal for this lab is to use templates to support these varous output types for our drawing program.
 
-The next big idea we are playing with is that many times when our program is running things can go wrong.  We can use assert and debugging and hope our user (and other software engineers) will be well behaved, however, we can also plan to have our programs fail gracefully if all else fails.  We will do this using exceptions.  Exception design is an art that we will only just start to experiment with.  The second half of this lab involves adding exception handling for when we issues in the drawing program.
+The next big idea we are playing with is that many times when our program is running things can go wrong.  We can use assert and debugging and hope our user (and other software engineers) will be well behaved, however, we can also plan to have our programs fail gracefully if all else fails.  We will do this using exceptions.  Exception design is an art that we will only just start to experiment with.  The second half of this lab involves adding exception handling for when unexpected issues arise in the drawing program.
 
 Task 1
 ============
@@ -52,9 +52,9 @@ Modify main to test your code (test each type - see sample main) - you will also
 ```
 void createImage
 ```
-in order to preserve the colors of shapes.
+in order to preserve the colors returned by specific shapes.
 
-The tests that the autograder will run will be included, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown due to size!). These outputs were produced with ./a.out 200 200 out
+The tests that the autograder will run will be released, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
 
 ![](lab07/outPPM.jpg)
 ![](lab07/outPGM.jpg)
@@ -63,7 +63,7 @@ The tests that the autograder will run will be included, but in genernal, make s
 
 Task 2
 ============
-
+Next, we will add some exception handling to the code.  
 Introduce exception handling for bad file and for polygon without enough vertices.
 
 
