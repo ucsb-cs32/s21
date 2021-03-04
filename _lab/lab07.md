@@ -223,9 +223,7 @@ https://www.gradescope.com/courses/222015/assignments/1060111
 
 #### valgrind task 3
 
-Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Make a version4 of the code and change the loops in main to generate 1000 shapes total.  Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind.  Report the memory use and reflect briefly on why there is a change in the overall memory use.
-
-<stay tuned for possible gradescope autograder>
+Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Make a version4 of the code and change the loops in main to generate 1000 shapes total (to do this just change each loop to add 500 each of rectangles and ellipses for a total shapes of 1003 is fine with the three triangles).  Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind.  Report the memory use and reflect briefly on why there is a change in the overall memory use.
 
 ### Question 9
 Copy the valgrind reports and your reflections to the gradescope assignment.
