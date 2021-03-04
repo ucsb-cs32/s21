@@ -23,10 +23,10 @@ Orientation
 As C++ is (mostly) a strongly typed language, however there are often computations we would like to apply to various types, templates give us the ability to apply general compute to a variey of types.  
 
 In particular, we started this quarter with a lecture project that wrote out asci files to represent shapes (remember way back then).
-![](lab07/asciFace.png)
+![](lab08/asciFace.png)
 
 At this point, we are creating drawings with color data:<br>
-![](lab07/movablejpg.jpg)
+![](lab08/movablejpg.jpg)
 
 However, we certainly can represent the same 'image' data as either a character (asci), black and white (boolean), greyscale (integer) or color (r, g, b).  Our first goal for this lab is to use templates to support these varous output types for our drawing program.
 
@@ -56,10 +56,10 @@ in order to preserve the colors returned by specific shapes.
 
 The tests that the autograder will run will be released, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
 
-![](lab07/outPPM.jpg)
-![](lab07/outPGM.jpg)
-![](lab07/outPBM.jpg)
-![](lab07/partialAsci.png)
+![](lab08/outPPM.jpg)
+![](lab08/outPGM.jpg)
+![](lab08/outPBM.jpg)
+![](lab08/partialAsci.png)
 
 Task 2
 ============
