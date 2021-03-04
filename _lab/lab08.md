@@ -14,8 +14,8 @@ Goals
 Learning objectives. At the end of this lab, students should be able to:
 
 - Add functionality to exisiting code base that draws 2D shapes (lecture project)
+- Add to an exisiting class (representing an image) to make it templated (able to produce either .ppm, .pgm, .pbm or .txt, including practicing using template specialization)
 - Introduce Exceptions to an exisitng code base to demonstrate handling odd behavior with grace
-- Add to an exisiting class (representing an image) to make it templated (able to produce either .ppm, .pgm, .pbm or .txt, including template specialization
 
 Orientation
 ============
