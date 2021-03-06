@@ -72,6 +72,12 @@ validates whether all shapes can be drawn as expected.  Add a pure virtual metho
 validate
 ```
 and before creating an image, validate that all shapes are drawable. (The example fullmain.cpp file includes an example).
+```
+		//prior to creating image test all valid
+		for (auto s : theShapes) {
+			s->validate();
+		}
+```
 
 For each concrete class, use try and catch (potentially nested - consider your design) such that the following is true:
 1) If an ellipse has a center vertex with a value less than zero, a warning is printed and the color of the ellipse is changed to black
@@ -86,6 +92,69 @@ A red re-coloring has priority.
 An example main.cpp is provided demonstrating the testing we expect your code to support.
 
 *Note that the general approach to handle concave polygons is to turn it into a set triangles.  We will skip the full solution for this lab and only create one triangle.
+
+The example main includes:
+```
+	/* four polygons - 2 concave */
+	shared_ptr<Polygon> t2 = make_shared<Polygon>(vec2(50, 50), 5, color(250)) ;
+	t2->addVert(vec2(75, 25));
+	t2->addVert(vec2(100, 50));
+	t2->addVert(vec2(100, 100));
+	t2->addVert(vec2(50, 100));
+
+	shared_ptr<Polygon> t3 = make_shared<Polygon>(vec2(200, 50), 5, color(250)) ;
+	t3->addVert(vec2(225, 75));
+	t3->addVert(vec2(250, 50));
+	t3->addVert(vec2(250, 100));
+	t3->addVert(vec2(200, 100));
+
+	shared_ptr<Polygon> t4 = make_shared<Polygon>(vec2(50, 200), 5, color(250)) ;
+	t4->addVert(vec2(100, 200));
+	t4->addVert(vec2(100, 250));
+	t4->addVert(vec2(50, 250));
+
+	shared_ptr<Polygon> t5 = make_shared<Polygon>(vec2(200, 200), 5, color(250)) ;
+	t5->addVert(vec2(210, 240));
+	t5->addVert(vec2(250, 250));
+	t5->addVert(vec2(200, 250));
+
+	theShapes.push_back(t2);
+	theShapes.push_back(t3);
+	theShapes.push_back(t4);
+	theShapes.push_back(t5);
+	
+	/*ellipse with zero divisor*/
+	theShapes.push_back(make_shared<Implicit2D>(vec2(150, 150), 0.0, 14, color(250)));	
+	
+	//rect with reversed corners
+	theShapes.push_back(make_shared<Rect>(vec2(170, 80), vec2(120, 60), color(250), 8));
+
+	/*polygon out of bounds */
+	shared_ptr<Polygon> t6 = make_shared<Polygon>(vec2(-10, 150), 5, color(250)) ;
+	t6->addVert(vec2(10, 130));
+	t6->addVert(vec2(10, 170));
+	theShapes.push_back(t6);
+
+	/*ellipse out of bounds*/
+	theShapes.push_back(make_shared<Implicit2D>(vec2(150, -2), 4, 28, color(250)));	
+
+	//rect out of bounds and inverted vertices */
+	theShapes.push_back(make_shared<Rect>(vec2(10, 210), vec2(-10, 240), color(250), 4));
+
+	/*ellipse out of bounds and zero radius! */
+	theShapes.push_back(make_shared<Implicit2D>(vec2(-2, 50), 40, 0, color(250)));	
+
+	/*polygon out of bounds  and concave!*/
+	shared_ptr<Polygon> t7 = make_shared<Polygon>(vec2(-10, 250), 5, color(250)) ;
+	t7->addVert(vec2(50, 290));
+	t7->addVert(vec2(140, 300));
+	t7->addVert(vec2(-10, 300));
+	theShapes.push_back(t7);
+  ```
+  
+Expected output for the example main is:
+![](fixPPM.jpg)
+
 -------
 
 
