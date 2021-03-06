@@ -48,13 +48,13 @@ writePixel
 For the header information, see: http://paulbourke.net/dataformats/ppm/
 for an example of the difference in the header for the different image types (PPM, PGM, PBM).
 
-Modify main to test your code (test each type - see sample main) - you will also need to use template specialization in main for:
+Modify both main.cpp and createImage.h to test your code (test each type - see sample main) - you will also need to use template specialization in createImage.h for:
 ```
 void createImage
 ```
 in order to preserve the colors returned by specific shapes.
 
-The tests that the autograder will run will be released, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
+The tests that the autograder will run are shown in TestmainPart.cpp, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
 
 ![](outPPM.jpg)
 ![](outPGM.jpg)
