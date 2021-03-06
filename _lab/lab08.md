@@ -63,8 +63,33 @@ The tests that the autograder will run will be released, but in genernal, make s
 
 Task 2
 ============
-Next, we will add some exception handling to the code. Stay tuned for exact details, but in general we will be  
-introducing exception handling for issues with output file specification and for trying to draw a polygon without enough vertices.
+Next, we will add some exception handling to the code. Mostly our goal is to create a drawing if we can, even if the user makes an error in their specification.
+We will use exceptions to try to catch and warn about issues but also proceed with drawing as best we can.
+
+First be sure you have the most recent version of polygon.h/cpp as it has a useful helper function.  In general, you need to add a step prior to drawing which
+validates whether all shapes can be drawn as expected.  Add a pure virtual method to shape called
+```
+validate
+```
+and before creating an image, validate that all shapes are drawable. (The example fullmain.cpp file includes an example).
+
+For each concrete class, use try and catch (potentially nested - consider your design) such that the following is true:
+1) If an ellipse has a center vertex with a value less than zero, a warning is printed and the color of the ellipse is changed to black
+2) If an ellipse has either radius specified as zero (such that evaluate function will have a divide by zero exception), warn and change the zero valued radius to 2 and color the ellipse red.
+3) If a rectangle has any of its vertices with values less than zero,  a warning is printed and the color of the rectangle is changed to black
+4) If a rectangle is created with its vertices out of order (i.e. first vertex is not upper left values) the vertices are correctly ordered (for proper drawing) and color the rectangle red.
+5) If a polygon has any of its vertices with values less than zero,  a warning is printed and the color of the polygon is changed to black
+6) If a polygon is concave, our drawing method will fail (as is*), thus, print a warning, change the polygon to be a triangle formed by the first, second and final vertex and color the polygon red. (Note a helper function to detect concave polygons is provided in the new code, make sure you have it
+
+A red re-coloring has priority.
+
+An example main.cpp is provided demonstrating the testing we expect your code to support.
+
+*Note that the general approach to handle concave polygons is to turn it into a set triangles.  We will skip the full solution for this lab and only create one triangle.
+-------
+
+
+
 
 
 
