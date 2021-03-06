@@ -71,7 +71,7 @@ validates whether all shapes can be drawn as expected.  Add a pure virtual metho
 ```
 validate
 ```
-and before creating an image, validate that all shapes are drawable. (The example fullmain.cpp file includes an example).
+and before creating an image, validate that all shapes are drawable. (The example TestmainPartial.cpp file includes an example).
 ```
 		//prior to creating image test all valid
 		for (auto s : theShapes) {
@@ -89,11 +89,11 @@ For each concrete class, use try and catch (potentially nested - consider your d
 
 A red re-coloring has priority.
 
-An example main.cpp is provided demonstrating the testing we expect your code to support.
+A partial example main.cpp (called TestmainPartial.cpp) is provided demonstrating the testing we expect your code to support.
 
 *Note that the general approach to handle concave polygons is to turn it into a set triangles.  We will skip the full solution for this lab and only create one triangle.
 
-The example main includes:
+The example partial main includes the following shapes:
 ```
 	/* four polygons - 2 concave */
 	shared_ptr<Polygon> t2 = make_shared<Polygon>(vec2(50, 50), 5, color(250)) ;
@@ -152,7 +152,7 @@ The example main includes:
 	theShapes.push_back(t7);
   ```
   
-Expected output for the example main is:
+Expected output for the example TestmainPartial is:
 ![](fix.jpg)
 
 -------
