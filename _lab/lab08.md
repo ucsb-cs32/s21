@@ -79,15 +79,15 @@ and before creating an image, validate that all shapes are drawable. (The exampl
 		}
 ```
 
-For each concrete class, use try and catch (potentially nested - consider your design) such that the following is true:
-1) If an ellipse has a center vertex with a value less than zero, a warning is printed and the color of the ellipse is changed to black
-2) If an ellipse has either radius specified as zero (such that evaluate function will have a divide by zero exception), warn and change the zero valued radius to 2 and color the ellipse red.
-3) If a rectangle has any of its vertices with values less than zero,  a warning is printed and the color of the rectangle is changed to black
-4) If a rectangle is created with its vertices out of order (i.e. first vertex is not upper left values) the vertices are correctly ordered (for proper drawing) and color the rectangle red.
-5) If a polygon has any of its vertices with values less than zero,  a warning is printed and the color of the polygon is changed to black
-6) If a polygon is concave, our drawing method will fail (as is*), thus, print a warning, change the polygon to be a triangle formed by the first, second and final vertex and color the polygon red. (Note a helper function to detect concave polygons is provided in the new code, make sure you have it
+For each concrete class, use try and catch (potentially nested - consider your design) such that the following is true:<br>
+1) If an ellipse has a center vertex with a value less than zero, a warning is printed and the color of the ellipse is changed to black<br>
+2) If an ellipse has either radius specified as zero (such that evaluate function will have a divide by zero exception), warn and change the zero valued radius to 2 and color the ellipse red.<br>
+3) If a rectangle has any of its vertices with values less than zero,  a warning is printed and the color of the rectangle is changed to black<br>
+4) If a rectangle is created with its vertices out of order (i.e. first vertex is not upper left values) the vertices are correctly ordered (for proper drawing) and color the rectangle red.<br>
+5) If a polygon has any of its vertices with values less than zero,  a warning is printed and the color of the polygon is changed to black<br>
+6) If a polygon is concave, our drawing method will fail (as is*), thus, print a warning, change the polygon to be a triangle formed by the first, second and final vertex and color the polygon red. (Note a helper function to detect concave polygons is provided in the new code, make sure you have it<br>
 
-A red re-coloring has priority.
+A red re-coloring has priority.<br>
 
 A partial example main.cpp (called TestmainPartial.cpp) is provided demonstrating the testing we expect your code to support.
 
@@ -152,10 +152,14 @@ The example partial main includes the following shapes:
 	theShapes.push_back(t7);
   ```
   
-Expected output for the example TestmainPartial is:
+Expected output for the example TestmainPartial is:<br>
 ![](fix.jpg)
 
 -------
+
+Grading:<br>
+(60) autograders (correct run with images of various types and correct run with shapes specified with errors)<br>
+(40) code review (offline not in person) evaluating correct output for the poorly formed shapes and all output files correct<br>
 
 
 
