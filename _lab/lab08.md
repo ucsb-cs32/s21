@@ -153,7 +153,7 @@ The example main includes:
   ```
   
 Expected output for the example main is:
-![](fixPPM.jpg)
+![](fix.jpg)
 
 -------
 
