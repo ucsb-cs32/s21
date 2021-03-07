@@ -175,7 +175,7 @@ writing an image of size: 300 300 to: out
 
 Grading:<br>
 (60) autograders (correct run with images of various types and correct run with shapes specified with errors)<br>
-(40) code review (offline not in person) evaluating correct output for the poorly formed shapes and all output files correct<br>
+(40) code review (offline not in person) evaluating correct visual output for the poorly specified shapes and all templated image output files correct<br>
 
 
 
