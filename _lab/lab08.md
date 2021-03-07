@@ -54,7 +54,7 @@ void createImage
 ```
 in order to preserve the colors returned by specific shapes.
 
-The tests that the autograder will run are shown in TestmainPart.cpp, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
+The tests that the autograder will run are shown in TestmainPartial.cpp, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
 
 ![](outPPM.jpg)
 ![](outPGM.jpg)
