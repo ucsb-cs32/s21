@@ -155,6 +155,22 @@ The example partial main includes the following shapes:
 Expected output for the example TestmainPartial is:<br>
 ![](fix.jpg)
 
+The tex output for the errors for the above TestmainPartial would be:
+```
+polygon concave
+polygon concave
+ellipse divide zero
+rect order incorrect
+polygon vert less zero
+ellipse center less zero
+rect vert less zero
+rect order incorrect
+ellipse center less zero
+ellipse divide zero
+polygon vert less zero
+polygon concave
+writing an image of size: 300 300 to: out
+```
 -------
 
 Grading:<br>
