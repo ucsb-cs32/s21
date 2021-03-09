@@ -52,7 +52,7 @@ Modify createImage.h (then you can use TestmainPartial.cpp as your main once you
 ```
 void createImage
 ```
-in order to preserve the colors returned by specific shapes.
+in order to set the templated values in the image.  In general, for a color image, use the colors returned by specific shapes, for a greyscale image, use the scaled brightness of the shape's color to set the greyscale value, for a black and white image and an asci image use the value of 'inC' as the interior value.
 
 The tests that the autograder will run are shown in TestmainPartial.cpp, but in genernal, make sure you can output all four image types: color, greyscale, black and white and asci (only partial image shown below due to size!). These outputs were produced with ./a.out 200 200 out
 
