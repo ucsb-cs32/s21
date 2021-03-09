@@ -48,7 +48,7 @@ writePixel
 For the header information, see: http://paulbourke.net/dataformats/ppm/
 for an example of the difference in the header for the different image types (PPM, PGM, PBM).
 
-Modify both main.cpp and createImage.h to test your code (test each type - see sample main) - you will also need to use template specialization in createImage.h for:
+Modify createImage.h (then you can use TestmainPartial.cpp as your main once you uncomment the code - this would then completely replace main.cpp). You will also need to use template specialization in createImage.h for:
 ```
 void createImage
 ```
