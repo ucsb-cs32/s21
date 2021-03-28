@@ -8,15 +8,14 @@ remote_theme: ucsb-cs-course-repos/course-repo-jekyll-theme@pcmultlectwithmaster
 
 
 url: https://ucsb-cs32.github.io 
-baseurl: "/w21"
+baseurl: "/s21"
 
 course: "CS32"
-qtr: "W21"
-quarter: "Winter 2021"
-piazza_url: https://piazza.com/ucsb/fall2020/cs32/home
-gauchospace_course_page: https://gauchospace.ucsb.edu/courses/course/view.php?id=104979
+qtr: "S21"
+quarter: "Spring 2021"
+gauchospace_course_page: https://gauchospace.ucsb.edu/
 gradescope_class_url: https://gradescope.com
-piazza: https://piazza.com/ucsb/winter2021/cs32w21
+piazza: https://piazza.com/ucsb/winter2021/cs32s21
 
 
 instructor_name: "Zoë Wood"
@@ -26,7 +25,7 @@ mentors_list: "Alan, Bethany, and Qiru"
 mentors_list_full: "Alan Roddick, Bethany Long, Qiru Hu"
 discussion_section_times: "noon, 1pm"
 
-github_url: https://github.com/ucsb-cs32/w21
+github_url: https://github.com/ucsb-cs32/s21
 mentor_url:
 
 on_campus: http://proquest.safaribooksonline.com
@@ -34,19 +33,19 @@ off_campus: http://proquest.safaribooksonline.com.proxy.library.ucsb.edu:2048
 
 
 start_week: 1
-start_date: 2021-01-03
+start_date: 2021-03-28
 num_weeks: 10
 extra_exam_week: true
 
 cal_dates: >
   [
-    {"label":"W21 1st day of instruction", "date":"2021-01-04" },	
-    {"label":"Univ Holiday", "date":"2021-01-18" , "holiday": true},
-    {"label":"Univ Holiday", "date":"2021-01-15" , "holiday": true},
-    {"label":"W21 instruction ends", "date":"2021-03-12" },
-    {"label":"W21 finals start", "date":"2021-03-13" },
-    {"label":"W21 finals end", "date":"2021-03-19" },
-    {"label":"W21 qtr ends", "date":"2021-03-19" }
+    {"label":"S21 1st day of instruction", "date":"2021-03-29" },	
+    {"label":"Univ Holiday", "date":"2021-05-31" , "holiday": true},
+    {"label":"S21 instruction ends", "date":"2021-06-04" },
+    {"label":"S21 finals start", "date":"2021-06-05" },
+    {"label":"CS156 Final noon-3pm", "date":"2021-06-08" },
+    {"label":"W21 finals end", "date":"2021-06-11" },
+    {"label":"W21 qtr ends", "date":"2021-06-11" }
   ]
 
 
