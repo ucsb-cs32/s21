@@ -19,6 +19,7 @@ your ability to:
 -   Create a basic Makefile from scratch
 -   Do some simple C++ programming as review of C++ basics, and as
     preliminary work towards understanding testing and arrays
+-   Do some simple editing of base code (*)
 -   Submit work using the Gradescope system
 
 Step by Step
