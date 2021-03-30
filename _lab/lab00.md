@@ -832,7 +832,20 @@ To be very clear, code like this will pass on Gradescope, BUT REPRESENTS A FORM 
 
 I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of "academic dishonesty". Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties. If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.
 
-Step 7: Submitting via Gradescope
+Step 7: Ading a little bit of code
+--------------------------------------------
+One final task for lab00 is to test another set of base code (that will we will build up to be our larger lab project).  Download the code and make the following additions:
+
+
+-
+-
+-
+
+
+
+
+
+Step 8: Submitting via Gradescope
 --------------------------------
 
 The lab assignment "lab00" should appear in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.
@@ -856,12 +869,13 @@ one of those labs.
 Gradescope automated
 -------------------
 
--   (80 pts) lab00Test passed Gradescope tests
+-   (40 pts) lab00Test passed Gradescope tests
 -   (20 pts) helloWorld passed Gradescope tests
+-   (40 pts) codeAddition passed Gradescope tests
 
 Acknowledgements
 ================
 
 Some material in this lab is based on work originally written by Mike
 Costanzo and edited by Phill Conrad, and Richert Wang. Other parts are
-original work of Phill Conrad.   Small language edits by Zoë Wood.
+original work of Phill Conrad.   Step 7 and language edits by Zoë Wood.
