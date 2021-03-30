@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab01	
-ready: true
+ready: false
 desc: "C++ class design to support CSV data"
-assigned: 2021-01-13 
-due: 2021-01-20 23:59
+assigned: 2021-04-13 
+due: 2021-04-20 23:59
 github_org_url: https://github.com/ucsb-cs32-w21
 ---
 
