@@ -5,7 +5,7 @@ ready: false
 desc: "Review of C++ basics, Makefiles, Gradescope"
 assigned: 2021-03-30 
 due: 2021-04-07 23:59
-github_org_url: https://github.com/ucsb-cs32-w21
+github_org_url: https://github.com/ucsb-cs32-s21
 ---
 
 Goals
@@ -19,7 +19,7 @@ your ability to:
 -   Create a basic Makefile from scratch
 -   Do some simple C++ programming as review of C++ basics, and as
     preliminary work towards understanding testing and arrays
--   Do some simple editing of base code (*)
+-   Do some simple editing of base code related to lecture project
 -   Submit work using the Gradescope system
 
 Step by Step
@@ -119,53 +119,8 @@ should have access to the autograding system. You should see "CMPSC
 
 The lab assignment "Lab00" should appear in your Gradescope dashboard in CMPSC 32. 
 
-### Step 0d: Decide: Working solo or pair?
 
-This lab may be done solo, or in pairs.
-
-Before you begin working on the lab, please decide if you will work solo or with a partner.
-
-If you decide to work with a partner:
-
-* Review the following explanation on [pair programming and Falco's strong-style pair programming](https://tobeagile.com/2017/01/11/strong-style-pairing/).
-* Make an agreement to be respectful and work together to maximize your learning benefit.
-* There are many ways to do pair programming and we encourage you to:
-    * Try and find a partner that is of a similar skill level (or similar confidence) with C++ programming.
-    * Try and find a style that works best for you and your partner.
-        * Many pairs find that switching roles is best done once per "step".
-        * Others may find switching roles after 10, 15, or 20 minute increments works better.
-
-The following arrangement is <strong>NOT OK</strong>.
-
-* Student A and Student B form a pair.
-* Student A works on the lab alone on Wednesday night.
-* Student B obtains the work Student A did on Thursday night and works alone to finish the lab.
-
-<strong>This is *NOT* how pair programming is done!</strong>
-
-There are a few requirements you must follow if you decide to work with a partner:
-
-* You and your partner must agree to work together outside of lab
-  section in case you do not finish the lab during your lab
-  section. You must agree to reserve at least two hours outside of lab
-  section to work together if needed.
-  You are responsible for exchanging contact information in
-  case you need to reach your partner.
-
-* If you choose to work with a partner for a future lab where pair
-  programming is allowed, you may be required to choose a partner you have not
-  worked with before.
-
-* You MUST add your partner on Gradescope when submitting your work <strong>*<u>EACH TIME</u>*</strong> you submit a file(s).
-  After uploading your file(s) on Gradescope, there is a "Group Members" link at the bottom (or "Add Group Member" under "Groups")
-  where you can select the partner you are working with. Whoever uploaded the submission must make sure your partner is part of
-  your Group. Click on "Group Members" -> "Add Member" and select your partner from the list.
-
-* <b> You must</b> write your Name(s) and Perm number on each file submitted to Gradescope.
-
-Once you and your partner are in agreement, choose an initial driver and navigator, and have the driver log into their account.
-
-### Step 0e: On CSIL, create your `~/cs32/lab00` directory
+### Step 0d: On CSIL, create your `~/cs32/lab00` directory
 
 Create a `~/cs32/lab00` directory and make it your current directory. You
 should already know how to do this from previous courses, but in case you need a reminder:
@@ -273,7 +228,7 @@ The first thing we should do is edit our Makefile using emacs or vim, or whateve
 -   `emacs Makefile`, OR
 -   `vim Makefile`
 
-On the first line of the file, put this, substituting your name (and that of your pair partner(s) if applicable, for YOUR NAME(S) HERE, as appropriate:
+On the first line of the file, put this, substituting your name  for YOUR NAME(S) HERE, as appropriate:
 
     # Makefile for lab00, YOUR NAME(S) HERE, CS32, W21
 
@@ -834,16 +789,54 @@ I would hope this would be obvious, but I have to say it so that there is no amb
 
 Step 7: Ading a little bit of code
 --------------------------------------------
-One final task for lab00 is to test another set of base code (that will we will build up to be our larger lab project).  Download the code and make the following additions:
+One final task for lab00 is to test another set of base code (that will we will build up to be our larger lab project).  Download the code from the github:
+https://github.com/ucsb-cs32-s21/Lab00-step7-STARTER
+
+If you are set up to use git from the command line, you will be cloning: git@github.com:ucsb-cs32-s21/Lab00-step7-STARTER.git
+
+As a reminder: If you are not familiar with git, I highly recommend learning this skill since this will be extremely valuable when collaborating on large software projects. More information on git can be found here: https://ucsb-cs32.github.io/topics/git/.
+
+Once you have the files (and have created a git repo for this lab like last week), take a look at the files.
+
+Compile the code and look at it to get a sense of what it does.  
 
 
--
--
--
+Working with real world data allows us to use computing to ask questions and learn about our world. It also allows us to practice design and implementation of object oriented projects. This week's lab is the first step in our larger project related to using various data sources to learn about the United States. This project and later additions will use the CORGIS datasets (The Collection of Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
 
+You will be provided with base code, written in C++ that reads in a CSV file representing county demographic data (demographic data relates to the structure of a population). The data file we will use is included in the base code and is named "county_demographics.csv."
 
+Before you do anything else, goto the web page and take a quick look at all the data this csv file includes: https://corgis-edu.github.io/corgis/csv/county_demographics/
 
+Which aspects of this demographic data is most interesting to you?
 
+We will only work with some of this data this quarter. For today, we will only work with the data related to the age and education level of each county's population.
+
+*Right now this is 'prototype' code - ripe for additions and revisions, which we will work this quarter*
+
+For today, make sure you look at main.cpp and parse.cpp and understand how data is being inserted into vectors from the CSV file.
+
+When you execute the main program 'dataProj' - it prints out the county name and population over the age of 65 for the first 50 counties... something like:
+```
+zoes-mbp:lab00-step7-STARTER zwood$ ./dataProj
+County: Autauga County Percent population over 65: 13.8
+County: Baldwin County Percent population over 65: 18.7
+County: Barbour County Percent population over 65: 16.5
+County: Bibb County Percent population over 65: 14.8
+County: Blount County Percent population over 65: 17
+County: Bullock County Percent population over 65: 14.9
+```
+
+Your task for today is to add the necessary code to also capture the population under age 18 and find and print the population information for
+Santa Barbara county.  When youre revisions are complete, executing dataProj, should report:
+
+```
+**Info about SB County**: Santa Barbara County Percent population over 65: <DATA>
+ Percent population under 18: <DATA>
+ ````
+Where <DATA> is replaced with real values.
+
+There will be an autograder test similar to testDemog1.cpp (but with the population under 18 vectors in use, which are commented out in the base code).
+....
 
 Step 8: Submitting via Gradescope
 --------------------------------
