@@ -853,7 +853,7 @@ For this portion of the lab, you will need to upload your modified files (i.e. *
 If you already submitted something on Gradescope, it will take you to their "Autograder Results" page. There is a "Resubmit" button on the bottom right that will allow you to update the files for your submission.
 
 
-2) Second, "lab00-step7" will also be found in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.  For this portion of the lab, you will need to upload your modified files (i.e. *`*main.cpp`**, **`parse.cpp`** and **`parse.h`** ). 
+2) Second, "lab00-step7" will also be found in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.  For this portion of the lab, you will need to upload your modified files (i.e. **`parse.cpp`** and **`parse.h`** ). 
 
 For this lab, if everything the autograder tests are correct, you'll see a successful submission passing all of the autograder test for both portions.  Then be sure to fill in the data requested in step 7 for Santa Barbara.
 
