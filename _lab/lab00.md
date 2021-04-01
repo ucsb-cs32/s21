@@ -837,9 +837,10 @@ To accomplish this task:
 **Info about SB County**: Santa Barbara County Percent population over 65: <DATA>
  Percent population under 18: <DATA>
  ````
-Where <DATA> is replaced with real values.
+Where <DATA> is replaced with real values.  Fill in the values here: https://www.gradescope.com/courses/259718/assignments/1144611/submissions
+    
 
-There will be an autograder test similar to testDemog1.cpp (but with the population under 18 vectors in use, which are commented out in the example code - but are included for you to uncomment once your changes are complete to test!).
+There is an autograder test similar to testDemog1.cpp (but with the population under 18 vectors in use, which are commented out in the example code - but are included for you to uncomment once your changes are complete to test!).
 
 
 Step 8: Submitting via Gradescope
