@@ -827,7 +827,11 @@ County: Bullock County Percent population over 65: 14.9
 ```
 
 Your task for today is to add the necessary code to also capture the population under age 18 and find and print the population information for
-Santa Barbara county.  When youre revisions are complete, executing dataProj, should report:
+Santa Barbara county. 
+
+To accomplish this task:
+1) modify main.cpp and parse.cpp to support collecting a vector of the data associated with the population under age 18.  Specifically, modify the two functions in parse.cpp (and parse.h) to also collect this data. And modify main.cpp to declare and pass this new vector.
+2) Modify main.cpp by adding code to now find and print the age population data about __Santa Barbara County__ - You will be asked to turn in a 'lab report' via gradescope to be able to report this data.  When your revisions are complete, executing dataProj, should report:
 
 ```
 **Info about SB County**: Santa Barbara County Percent population over 65: <DATA>
@@ -835,28 +839,29 @@ Santa Barbara county.  When youre revisions are complete, executing dataProj, sh
  ````
 Where <DATA> is replaced with real values.
 
-There will be an autograder test similar to testDemog1.cpp (but with the population under 18 vectors in use, which are commented out in the base code).
+There will be an autograder test similar to testDemog1.cpp (but with the population under 18 vectors in use, which are commented out in the example code - but are included for you to uncomment once your changes are complete to test!).
 
 
 Step 8: Submitting via Gradescope
 --------------------------------
 
-The lab assignment "lab00" should appear in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.
+The lab assignment you will be making submission to gradescope:
+1) First, "lab00" should appear in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.
 
-For this lab, you will need to upload your modified files (i.e. **`Makefile`** and **`arrayFuncs.cpp`**). For this lab, you are <b>required</b> to submit your files with your github repo.
+For this portion of the lab, you will need to upload your modified files (i.e. **`Makefile`** and **`arrayFuncs.cpp`**). For this lab, you are <b>required</b> to submit your files with your github repo.
 
 If you already submitted something on Gradescope, it will take you to their "Autograder Results" page. There is a "Resubmit" button on the bottom right that will allow you to update the files for your submission.
 
-For this lab, if everything is correct, you'll see a successful submission passing all of the autograder tests.
 
-**Remember to add your partner to Groups Members for this submission on Gradescope if applicable. At this point, if you worked in a pair, it is a good idea for both partners to log into Gradescope and see if you can see the uploaded files for Lab00.**
+2) Second, "lab00-step7" will also be found in your Gradescope dashboard in CMPSC 32. If you haven't submitted anything for this assignment yet, Gradescope will prompt you to upload your files.  For this portion of the lab, you will need to upload your modified files (i.e. *`*main.cpp`**, **`parse.cpp`** and **`parse.h`** ). 
+
+For this lab, if everything the autograder tests are correct, you'll see a successful submission passing all of the autograder test for both portions.  Then be sure to fill in the data requested in step 7 for Santa Barbara.
 
 
 Grading Rubric
 ==============
 
-This lab is based entirely on the grade assigned by Gradescope. There
-may be labs this quarter where code style is assessed, but this is not
+This lab is based entirely on the grade assigned by Gradescope (via the autograder and the online 'lab report' to fill in the data about Santa Barbara. There will be labs this quarter where code style is assessed, but this is not
 one of those labs.
 
 Gradescope automated
@@ -864,7 +869,7 @@ Gradescope automated
 
 -   (40 pts) lab00Test passed Gradescope tests
 -   (20 pts) helloWorld passed Gradescope tests
--   (40 pts) codeAddition passed Gradescope tests
+-   (30 and 10 pts) code addition passed Gradescope tests (step 7)(30) and fill in data about Santa Barbara (10)
 
 Acknowledgements
 ================
