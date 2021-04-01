@@ -1,8 +1,8 @@
 ---
 layout: lab
 num: lab00	
-ready: false
-desc: "Review of C++ basics, Makefiles, Gradescope"
+ready: true
+desc: "Review of C++ basics, Makefiles, start thinking about data, and Gradescope"
 assigned: 2021-03-30 
 due: 2021-04-07 23:59
 github_org_url: https://github.com/ucsb-cs32-s21
