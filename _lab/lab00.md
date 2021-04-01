@@ -836,7 +836,7 @@ Santa Barbara county.  When youre revisions are complete, executing dataProj, sh
 Where <DATA> is replaced with real values.
 
 There will be an autograder test similar to testDemog1.cpp (but with the population under 18 vectors in use, which are commented out in the base code).
-....
+
 
 Step 8: Submitting via Gradescope
 --------------------------------
