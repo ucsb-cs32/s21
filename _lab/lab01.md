@@ -67,29 +67,36 @@ You should confirm that when you run
 
 that it prints out county data (lots of county data - so expect you console to be filled with print outs).  You might see something like:
 
-....
+```
+County Demographics Info: Alameda County, CA total population: 1610921
+Population info: 
+(% over 65): 12.5
+(% under 18): 21.4
+(% under 5): 6.1
+Education info: fix this for lab01
 
-County Demographics Info: Uinta County, WY <br>
-Population info: <br>
-(% over 65): 11<br>
-(% under 18): 29.8<br>
-(% under 5): 7.6<br>
-Education info: fix this for lab01<br>
-<br>
-County Demographics Info: Washakie County, WY<br>
-Population info: <br>
-(% over 65): 20.1<br>
-(% under 18): 23.9<br>
-(% under 5): 5.5<br>
-Education info: fix this for lab01<br>
-<br>
-County Demographics Info: Weston County, WY<br>
-Population info: <br>
-(% over 65): 18.1<br>
-(% under 18): 21.6<br>
-(% under 5): 6.5<br>
-Education info: fix this for lab01<br>
-***<br>
+County Demographics Info: Alpine County, CA total population: 1116
+Population info: 
+(% over 65): 21.1
+(% under 18): 20
+(% under 5): 3.3
+Education info: fix this for lab01
+
+County Demographics Info: Amador County, CA total population: 36742
+Population info: 
+(% over 65): 25.1
+(% under 18): 15.3
+(% under 5): 3.7
+Education info: fix this for lab01
+
+County Demographics Info: Butte County, CA total population: 224241
+Population info: 
+(% over 65): 17
+(% under 18): 20.2
+(% under 5): 5.4
+Education info: fix this for lab01
+```
+
 Note that with so much data, it will likely be useful to redirect the output to a file.  If you run: Lab01Full zwood$ ./dataProj > outputFile
 You can then open the text file "outputFile" to look at all the data using a text editor.
 Or for example use "more outputFile" to examine the data one screen at a time.
