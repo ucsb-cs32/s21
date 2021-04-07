@@ -22,7 +22,7 @@ Learning objectives.  At the end of this lab, students should be able to:
 Orientation
 =====
 
-
+Similar to step 7 of Lab00, this is the background on the data project for this quarter:
 Working with real world data allows us to use computing to ask questions and learn about our world.  It also allows us to practice design and implementation of object oriented projects.  This week's lab is the first step in our larger project related to using various data sources to learn about the United States.
 This project and later additions will use the CORGIS datasets (The Collection of Really Great, Interesting, Situated Datasets): https://corgis-edu.github.io/corgis/
 
@@ -36,6 +36,8 @@ Which aspects of this demographic data is most interesting to you?
 We will only work with some of this data this quarter.  For today, we will only work with the data related to the age and education level of each county's
 population.
 
+Unlike the code in Lab00, we want to start encapsulating our data into classes....
+
 Step by Step
 ============
 
@@ -43,7 +45,7 @@ Step 0: Getting Started
 -----------------------
 
 ### Download base code and test the executables dataProj and testDemog1
-Download the base code.  It can be found here:
+Download the new base code.  It can be found here:
 
 https://github.com/ucsb-cs32-w21/lab01-STARTER
 
@@ -51,7 +53,7 @@ If you are set up to use git from the command line, you will be cloning: git@git
 
 As a reminder: If you are not familiar with git, I highly recommend learning this skill since this will be extremely valuable when collaborating on large software projects. More information on git can be found here: https://ucsb-cs32.github.io/topics/git/.
 
-Once you have the files (and have created a git repo for this lab like last week), take a look at the files.
+Once you have the files (and have created a git repo for this lab like last week), take a look at the files.  Some will look familiar from Lab00 step 7, but now we are *encapsulating* demographic data into a class (no more parallel vectors!). Details are included below.
 
 The starter code includes files related to our main data project and files related to testing our code.
 When you try to compile the code using the provided Makefile, it should be able to make the executable for our main data project:
@@ -147,12 +149,18 @@ There are a few closely related steps in this process:
 1) add data to the class demogData to represent the percentage of the county population that have received an undergraduate degree and the percentage
 that has graduated from high school
 2) add the data fields to the class constructor (*add a new constructor for county data with all fields - leave the prior constructor and set default values for the education fields of -1).  You should have two constructors when you are done.*
-3) add the necessary getter methods for this new data (hint: check out testDemog2 for getter names).
-4) add code to parse.cpp to read in the two additional data fields (and use them when constructing a demogData object).
-5) modify in demogData.cpp the function that overrides the << operator to also print the educational data.  See the below sample for formatting.
+4) add the necessary getter methods for this new data (hint: check out testDemog2 for getter names).
+5) We will be looking at averaging data in future assignments and cannot average percentages across counties (because they each have different sized populations).  Instead, we will total counts (or number of people per category) and divide by total population to report average population (per state).  Thus, you need to add getters to return the count for each data category, for each county.  Each should return an integer.  Name these getters as follows:
+ ```
+getpopOver65Count()
+getpopUnder18Count()
+getpopUnder5Count()
+getBAupCount()
+getHSupCount()
+```
+7) add code to parse.cpp to read in the two additional data fields (and use them when constructing a demogData object).
+8) modify in demogData.cpp the function that overrides the << operator to also print the educational data.  See the below sample for formatting.
 
-Finally, to start making the demogData class conform to good OO style, all the data is private, however, we want to give access to (read) the data, 
-so add getters for all of the data currently associated with our demogData. (Note again see testDemg2 for getter names).
 
 Step 3: Make sure your output matches and now all test cases pass
 -----------------------
