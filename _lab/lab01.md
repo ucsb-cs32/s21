@@ -155,7 +155,7 @@ Education.High School or Higher</b>
 There are a few closely related steps in this process:
 1) add data to the class demogData to represent the percentage of the county population that have received an undergraduate degree and the percentage
 that has graduated from high school
-2) add the data fields to the class constructor (*add a new constructor for county data with all fields - leave the prior constructor and set default values for the education fields of -1).  You should have two constructors when you are done.*
+2) add the data fields to the class constructor (*add a new constructor for county data with all fields.  THE ORDER SHOULD MATCH THE ORDER OF THE DATA IN THE ORIGINAL FILE> - leave the prior constructor and set default values for the education fields of -1).  You should have two constructors when you are done.*
 4) add the necessary getter methods for this new data (hint: check out testDemog2 for getter names).
 5) We will be looking at averaging data in future assignments and cannot average percentages across counties (because they each have different sized populations).  Instead, we will total counts (or number of people per category) and divide by total population to report average population (per state).  Thus, you need to add getters to return the count for each data category, for each county.  Each should return an integer.  Name these getters as follows:
  ```
@@ -175,44 +175,51 @@ Step 3: Make sure your output matches and now all test cases pass
 If you completed the steps above, you should now be able to compile all of the code and tests with <tt>make</tt>
 
 So that when you run testDemog2 you see:
-
-zwood$ ./testDemog2<br>	
-Testing class county demographics...<br>	
-PASSED: c1.getName()<br>	
-PASSED: c1.getState()<br>	
-PASSED: c1.getpopOver65()<br>	
-PASSED: c1.getpopUnder18()<br>	
-PASSED: c1.getpopUnder5()<br>	
-PASSED: c1.getBAup()<br>	
-PASSED: c1.getHSup()<br>	
+```
+zwood$ ./testDemog2
+Testing class county demographics...
+PASSED: c1.getName()
+PASSED: c1.getState()
+PASSED: c1.getpopOver65()
+PASSED: c1.getpopUnder18()
+PASSED: c1.getpopUnder5()
+PASSED: c1.getBAup()
+PASSED: c1.getHSup()
+PASSED: c1.getPop()
+PASSED: c1.getpopOver65Count()
+PASSED: c1.getpopUnder18Count()
+PASSED: c1.getpopUnder5Count()
+PASSED: c1.getBAupCount()
+PASSED: c1.getHSupCount()
+```
 
 Now, when you print all the county data it should look like:
-...
-County Demographics Info: Uinta County, WY<br>	
-Population info: <br>	
-(% over 65): 11<br>	
-(% under 18): 29.8<br>	
-(% under 5): 7.6<br>	
-Education info: <br>	
-(% Bachelor degree or more): 18.9<br>	
-(% high school or more): 89.2<br>	
-County Demographics Info: Washakie County, WY<br>	
-Population info: <br>	
-(% over 65): 20.1<br>	
-(% under 18): 23.9<br>	
-(% under 5): 5.5<br>	
-Education info: <br>	
-(% Bachelor degree or more): 23.6<br>	
-(% high school or more): 90.5<br>	
-County Demographics Info: Weston County, WY<br>	
-Population info: <br>	
-(% over 65): 18.1<br>	
-(% under 18): 21.6<br>	
-(% under 5): 6.5<br>	
-Education info: <br>	
-(% Bachelor degree or more): 17.2<br>	
-(% high school or more): 90.2<br>	
-
+```
+County Demographics Info: Lewis County, WA total population: 75128
+Population info: 
+(% over 65): 19.8 Count: 14875
+(% under 18): 21.9 Count: 16453
+(% under 5): 5.8 Count: 4357
+Education info: 
+(% Bachelor degree or more): 14 Count: 10517
+(% high school or more): 85.9 Count: 64534
+County Demographics Info: Lincoln County, WA total population: 10250
+Population info: 
+(% over 65): 23.9 Count: 2449
+(% under 18): 21.7 Count: 2224
+(% under 5): 4.7 Count: 481
+Education info: 
+(% Bachelor degree or more): 20.3 Count: 2080
+(% high school or more): 93.5 Count: 9583
+County Demographics Info: Mason County, WA total population: 60711
+Population info: 
+(% over 65): 21.3 Count: 12931
+(% under 18): 19.3 Count: 11717
+(% under 5): 5.4 Count: 3278
+Education info: 
+(% Bachelor degree or more): 17.3 Count: 10503
+(% high school or more): 88.5 Count: 53729
+```
 Consider using <b>diff</b> on the file you produce and the provided comparison file.
 
 Step 4: Submitting via Gradescope
