@@ -98,7 +98,10 @@ Education info: fix this for lab01
 
 ```
 
-Note that with so much data, it will likely be useful to redirect the output to a file.  If you run: Lab01Full zwood$ ./dataProj > outputFile
+Note that with so much data, it will likely be useful to redirect the output to a file.  If you run: 
+```
+./dataProj > outputFile
+```
 You can then open the text file "outputFile" to look at all the data using a text editor.
 Or for example use "more outputFile" to examine the data one screen at a time.
 
@@ -153,12 +156,12 @@ For this first week, lets add some additional information, specifically, the dat
 <b>Education.Bachelor's Degree or Higher <br>	
 Education.High School or Higher</b>
 
-There are a few closely related steps in this process:
+There are a few closely related steps in this process:<br>
 1) add data to the class demogData to represent the percentage of the county population that have received an undergraduate degree and the percentage
-that has graduated from high school
-2) add the data fields to the class constructor (*add a new constructor for county data with all fields.  THE ORDER SHOULD MATCH THE ORDER OF THE DATA IN THE ORIGINAL FILE> - leave the prior constructor and set default values for the education fields of -1).  You should have two constructors when you are done.*
-4) add the necessary getter methods for this new data (hint: check out testDemog2 for getter names).
-5) We will be looking at averaging data in future assignments and cannot average percentages across counties (because they each have different sized populations).  Instead, we will total counts (or number of people per category) and divide by total population to report average population (per state).  Thus, you need to add getters to return the count for each data category, for each county.  Each should return an integer.  Name these getters as follows:
+that has graduated from high school<br>
+2) add the data fields to the class constructor (*add a new constructor for county data with all fields.  THE ORDER SHOULD MATCH THE ORDER OF THE DATA IN THE ORIGINAL FILE> - leave the prior constructor but set default values for the education fields).  You should have two constructors when you are done.*<br>
+4) add the necessary getter methods for this new data (hint: check out testDemog2 for getter names).<br>
+5) We will be averaging data in future assignments and cannot average percentages across counties (because they each have different sized populations).  Instead, we will total up the counts (or number of people per category) and divide by the total population to report average population (per state).  Thus, you need to add getters to return the count for each data category, for each county.  Each should return an integer.  Name these getters as follows:
  ```
 getpopOver65Count()
 getpopUnder18Count()
@@ -166,8 +169,8 @@ getpopUnder5Count()
 getBAupCount()
 getHSupCount()
 ```
-7) add code to parse.cpp to read in the two additional data fields (and use them when constructing a demogData object).
-8) modify in demogData.cpp the function that overrides the << operator to also print the educational data.  See the below sample for formatting.
+7) add code to parse.cpp to read in the two additional data fields (and use them when constructing a demogData object).<br>
+8) modify in demogData.cpp the function that overrides the << operator to also print the educational data.  See the below sample for formatting.<br>
 
 
 Step 3: Make sure your output matches and now all test cases pass
