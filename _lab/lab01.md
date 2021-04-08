@@ -5,7 +5,7 @@ ready: false
 desc: "C++ class design to support CSV data"
 assigned: 2021-04-13 
 due: 2021-04-20 23:59
-github_org_url: https://github.com/ucsb-cs32-w21
+github_org_url: https://github.com/ucsb-cs32-s21
 ---
 
 Goals
@@ -47,9 +47,9 @@ Step 0: Getting Started
 ### Download base code and test the executables dataProj and testDemog1
 Download the new base code.  It can be found here:
 
-https://github.com/ucsb-cs32-w21/lab01-STARTER
+https://github.com/ucsb-cs32-s21/Lab01-STARTER
 
-If you are set up to use git from the command line, you will be cloning: git@github.com:ucsb-cs32-w21/lab01-STARTER.git
+If you are set up to use git from the command line, you will be cloning: git@github.com:ucsb-cs32-s21/Lab01-STARTER.git
 
 As a reminder: If you are not familiar with git, I highly recommend learning this skill since this will be extremely valuable when collaborating on large software projects. More information on git can be found here: https://ucsb-cs32.github.io/topics/git/.
 
