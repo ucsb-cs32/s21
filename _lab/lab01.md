@@ -224,7 +224,7 @@ Education info:
 (% Bachelor degree or more): 17.3 Count: 10503
 (% high school or more): 88.5 Count: 53729
 ```
-Consider using <b>diff</b> on the file you produce and the provided comparison file.
+
 
 Step 4: Submitting via Gradescope
 -----------------------
