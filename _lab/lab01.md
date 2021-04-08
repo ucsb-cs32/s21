@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01	
-ready: false
+ready: true
 desc: "C++ class design to support CSV data"
 assigned: 2021-04-13 
 due: 2021-04-20 23:59
