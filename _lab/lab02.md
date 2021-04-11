@@ -207,10 +207,10 @@ Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual
 ------<br>
 Grade:<br>
 gradescope worksheet (9 questions): <br>
-https://www.gradescope.com/courses/222015/assignments/1060116<br>
+<gradescope>
 gradescope autograder (2 autograder tests - fixed seg fault and fixed memory leak):<br>
-https://www.gradescope.com/courses/222015/assignments/1066844<br>
-https://www.gradescope.com/courses/222015/assignments/1060111<br>
+<gradescope>
+<gradescope>
 <p>
 ------<br>
 Acknowledgements:<br>
