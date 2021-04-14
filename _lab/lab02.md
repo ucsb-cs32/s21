@@ -93,7 +93,7 @@ Or copy from here:
 
 Use the associated gradescope online tool to answer questions for this lab.  Note that this lab is about giving you experience with these tools.  'Cheating' really only cheats you of the opportunity to learn.
 
-https://www.gradescope.com/courses/222015/assignments/1060116
+<insert gradescope link for questions>
 
 
 ### Question 1
