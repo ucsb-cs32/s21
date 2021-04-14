@@ -200,7 +200,36 @@ https://www.gradescope.com/courses/222015/assignments/1066844
 Once you feel comfortable with debugging, another useful tool is valgrind.
 Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
 
-<need to re-do with current lecture code>
+#### valgrind task 1
+Starting with the provided versions of lecture code, from: 
+or
+```
+cp ~zjwood/32Public/...
+````
+Compile the versions of the code in both version1 and version2 and run valgrind and copy their report into the gradescope worksheet.
+<pre>
+valgrind --leak-check=full version1/a.out 300 300 out.ppm
+valgrind --leak-check=full version2/a.out 300 300 out.ppm
+</pre>
+
+### Question 8
+Copy the valgrind reports to the gradescope assignment.
+
+#### valgrind task 2
+Next, fix the code.  Make a copy of the version2 code - you must leave the data as raw pointers (do not swap them to smart pointers) and fix the code so that no memory is left on the heap. 
+
+You will need to turn in your working solution and expect that valgrind will be run on your solution to confirm your solution.
+
+<gradescope>
+
+#### valgrind task 3
+
+Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind. Finally, change the vector to a vector of instances of the rectangle and ellipses (likewise change the WriteOut function to take in the vector of ellipses and rectangles.
+Report the memory use and reflect briefly on why there is a change in the overall memory use.
+
+### Question 9
+Copy the valgrind reports and your reflections to the gradescope assignment.
+
     
     
     <p>
