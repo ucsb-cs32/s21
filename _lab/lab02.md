@@ -145,15 +145,14 @@ Remember to pass in your umail address when running through gdb in order to obta
 ## Step 3: Debugging and fixing given code (further gdb exploration)
 
 Now grab the next set of files:
-https://github.com/ucsb-cs32-w21/lab07-STARTER
-
+https://github.com/ucsb-cs32-s21/Lab02GDB-STARTER.git
 or on csil:
 
 ```
-cp ~zjwood/32Public/lab07GDB.zip .
+cp ~zjwood/32Public/lab02GDB.zip .
 ````
 
-For the code in lab07GDB compile the code and you will be executing the following commands (*Q* denotes a question to answer on the corresponding gradescope assignment):
+For the code in lab02GDB compile the code and you will be executing the following commands (*Q* denotes a question to answer on the corresponding gradescope assignment):
 ```
 % gdb example
 ...
@@ -193,7 +192,7 @@ Consider the simpliest fix so that the code does not crash - this means being cl
 Submit the fixed code for autograding at the lab07Lab gradescope assignment.
 
 Turn inyour fixed code here:
-https://www.gradescope.com/courses/222015/assignments/1066844
+<insert gradescope question link>
 
 ## Step 3: valgrind 
 
