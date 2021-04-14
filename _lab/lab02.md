@@ -201,11 +201,11 @@ Once you feel comfortable with debugging, another useful tool is valgrind.
 Consider reading the quickstart guide here: https://www.valgrind.org/docs/manual/QuickStart.html
 
 #### valgrind task 1
-Starting with the provided versions of lecture code, from: 
+Starting with the provided versions of lecture code, from:  https://github.com/ucsb-cs32-s21/Lab02-ValGrindBase.git
 or
 ```
-cp ~zjwood/32Public/...
-````
+cp ~zjwood/32Public/testValgrindBaseS21.zip
+```
 Compile the versions of the code in both version1 and version2 and run valgrind and copy their report into the gradescope worksheet.
 <pre>
 valgrind --leak-check=full version1/a.out 300 300 out.ppm
@@ -224,15 +224,27 @@ You will need to turn in your working solution and expect that valgrind will be 
 
 #### valgrind task 3
 
-Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Use valgrind and report the total memory use (on the gradescope worksheet).  Now, change the function parameter passed to writeOut to be a reference and re-run valgrind. Finally, change the vector to a vector of instances of the rectangle and ellipses (likewise change the WriteOut function to take in the vector of ellipses and rectangles.
-Report the memory use and reflect briefly on why there is a change in the overall memory use.
+Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Use valgrind and report the total memory use (on the gradescope worksheet) for version3. That is with writeOut (and main data structures as:
+```
+ void writeOut(ostream& out, ppmR& theWriter, vector<ellipse *> IEs, vector<Rect* > Rs)
+```
+<br>
+Now, change the function parameter passed to writeOut to be a reference and re-run valgrind (version4). Specifically, what is the memory use, when in main and inWrite out the data is represented as:
+```
+ void writeOut(ostream& out, ppmR& theWriter, vector<ellipse *>& IEs, vector<Rect* >& Rs) {
+```
 
-### Question 9
-Copy the valgrind reports and your reflections to the gradescope assignment.
+Finally, change the vector to a vector of instances of the rectangle and ellipses (likewise change the WriteOut function to take in the vector of ellipses and rectangles). 
+Specifically, what is the memory use, when in main and inWrite out the data is represented as:
+```
+void writeOut(ostream& out, ppmR& theWriter, vector<ellipse> IEs, vector<Rect> Rs)
+```
 
-    
-    
-    <p>
+Use the worksheet to report on the memory use and fill in the question to reflect briefly on why there is a change in the overall memory use.
+
+Be sure to copy the valgrind reports and your reflections to the gradescope assignment.
+
+<p>
 ------<br>
 Grade:<br>
 gradescope worksheet (9 questions): <br>
