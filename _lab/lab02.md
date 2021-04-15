@@ -93,12 +93,13 @@ Or copy from here:
 
 Use the associated gradescope online tool to answer questions for this lab.  Note that this lab is about giving you experience with these tools.  'Cheating' really only cheats you of the opportunity to learn.
 
-<insert gradescope link for questions>
+insert gradescope link for questions
 
 
 ### Question 1
 
 Start up `gdb` and load in `segProgram`.
+
 ```
 gdb ./segProgram
 ```
