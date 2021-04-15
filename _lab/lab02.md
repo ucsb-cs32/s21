@@ -192,8 +192,8 @@ Now look at the code and fix it so that when it compiles and runs it works - i.e
 Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code and modifying one other.  The ideal solution will preserve all functions, including parameter types and calls.  Think of this as an oportunity to practice with understanding pointers and memory allocation/management (as those are topics that often lead to seg faults).
 Submit the fixed code for autograding at the lab07Lab gradescope assignment.
 
-Turn inyour fixed code here:
-<insert gradescope question link>
+Turn in your fixed code here:
+
 
 ## Step 3: valgrind 
 
