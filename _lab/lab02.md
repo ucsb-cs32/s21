@@ -93,7 +93,7 @@ Or copy from here:
 
 Use the associated gradescope online tool to answer questions for this lab.  Note that this lab is about giving you experience with these tools.  'Cheating' really only cheats you of the opportunity to learn.
 
-insert gradescope link for questions
+https://www.gradescope.com/courses/259718/assignments/1176450/grade
 
 
 ### Question 1
@@ -188,11 +188,11 @@ Explain in your own words what is happening for this line of code:
 ```
 
 #### submit fixed file
-Now look at the code and fix it so that when it compiles and runs it works - i.e. it does not segfault and will ouput a number. NO NOT EDIT main at ALL. 
-Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code and modifying one other.  The ideal solution will preserve all functions, including parameter types and calls.  Think of this as an oportunity to practice with understanding pointers and memory allocation/management (as those are topics that often lead to seg faults).
-Submit the fixed code for autograding at the lab07Lab gradescope assignment.
+Now look at the code and fix it so that when it compiles and runs it works - i.e. it does not segfault and will ouput a number. NO NOT EDIT main at ALL and our solution must keep all the function calls (i.e. the same functions must be called in your solution - do not 'solve' this task by deleting or not calling a function!)
+Consider the simpliest fix so that the code does not crash - this means being clear on why it is crashing.  This task should be accomplished by adding one line of code and modifying one other. Think of this as an oportunity to practice with understanding pointers and memory allocation/management (as those are topics that often lead to seg faults).
+Submit the fixed code for autograding at the lab02Lab gradescope assignment.
 
-Turn in your fixed code here:
+Turn in your fixed code here: https://www.gradescope.com/courses/259718/assignments/1176445/review_grades
 
 
 ## Step 3: valgrind 
@@ -220,7 +220,7 @@ Next, fix the code.  Make a copy of the version2 code and call it version3 - you
 
 You will need to turn in your working solution and expect that valgrind will be run on your solution to confirm your solution.
 
-
+https://www.gradescope.com/courses/259718/assignments/1176448/grade
 
 #### valgrind task 3
 
