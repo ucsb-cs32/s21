@@ -220,7 +220,7 @@ Next, fix the code.  Make a copy of the version2 code - you must leave the data 
 
 You will need to turn in your working solution and expect that valgrind will be run on your solution to confirm your solution.
 
-<gradescope>
+
 
 #### valgrind task 3
 
