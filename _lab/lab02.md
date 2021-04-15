@@ -216,7 +216,7 @@ valgrind --leak-check=full version2/a.out 300 300 out.ppm
 Copy the valgrind reports to the gradescope assignment.
 
 #### valgrind task 2
-Next, fix the code.  Make a copy of the version2 code - you must leave the data as raw pointers (do not swap them to smart pointers) and fix the code so that no memory is left on the heap. 
+Next, fix the code.  Make a copy of the version2 code and call it version3 - you must leave the data as raw pointers (do not swap them to smart pointers) and fix the code so that no memory is left on the heap. 
 
 You will need to turn in your working solution and expect that valgrind will be run on your solution to confirm your solution.
 
@@ -224,17 +224,17 @@ You will need to turn in your working solution and expect that valgrind will be 
 
 #### valgrind task 3
 
-Valgrind is also useful for measuring overall memory use.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Use valgrind and report the total memory use (on the gradescope worksheet) for version3. That is with writeOut (and main data structures as:
+Valgrind is also useful for measuring overall memory use your fixed code in version3.  This is a fun topic to explore in depth, but for today, lets just consider one variable which is function parameters. Make a copy of yourUse valgrind and report the total memory use (on the gradescope worksheet) for version3. That is with writeOut (and main data structures as:
 ```
  void writeOut(ostream& out, ppmR& theWriter, vector<ellipse *> IEs, vector<Rect* > Rs)
 ```
 <br>
-Now, change the function parameter passed to writeOut to be a reference and re-run valgrind (version4). Specifically, what is the memory use, when in main and in writeOut the data is represented as:
+Now, make a new copy (version4) change the function parameter passed to writeOut to be a reference and re-run valgrind (version4). Specifically, what is the memory use, when in main and in writeOut the data is represented as:
 ```
  void writeOut(ostream& out, ppmR& theWriter, vector<ellipse *>& IEs, vector<Rect* >& Rs) {
 ```
 
-Finally, change the vector to a vector of instances of the rectangle and ellipses (likewise change the WriteOut function to take in the vector of ellipses and rectangles). 
+Finally, make a new copy (version5) change the vector to a vector of instances of the rectangle and ellipses (likewise change the WriteOut function to take in the vector of ellipses and rectangles). 
 Specifically, what is the memory use, when in main and inWrite out the data is represented as:
 ```
 void writeOut(ostream& out, ppmR& theWriter, vector<ellipse> IEs, vector<Rect> Rs)
