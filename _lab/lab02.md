@@ -154,7 +154,7 @@ cp ~zjwood/32Public/lab02GDB.zip .
 
 For the code in lab02GDB compile the code and you will be executing the following commands (*Q* denotes a question to answer on the corresponding gradescope assignment):
 ```
-% gdb example
+% gdb .\example
 ...
 (gdb) b example.cpp:33
 (gdb) r
@@ -228,7 +228,7 @@ Valgrind is also useful for measuring overall memory use.  This is a fun topic t
  void writeOut(ostream& out, ppmR& theWriter, vector<ellipse *> IEs, vector<Rect* > Rs)
 ```
 <br>
-Now, change the function parameter passed to writeOut to be a reference and re-run valgrind (version4). Specifically, what is the memory use, when in main and inWrite out the data is represented as:
+Now, change the function parameter passed to writeOut to be a reference and re-run valgrind (version4). Specifically, what is the memory use, when in main and in writeOut the data is represented as:
 ```
  void writeOut(ostream& out, ppmR& theWriter, vector<ellipse *>& IEs, vector<Rect* >& Rs) {
 ```
