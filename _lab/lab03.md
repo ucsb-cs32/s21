@@ -93,9 +93,9 @@ two classes that are very similar but represent different regional zones (as men
 
 <p>This class should be implemented in the empty provided files demogState.h and demogState.cpp.</p>
 
-<h3 id="create-and-propogate-data-into-a-hashmap-to-aggregate-county-data-to-state-data">
+<h3 id="create-and-propogate-data-into-a-hashmap-to-aggregate-county-data-to-state-data"></h3>
   We will be using the dataAQ class to aggregate and query our state data.  Take a look at the header file and member function stubs.  It is here that you will
-  create and propagate data into a hashmap to aggregate county data to state data.  (For example, see the declaration of a dataAQ in main and the function call used once the data has been read in from csv file to *createStateData*</h3>
+  create and propagate data into a hashmap to aggregate county data to state data.  (For example, see the declaration of a dataAQ in main and the function call used once the data has been read in from csv file to *createStateData*
 <p>Use an STL hashmap in order to associate any county data with it’s state (i.e. recall our demogData class has a string which is the 
   name of the state where that county is located).  Again you have choices here.  Do what makes sense for your solution.
 </p>
