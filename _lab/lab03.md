@@ -67,7 +67,7 @@ we can use to build up necessary data relationships).  There are multiple valid 
 
 <p>Do create a new github repo for this weeks lab.  We will be looking at your code via github.</p>
 
-Task 0: prepare for averaging percentages of populations
+A note about averaging percentages of populations
 -----------------------
 As mentioned in lab01, we can not  average our percentages because the counties have different numbers of residents.  When averaging for the 
 state, you will need to use the *count* data per data field and the total population of the counties.
@@ -87,7 +87,7 @@ Design a class to represent state level demographic data.  Again, there are mult
   data to help represent that it is aggregate. But, yes, this does mean you will have 
 two classes that are very similar but represent different regional zones and store different data (as mentioned above, we will revisit this design as we expand our data project).</p>
 
-<p>This class should be implemented in the empty provided files stateDemog.h and stateDemog.cpp.</p>
+<p>This class should be implemented in the empty provided files demogState.h and demogState.cpp.</p>
 
 <h3 id="create-and-propogate-data-into-a-hashmap-to-aggregate-county-data-to-state-data">
   Create and propagate data into a hashmap to aggregate county data to state data</h3>
