@@ -156,6 +156,7 @@ class dataAQ {
 <p>You are encouraged to write additional test cases for each of the required queries in dataAQ.</p>
 
 <p>The output for dataProj should include a complete version of the following (your code would fill in for <b>BLANK</b>):</p>
+
 ```
 *** the state that needs the most pre-schools**
 State Info: UT
@@ -230,7 +231,8 @@ Education info:
 persons below poverty: BLANK and total: BLANK
 Total population: BLANK
 ```
-----
+
+
 For clarity, the questions in main, refer to the queries in dataAQ (i.e. 'most' refers to a ranking in proportion to the state's whole population, not
 total count).  Thus:<br>
 -the state that needs the most pre-schools: should be the state with the largest percentage of its population under age 5<br>
