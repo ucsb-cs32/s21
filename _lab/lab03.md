@@ -37,6 +37,14 @@ depends on your code being reviewed by one of the teaching assistants or instruc
 understand the tools you are using in your solution.  You can implement a solution to each of these tasks with the material that
 has already been discussed in lecture.  Make sure you understand your solution as you will/may be asked to discuss your solution.</p>
 
+
+Modality
+============
+This is a pair lab.  You may choose to work alone or with another student.  When working in a pair, please always follow good pair programming methodologies.  For example, see: https://gds.blog.gov.uk/2018/02/06/how-to-pair-program-effectively-in-6-steps/. In general, set aside time to work together and share your screen to share the work and learning.  
+
+You will need to identify you partner (pair) in your submission (add a header to your main with both your names!).  The remaining labs will also be optional pair labs and you will be asked to only partner with the same person TWICE.
+
+
 Tasks
 ============
 
@@ -102,7 +110,6 @@ two classes that are very similar but represent different regional zones (as men
 
 <p>Depending on the order you tackle these tasks, don’t forget that one task is to combine the demographic data for all counties into state level demographic data.  
   
-
 
 <h2 id="task-3-use-data-represenation-stl-hashmap-to-be-able-to-answer-queries-about-data">Task 3: Use data representation (STL hashmap) to be able to answer queries about data</h2>
 
