@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab03	
-ready: false
+ready: true
 desc: "Using STL to aggregate data and query"
 assigned: 2021-04-21
 due: 2021-04-28 23:59
