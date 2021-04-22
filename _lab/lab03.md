@@ -252,9 +252,9 @@ total count).  Thus:<br>
 
 Grading
 -----------------------
-(50) tests passed (GS)<br>
-(20) reasonable state data design<br>
-(20) reasonable aggregation computation<br>
+(70) tests passed (GS)<br>
+(10) reasonable state data design<br>
+(10) reasonable aggregation computation<br>
 (10) reasonable reporting of mins and max in dataAQ<br>
 
 
