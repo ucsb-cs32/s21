@@ -54,7 +54,7 @@ Starting with your lab03 code take a look at the new files and integrate the new
 <p>
     
 **Task 0:** 
-Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand what it represents.  You will need to complete the one operator overload that is not complete in raceDemogData.h (clearly listed).  In general, this data type is intended to represent the racial counts for a specific total population.  It is not a data type for one person's race, but the counts of various racial identities for an entire population.  Most of the categories are derived from the US census, however, as the police shooting data has some variance (for example the police shooting uses "other" and the US census does not, this class has combined representation for the racial categories used in both the regional data sources we are using (US census and Washington Post shooting database).<br>
+Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand what it represents.  You will need to complete the one operator overload that is not complete in raceDemogData.h (clearly listed).  In general, this data type is intended to represent the racial counts for a specific total population.  It is not a data type for one person's race, but the counts of various racial identities for an entire population.  Most of the categories are derived from the US census, however, as the police shooting data has some variance (for example the police shooting uses *other* and the US census does not, this class has combined representation for the racial categories used in both the regional data sources we are using (US census and Washington Post shooting database).<br>
 
     
 **Task 1:** 
@@ -78,7 +78,7 @@ State level police class must support the following methods:<br>
     string getState();
 ```
 
-<p>
+
     
  **Task 3:** 
 Modify **parse.cpp** to support the use of the new data types (add raceDemogData to demogData) and fill in any code to read all necessary data for police incidents and construct policeData properly.<br>
