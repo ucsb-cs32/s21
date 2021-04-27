@@ -14,6 +14,7 @@ Goals
 Learning objectives. At the end of this lab, students should be able to:
 
 - read example C++ code and understand the data representations used in the base code
+- apply OO design and implementation to a real world data set
 - design and implement a new class to represent police shootings (which supports aggregation and comparisons)at two regional levels (county and state)
 - use a new data representation for racial demographics (including integration into exisiting code)
 - aggregate regional data to state level data using a hashmap
