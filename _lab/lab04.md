@@ -46,7 +46,7 @@ Developing an understanding of civil rights issues faced by our nation involves 
 
 Once you have expanded your code to represent this new data (police shootings at the county level and aggregated to the state level) and you have integrated the raceDemogData, we will practice using the standard sorting algorithm, by writing some specified compare predicates to sort the data on various fields.  Your program will also need to report various data findings.  *For example, list the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states or list the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states
 
-To support reading in the new csv data (police_shootings_cleaned.csv), there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design and integrate the new types).  *Note that if you look carefully at parse.cpp you will see that there is a good deal of redundancy in the functions for reading police data or demographic data. This is something that will be addressed in next weeks lab.*
+To support reading in the new csv data (police_shootings_cleaned.csv), there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design and integrate the new types).  *Note that if you look carefully at parse.cpp you will see that there is a good deal of redundancy in the functions for reading police data or demographic data. This is something that will be addressed in next week's lab.*
 
 Tasks
 ============
@@ -107,13 +107,13 @@ Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on
     
  **Task 5:**
  Modify **main.cpp** in order to read in, create and aggregate all data and confirm that your output can match the example below.<br>
-<p>
+
 
 
 Example report
 ============
 For your reference, here is a partial example reporting of expected output from the overloaded stream operators for stateDemog and statePolice data:
-<p>
+
     
 ```
 State Demographic Info: State Info: AK
@@ -156,13 +156,10 @@ Racial demographics of state incidents: Racial Demographics Info:
 % White (inclusive) count: 0
 % White (nonHispanic) percent: 65.85 count: 27
 total Racial Demographic Count: 41
-------------
-State Info: AL
-...
 ```
 
 
-<p>
+
     
 Grading
 ================
@@ -172,10 +169,10 @@ Grading
 (10) code review reasonable sorting and reporting<br>
 
 
-<p>
+
     
 Acknowledgements
 ================
-<p>
+
 Spring`21 vesion: Zoë Wood.  Thank you to JO and BZF for assistance with the data exploration project and the cleaned Washington Post data.
 
