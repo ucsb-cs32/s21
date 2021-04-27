@@ -18,8 +18,7 @@ Learning objectives. At the end of this lab, students should be able to:
 - design and implement a new class to represent police shootings at two regional levels (county and state).  State level data requires aggregation.
 - use a new data representation for racial demographics (including integrating this data into exisiting code and classes)
 - aggregate regional data to state level data using a hashmap
-- implement various *compare predicates* to sort state demographic data on various data fields 
-*for example, list the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states or list the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states
+- implement various *compare predicates* to sort state demographic data on various data fields. For example, list the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states or list the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states
 
 
 Modality
@@ -47,7 +46,7 @@ Developing an understanding of civil rights issues faced by our nation involves 
 
 Once you have expanded your code to represent this new data (police shootings at the county level and aggregated to the state level) and you have integrated the raceDemogData, we will practice using the standard sorting algorithm, by writing some specified compare predicates to sort the data on various fields.  Your program will also need to report various data findings.  *For example, list the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states or list the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states
 
-To support reading in the new csv data (police_shootings_cleaned.csv), there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design and integrate the new types).  *Note that if you look carefully at parse.cpp you will see that there is a good deal of redundancy in the functions for reading police data or demographic data. This is something that will be addressed in next weeks lab.
+To support reading in the new csv data (police_shootings_cleaned.csv), there is a new parse.cpp and parse.h, which reads in this new data (it is incomplete until you design and integrate the new types).  *Note that if you look carefully at parse.cpp you will see that there is a good deal of redundancy in the functions for reading police data or demographic data. This is something that will be addressed in next weeks lab.*
 
 Tasks
 ============
