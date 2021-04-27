@@ -21,9 +21,15 @@ Learning objectives. At the end of this lab, students should be able to:
 *for example, list the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states or list the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information
 
 
+Modality
+============
+This is a pair lab.  You may choose to work alone or with another student.  When working in a pair, please always follow good pair programming methodologies.  In general, set aside time to work together and share your screen to share the work and learning.  
+
+You will need to identify you partner (pair) in your submission (add a header to your main with both your names!).  The remaining labs will also be optional pair labs and you will be asked to only partner with the same person TWICE.
+
 Orientation
 ============
-In order to expand the questions/queries about the US data we have been working with, we will be adding additional data from CORGIS, originally compiled by the Washington Post. Specifically, we will be adding regional data reporting of police shootings: https://corgis-edu.github.io/corgis/csv/police_shootings/ However, there is a more up to date version of this data, maintained by the Washington Post that has been cleaned by UCSB students working on a related data project.  The exact csv file we will be using is included in the STARTER code and is called: police_shootings_cleaned.csv
+In order to expand the questions/queries about the US data we have been working with, we will be adding additional data from CORGIS, originally compiled by the Washington Post. Specifically, we will be adding regional data reporting of police shootings: https://corgis-edu.github.io/corgis/csv/police_shootings/ However, there is a more up to date version of this data, maintained by the Washington Post that has been cleaned by UCSB students working on a related data project.  The exact csv file we will be using is included in the STARTER code and is called: police_shootings_cleaned.csv. We will use the cleaned file for consistency, however, I encourage you to read more about the Washington Post's project here: https://www.washingtonpost.com/graphics/investigations/police-shootings-database/
 
 There is lots of important data for each incident, but we will focus on the fields:<br>
 name,age,gender,race,county,state,signs_of_mental_illness,flee<br>
