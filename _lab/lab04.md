@@ -39,7 +39,7 @@ The data captured by the Washington Post includes several data fields relevant t
 name, age, gender, race, county, state, signs_of_mental_illness, flee
 ``` 
 <br>
-Note there is other data associated with each incident, but you will need to design a class to represent the specified data listed above. Name the class policeData. We will be representing and aggregating this data into state level information (similar to lab03), called policeState.
+Note there is other data associated with each incident, but you will need to design a class to represent the specified data listed above. Name the class psData. We will be representing and aggregating this data into state level information (similar to lab03), called psState.
 
 An important data component for both the demographic census data and the police shooting data is racial demographic data. To support this, you are provided with a new (mostly complete) data type raceDemogData. Personal and community identity with respect to race and ethnicity are complex topics. This page describes the categories used in the US Census and some reasons why this data is collected: https://www.census.gov/topics/population/race/about.html
 Developing an understanding of civil rights issues faced by our nation involves representing and examining data related to race. One of your tasks for this lab is to integrate this data type into your code for both demographic data and the aggregated (state) police shooting data.
@@ -60,11 +60,11 @@ Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand 
     
 **Task 1:** 
 <p>
-    Design and implment the Police Data representation in **policeData.h/cpp** for individual incidents.  This must represent the following data for each incident: name, age, gender, race, county, state, signs_of_mental_illness, flee.  You need to make decisions about types to use to represent these data fields, however, make sure you understand the related constraints and reporting necessities in later steps of this lab.  Also look at policeState.h and be sure you understand all the getters you will need to support for the aggregated policeData.  They may imply some specific type representations for some of this data.<br>
+    Design and implment the Police Data representation in **psData.h/cpp** for individual incidents.  This must represent the following data for each incident: name, age, gender, race, county, state, signs_of_mental_illness, flee.  You need to make decisions about types to use to represent these data fields, however, make sure you understand the related constraints and reporting necessities in later steps of this lab.  Also look at psState.h and be sure you understand all the getters you will need to support for the aggregated psData.  They may imply some specific type representations for some of this data.<br>
 </p>
     
 **Task 2:** 
-<p>Design the state level Police Data representation in **policeState.h/cpp**.  This aggregated data will be similar to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to handle the aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population; in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported and be sure to consider what design choices you want to make in deciding on variables and types associated with this class.<br>
+<p>Design the state level Police Data representation in **psState.h/cpp**.  This aggregated data will be similar to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to handle the aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population; in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported and be sure to consider what design choices you want to make in deciding on variables and types associated with this class.<br>
 
 State level police class must support the following methods:</p>
 
@@ -97,14 +97,14 @@ Modify **dataAQ.h/cpp** to support aggregating the police data to the the state 
 
 ```
     void createStateDemogData(std::vector<shared_ptr<demogData>> theData);
-    void createStatePoliceData(std::vector<shared_ptr<policeData>> theData);
+    void createStatePoliceData(std::vector<shared_ptr<psData>> theData);
 ```
 
 Similar to lab03, add any data members to dataAQ that you need to store and aggregate the state data.  Also add the getter:
 
 
 ```
-    shared_ptr<policeState> getStatePoliceData(string stateName);  
+    shared_ptr<psState> getStatePoliceData(string stateName);  
 ```
 <p>
 Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort to report the following:<br>
