@@ -65,7 +65,7 @@ Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand 
 **Task 2:** 
     Design the state level Police Data representation in **policeState.h/cpp**.  This aggregated data will be similar to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to handle the aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population - in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported and be sure to consider what design choices you want to make in deciding on variables and types associated with this class.<br>
 
-State level police class must support the following methods:
+State level police class must support the following methods:<br>
 
 ```
     int getNumMentalI();
@@ -96,7 +96,7 @@ Modify **dataAQ.h/cpp** to support aggregating the police data to the the state 
 Similar to lab03, add any data members to dataAQ that you need to store and aggregate the state data.  Also add the getter:<br>
 
 ```
-    shared_ptr<policeState> getStatePoliceData(string stateName) { return nullptr; } //FIX  
+    shared_ptr<policeState> getStatePoliceData(string stateName);  
 ```
 
 Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort to report the following:<br>
