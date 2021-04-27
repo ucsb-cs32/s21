@@ -63,6 +63,7 @@ Familiarize yourself with the ```raceDemoData.h/cpp``` and be sure you understan
     Design the state level Police Data representation in ```policeState.h/cpp```.  This aggregated data will be similar to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to handle the aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population - in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported and be sure to consider what design choices you want to make in deciding on variables and types associated with this class.<br>
 
 State level police class must support the following methods:
+
 ```
     int getNumMentalI();
     int getFleeingCount();
@@ -75,7 +76,7 @@ State level police class must support the following methods:
     string getState();
 ```
 
-
+<p>
  **Task 3:** 
 Modify ```parse.cpp``` to support the use of the new data types (add raceDemogData to demogData) and fill in any code to read all necessary data for police incidents and construct policeData properly.<br>
 
@@ -157,11 +158,11 @@ State Info: AL
 <p>
     
 Grading
------------------------
-(50) tests passed (GS)<br>
-(20) reasonable data designs<br>
-(20) reasonable aggregation computation<br>
-(10) reasonable sorting and reporting<br>
+================
+(50) autograder tests passed (GS)<br>
+(20) code review reasonable data designs<br>
+(20) code review reasonable aggregation computation<br>
+(10) code review reasonable sorting and reporting<br>
 
 
 <p>
