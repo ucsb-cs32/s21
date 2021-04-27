@@ -64,7 +64,8 @@ Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand 
 **Task 2:** 
     Design the state level Police Data representation in **policeState.h/cpp**.  This aggregated data will be similar to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to handle the aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population; in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported and be sure to consider what design choices you want to make in deciding on variables and types associated with this class.<br>
 
-State level police class must support the following methods:<br>
+State level police class must support the following methods:
+
 
 ```
         int getNumMentalI();
@@ -86,14 +87,16 @@ Modify **parse.cpp** to support the use of the new data types (add raceDemogData
 
     
  **Task 4:**
-Modify **dataAQ.h/cpp** to support aggregating the police data to the the state level. This code may look very similar to what you completed for lab03.  Note that to distinguish between the two functions, dataAQ should now support the following two methods (included in the STARTER code dataAQ.h):<br>
+Modify **dataAQ.h/cpp** to support aggregating the police data to the the state level. This code may look very similar to what you completed for lab03.  Note that to distinguish between the two functions, dataAQ should now support the following two methods (included in the STARTER code dataAQ.h):
+
 
 ```
     void createStateDemogData(std::vector<shared_ptr<demogData>> theData);
     void createStatePoliceData(std::vector<shared_ptr<policeData>> theData);
 ```
 
-Similar to lab03, add any data members to dataAQ that you need to store and aggregate the state data.  Also add the getter:<br>
+Similar to lab03, add any data members to dataAQ that you need to store and aggregate the state data.  Also add the getter:
+
 
 ```
     shared_ptr<policeState> getStatePoliceData(string stateName);  
