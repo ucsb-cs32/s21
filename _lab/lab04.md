@@ -80,6 +80,7 @@ State level police class must support the following methods:<br>
 ```
 
 <p>
+    
  **Task 3:** 
 Modify **parse.cpp** to support the use of the new data types (add raceDemogData to demogData) and fill in any code to read all necessary data for police incidents and construct policeData properly.<br>
 
