@@ -50,16 +50,18 @@ To support reading in the new csv data (police_shootings_cleaned.csv), there is 
 
 Tasks
 ============
-Starting with your lab03 code take a look at the new files and integrate the new files (and modified files).  Then you will need to work through the following tasks (you may tackle them in the order that makes sense to you:
-<p>
+<p>Starting with your lab03 code take a look at the new files and integrate the new files (and modified files).  Then you will need to work through the following tasks (you may tackle them in the order that makes sense to you:
+</p>
     
 **Task 0:** 
+<p>
 Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand what it represents.  You will need to complete the one operator overload that is not complete in raceDemogData.h (clearly listed).  In general, this data type is intended to represent the racial counts for a specific total population.  It is not a data type for one person's race, but the counts of various racial identities for an entire population.  Most of the categories are derived from the US census, however, as the police shooting data has some variance (for example the police shooting uses *other* and the US census does not, this class has combined representation for the racial categories used in both the regional data sources we are using (US census and Washington Post shooting database).<br>
-
+</p>
     
 **Task 1:** 
+<p>
     Design and implment the Police Data representation in **policeData.h/cpp** for individual incidents.  This must represent the following data for each incident: name, age, gender, race, county, state, signs_of_mental_illness, flee.  You need to make decisions about types to use to represent these data fields, however, make sure you understand the related constraints and reporting necessities in later steps of this lab.  Also look at policeState.h and be sure you understand all the getters you will need to support for the aggregated policeData.  They may imply some specific type representations for some of this data.<br>
-
+</p>
     
 **Task 2:** 
 <p>Design the state level Police Data representation in **policeState.h/cpp**.  This aggregated data will be similar to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to handle the aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population; in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported and be sure to consider what design choices you want to make in deciding on variables and types associated with this class.<br>
@@ -82,12 +84,15 @@ State level police class must support the following methods:</p>
 
     
  **Task 3:** 
+ <p>
 Modify **parse.cpp** to support the use of the new data types (add raceDemogData to demogData) and fill in any code to read all necessary data for police incidents and construct policeData properly.<br>
-
+</p>
 
     
  **Task 4:**
+ <p>
 Modify **dataAQ.h/cpp** to support aggregating the police data to the the state level. This code may look very similar to what you completed for lab03.  Note that to distinguish between the two functions, dataAQ should now support the following two methods (included in the STARTER code dataAQ.h):
+ </p>
 
 
 ```
@@ -101,16 +106,17 @@ Similar to lab03, add any data members to dataAQ that you need to store and aggr
 ```
     shared_ptr<policeState> getStatePoliceData(string stateName);  
 ```
-
+<p>
 Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort to report the following:<br>
 <br>
     -List the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states<br>
     -List the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states<br>
-
+</p>
     
  **Task 5:**
+ <p>
  Modify **main.cpp** in order to read in, create and aggregate all data and confirm that your output can match the example below.<br>
-
+</p>
 
 
 Example report
