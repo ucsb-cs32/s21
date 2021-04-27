@@ -18,7 +18,7 @@ Learning objectives. At the end of this lab, students should be able to:
 - use a new data representation for racial demographics (including integration into exisiting code)
 - aggregate regional data to state level data using a hashmap
 - implement various *compare predicates* to sort regional data and state demographic data on various data fields 
-*for example, list the t... and print out the demographic data for these states or list the 5 states with the least number of people below the poverty line and the associated regional information
+*for example, list the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states or list the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information
 
 
 Orientation
