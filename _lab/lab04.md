@@ -23,13 +23,14 @@ Learning objectives. At the end of this lab, students should be able to:
 
 Orientation
 ============
-In order to expand the questions/queries about the US data we have been working with, we will be adding additional data from CORGIS. Specifically, we will be adding regional data reporting police shootings: https://corgis-edu.github.io/corgis/csv/police_shootings/ However, there is a more up to date version of this data, compiled by the Washington Post that has been cleaned by UCSB students working on a data project.  The exact csv file we will be using is included in the STARTER code and is called: police_shootings_cleaned.csv
+In order to expand the questions/queries about the US data we have been working with, we will be adding additional data from CORGIS, originally compiled by the Washington Post. Specifically, we will be adding regional data reporting of police shootings: https://corgis-edu.github.io/corgis/csv/police_shootings/ However, there is a more up to date version of this data, maintained by the Washington Post that has been cleaned by UCSB students working on a related data project.  The exact csv file we will be using is included in the STARTER code and is called: police_shootings_cleaned.csv
 
-There is lots of important data for each incident, but we will focus on the fields:
-name,age,gender,race,county,state,signs_of_mental_illness,flee
-Note there is other data associated with each incident, but you will need to design a class to represent the specified data, called policeData.  We will be representing and aggreating this data into state level information (similar to lab03).  
+There is lots of important data for each incident, but we will focus on the fields:<br>
+name,age,gender,race,county,state,signs_of_mental_illness,flee<br>
+Note there is other data associated with each incident, but you will need to design a class to represent the specified data listed above, called policeData.  We will be representing and aggreating this data into state level information (similar to lab03), called policeState.  
 
-An important data component for both the demographic census data and the police shooting data is racial demographic data.  To support this, you are provided with a new (mostly complete) data type raceDemogData.  Personal and community identity with respect to race and ethnicity are complex topics.  This page describes the categories used in the US Census and some reasons why this data is collected: https://www.census.gov/topics/population/race/about.html  Developing an understanding of civil rights issues faced by our nation involve representing and examining data related to race.  One of your tasks for this lab is to integrate this data type into your code.
+An important data component for both the demographic census data and the police shooting data is racial demographic data.  To support this, you are provided with a new (mostly complete) data type raceDemogData.  Personal and community identity with respect to race and ethnicity are complex topics.  This page describes the categories used in the US Census and some reasons why this data is collected: https://www.census.gov/topics/population/race/about.html  
+Developing an understanding of civil rights issues faced by our nation involve representing and examining data related to race.  One of your tasks for this lab is to integrate this data type into your code for both demographic data and the aggregated police shooting data.
 
 Once you have expanded your code to represent this new data (police shootings at the county level and aggregated to the state level) and you have integrated the raceDemogData, we will practice using the standard sorting algorithm, by writing some specified compare predicates to sort the data on various fields.  Your program will also need to report various data findings.
 
@@ -37,16 +38,31 @@ To support reading in the new csv data (police_shootings_cleaned.csv), there is 
 
 Tasks
 ============
-Starting with your lab03 code take a look at the new files and integrate the new files (and modified files).  
+Starting with your lab03 code take a look at the new files and integrate the new files (and modified files).  Then you will need to work through the following tasks:
 <p>
--Familiarize yourself with the raceDemoData.h/cpp and be sure you understand what it represents<br>
--Start by designing the Police Data representation in policeData.h/cpp<br>
--Design the state level Police Data representation in policeState.h/cpp<br>
--Modify parse.cpp to support the use of the new data types<br>
--Modify dataAQ.h/cpp to support aggregating the police data to the the state level<br>
--Confirm that your output can match the example below<br>
--Use sort to sort state data based on various criteria and report<br>
+-Task 0: Familiarize yourself with the raceDemoData.h/cpp and be sure you understand what it represents.  You do need to complete the one method in raceDemogData.h (clearly listed with `fill in')<br>
+-Task 1: Design and implment the Police Data representation in policeData.h/cpp for individual incidents.  This must represent the following data for each incident: name,age,gender,race,county,state,signs_of_mental_illness,flee.  You need to make decisions about types (but see related constraints and reporting).<br>
+-Task 2: Design the state level Police Data representation in policeState.h/cpp.  This will be close in form to the individual incident data, however, as it represents aggregate data, you will need to make decisions about how to represent aggregated data.  For example, instead of just representing the race of a single incident victim, you will want the state level police data to include a field for raceDemogData (that is the racial counts for a demographic population - in this case the population is the victims of police shootings aggregated to a state level).  See below list for exact getter methods that must be supported.<br>
+-Modify parse.cpp to support the use of the new data types (add raceDemogData to demogData) and fill in to read all necessary data for police incidents and constructor.<br>
+-Modify dataAQ.h/cpp to support aggregating the police data to the the state level.<br>
+-Modify main.cpp in order to read in, create and aggregate all data and confirm that your output can match the example below<br>
+-Add final methods to dataAQ.h/cpp in order to use sort to sort state data based on various criteria and report.<br>
 
+Some details for task 2:
+State level police class must support the following methods:
+```
+    int getNumMentalI();
+    int getFleeingCount();
+    int getCasesOver65();
+    int getCasesUnder18();
+    raceDemogData getRacialData();
+    int getnumMales();
+    int getnumFemales();
+    int getNumberOfCases();
+    string getState();
+```
+    
+    
 Example report
 ============
 ```
