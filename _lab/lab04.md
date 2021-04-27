@@ -38,14 +38,14 @@ To support reading in the new csv data (police_shootings_cleaned.csv), there is 
 Tasks
 ============
 Starting with your lab03 code take a look at the new files and integrate the new files (and modified files).  
-
--Familiarize yourself with the raceDemoData.h/cpp and be sure you understand what it represents
--Start by designing the Police Data representation in policeData.h/cpp
--Design the state level Police Data representation in policeState.h/cpp
--Modify parse.cpp to support the use of the new data types
--Modify dataAQ.h/cpp to support aggregating the police data to the the state level
--Confirm that your output can match the example below
--Use sort to sort state data based on various criteria and report
+<p>
+-Familiarize yourself with the raceDemoData.h/cpp and be sure you understand what it represents<br>
+-Start by designing the Police Data representation in policeData.h/cpp<br>
+-Design the state level Police Data representation in policeState.h/cpp<br>
+-Modify parse.cpp to support the use of the new data types<br>
+-Modify dataAQ.h/cpp to support aggregating the police data to the the state level<br>
+-Confirm that your output can match the example below<br>
+-Use sort to sort state data based on various criteria and report<br>
 
 Example report
 ============
@@ -105,5 +105,5 @@ Grading
 Acknowledgements
 ================
 
-Spring`21 vesion: Zoë Wood.  Thank you to JO and BZ for assistance with the data exploration project and the cleaned Washington Post data.
+Spring`21 vesion: Zoë Wood.  Thank you to JO and BZF for assistance with the data exploration project and the cleaned Washington Post data.
 
