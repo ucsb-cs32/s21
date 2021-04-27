@@ -67,15 +67,15 @@ Familiarize yourself with the **raceDemoData.h/cpp** and be sure you understand 
 State level police class must support the following methods:<br>
 
 ```
-    int getNumMentalI();
-    int getFleeingCount();
-    int getCasesOver65();
-    int getCasesUnder18();
-    raceDemogData getRacialData();
-    int getnumMales();
-    int getnumFemales();
-    int getNumberOfCases();
-    string getState();
+        int getNumMentalI();
+        int getFleeingCount();
+        int getCasesOver65();
+        int getCasesUnder18();
+        raceDemogData getRacialData();
+        int getnumMales();
+        int getnumFemales();
+        int getNumberOfCases();
+        string getState();
 ```
 
 
@@ -114,7 +114,6 @@ Example report
 ============
 For your reference, here is a partial example reporting of expected output from the overloaded stream operators for stateDemog and statePolice data:
 
-    
 ```
 State Demographic Info: State Info: AK
 Number of Counties: 29
