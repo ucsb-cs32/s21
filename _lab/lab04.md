@@ -1,11 +1,11 @@
 ---
 layout: lab
 num: lab04	
-ready: false
+ready: true
 desc: "New type and predicates (for sorting)"
 assigned: 2021-04-27 
 due: 2021-05-05 23:59
-github_org_url: https://github.com/ucsb-cs32-w21
+github_org_url: https://github.com/ucsb-cs32-s21
 ---
 
 Goals
@@ -50,7 +50,8 @@ To support reading in the new csv data (police_shootings_cleaned.csv), there is 
 
 Tasks
 ============
-<p>Starting with your lab03 code take a look at the new files and integrate the new files (and modified files).  Then you will need to work through the following tasks (you may tackle them in the order that makes sense to you:
+<p>Starting with your lab03 code take a look at the new files and integrate the new files (and modified files): https://github.com/ucsb-cs32-s21/Lab04-STARTER
+ Then you will need to work through the following tasks (you may tackle them in the order that makes sense to you:
 </p>
     
 **Task 0:** 
