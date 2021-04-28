@@ -77,7 +77,10 @@ we can use to build up necessary data relationships).  There are multiple valid 
 A note about averaging percentages of populations
 -----------------------
 As mentioned in lab01, we can not average our percentages because the counties have different numbers of residents.  When averaging for the 
-state, you will need to use the *count* data per data field and the total population of the counties.
+state, you will need to use the *count* data per data field and the total population of the counties.  
+
+In your code, when transforming the county percentages to counts, represent the counts as whole numbers and use round to convert from any decimal valued number to a whole number.  This is because a decision was made upstream from our application about the precision of the percentages, thus we will sometimes generate decimal valued numbers, however, the number of people (count) of a given population in a county should be a whole number (i.e. 123 people makes sense, while 122.7 people is not as sensible).  And remember to watch out for integer division. 
+
 Then when designing your state data, also store a total state population and think about how to aggregate the county data 
 (for example, during aggregation compute total states counts which can be converted to percentages of the total state population, 
 after all county data has been aggregated together).
