@@ -113,6 +113,7 @@ Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on
     -List the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states<br>
     -List the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states<br>
 </p>
+Note additional sorts/reports may be added (stay tuned).
     
  **Task 5:**
  <p>
@@ -172,6 +173,7 @@ total Racial Demographic Count: 41
     
 Grading
 ================
+(Draft - check for revisions)
 (50) autograder tests passed (GS)<br>
 (20) code review reasonable data designs<br>
 (20) code review reasonable aggregation computation<br>
