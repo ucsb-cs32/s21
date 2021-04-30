@@ -112,7 +112,7 @@ Similar to lab03, add any data members to dataAQ that you need to store and aggr
 Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort to report the following:<br>
 <br>
     -List the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states<br>
-    -List the 5 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states<br>
+    -List the 10 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states<br>
 </p>
 Note additional sorts/reports may be added (stay tuned).
     
