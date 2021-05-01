@@ -109,12 +109,78 @@ Similar to lab03, add any data members to dataAQ that you need to store and aggr
     shared_ptr<psState> getStatePoliceData(string stateName);  
 ```
 <p>
-Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort to report the following:<br>
+Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort in each of the following methods:<br>
 <br>
-    -List the top 10 states in order based on highest number of police shooting incidents and print out the demographic data for these states<br>
-    -List the 10 states with the lowest percentage of people below the poverty line and the associated police shooting information for those states<br>
+ ```
+     //sort and report the top ten states in terms of number of police shootings 
+    void reportTopTenStatesPS();
+    //sort and report the top ten states with largest population below poverty 
+    void reportTopTenStatesBP();
+ ```
+
+Note that each of these methods should sort the full data, print a short report on the top 10 (see below) and write out a full listing for both the police shooting and demographic data for the top three. Example output would look like the following with all blanks filled in:
+```
+Testing sort on BP state data...
+Top ten states sorted on Below Poverty data & the associated police shooting data:
+MS
+Total population: 2994079
+Percent below poverty: 22.63
+Police shooting incidents: 75
+--
+Total population: --
+Percent below poverty: --
+Police shooting incidents: --
+--
+Total population: --
+Percent below poverty: --
+Police shooting incidents: --
+...
+**Full listings for top 3 Below Poverty data & the associated police shooting data for top 3:
+State Info: MS
+Number of Counties: 82
+Population info: 
+(over 65): 14.31% and total: 428361
+(under 18): 24.42% and total: 731075
+(under 5): 6.48% and total: 193957
+Education info: 
+(Bachelor or more): 20.43% and total: 611741
+(high school or more): 81.62% and total: 2443639
+persons below poverty: 22.63% and total: 677656
+community racial demographics: Racial Demographics Info: 
+% American Indian and Alaska Native percent: 0.58 count: 17228
+% Asian American percent: 1.02 count: 30444
+% Black/African American percent: 37.50 count: 1122809
+% Hispanic or Latinx percent: 2.96 count: 88738
+% Native Hawaiian and Other Pacific Islander percent: 0.05 count: 1616
+% Two or More Races percent: 1.17 count: 35077
+% White (inclusive) percent: 59.65 count: 1786078
+% White (nonHispanic) percent: 57.26 count: 1714508
+total Racial Demographic Count: 2994079
+Total population: 2994079
+**Police shooting incidents:State Info: MS
+Number of incidents: 75
+Incidents with age 
+(over 65): 2
+(19 to 64): 64
+(under 18): 9
+Incidents involving fleeing: 31
+Incidents involving mental illness: 12
+Male incidents: 73 female incidents: 2
+Racial demographics of state incidents: Racial Demographics Info: 
+% American Indian and Alaska Native count: 0
+% Asian American percent: 0.89 count: 1
+% Black/African American percent: 23.21 count: 26
+% Hispanic or Latinx percent: 0.89 count: 1
+% Native Hawaiian and Other Pacific Islander count: 0
+% Two or More Races count: 0
+% White (inclusive) percent: 37.50 count: 42
+% White (nonHispanic) percent: 37.50 count: 42
+total Racial Demographic Count: 112
+
+```
+
 </p>
-Note additional sorts/reports may be added (stay tuned).
+Note that the starter code has partial test cases, that will then have further assessment conducted on gradescope.
     
  **Task 5:**
  <p>
