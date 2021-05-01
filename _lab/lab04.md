@@ -240,7 +240,7 @@ total Racial Demographic Count: 68
     
 Grading
 ================
-(70) autograder tests passed (GS)<br>
+(70) autograder tests passed (GS):  https://www.gradescope.com/courses/259718/assignments/1218415/submissions <br>
 (10) code review reasonable psData <br>
 (10) code review reasonable psState (aggregation and representation - data type use, method design) <br>
 (10) racial demographic data integration<br>
