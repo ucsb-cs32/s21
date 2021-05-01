@@ -224,26 +224,25 @@ Incidents involving fleeing: 18
 Incidents involving mental illness: 7
 Male incidents: 42 female incidents: 2
 Racial demographics of state incidents: Racial Demographics Info: 
-% American Indian and Alaska Native percent: 21.95 count: 9
-% Asian American percent: 4.88 count: 2
-% Black/African American percent: 7.32 count: 3
+% American Indian and Alaska Native percent: 13.24 count: 9
+% Asian American percent: 2.94 count: 2
+% Black/African American percent: 4.41 count: 3
 % Hispanic or Latinx count: 0
 % Native Hawaiian and Other Pacific Islander count: 0
 % Two or More Races count: 0
-% White (inclusive) count: 0
-% White (nonHispanic) percent: 65.85 count: 27
-total Racial Demographic Count: 41
+% White (inclusive) percent: 39.71 count: 27
+% White (nonHispanic) percent: 39.71 count: 27
+total Racial Demographic Count: 68
 ```
 
-
+(Note that 'W' race reported in the police shooting data is added to both White (inclusive) and White (nonHispanic).
 
     
 Grading
 ================
-(Draft - check for revisions)
-(50) autograder tests passed (GS)<br>
-(20) code review reasonable data designs<br>
-(20) code review reasonable aggregation computation<br>
+(70) autograder tests passed (GS)<br>
+(10) code review reasonable data designs<br>
+(10) code review reasonable aggregation computation<br>
 (10) code review reasonable sorting and reporting<br>
 
 
