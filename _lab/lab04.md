@@ -110,6 +110,7 @@ Similar to lab03, add any data members to dataAQ that you need to store and aggr
 ```
 <p>
 Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on various criteria and report.  Specifically, write the required compare predicates and use sort in each of the following methods:<br>
+ </p>
 
  ```
      //sort and report the top ten states in terms of number of police shootings 
@@ -179,7 +180,6 @@ total Racial Demographic Count: 112
 
 ```
 
-</p>
 Note that the starter code has partial test cases, that will then have further assessment conducted on gradescope.
     
  **Task 5:**
