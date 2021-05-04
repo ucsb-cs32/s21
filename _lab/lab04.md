@@ -135,6 +135,7 @@ Police shooting incidents: --
 Total population: --
 Percent below poverty: --
 Police shooting incidents: --
+...//print all ten
 ...
 **Full listings for top 3 Below Poverty data & the associated police shooting data for top 3:
 State Info: MS
