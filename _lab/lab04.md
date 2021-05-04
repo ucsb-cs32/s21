@@ -119,10 +119,9 @@ Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on
     void reportTopTenStatesBP();
  ```
 
-Note that each of these methods should sort the full data, print a short report on the top 10 (see below) and write out a full listing for both the police shooting and demographic data for the top three. Example output would look like the following with all blanks filled in:
+Note that each of these methods should sort the full data, print a short report on the top 10 (see below) and write out a full listing for both the police shooting and demographic data for the top three. Example output would look like the following with all blanks filled in (prior example included the output string from testBPSort - now removed for clarity):
 
 ```
-Testing sort on BP state data...
 Top ten states sorted on Below Poverty data & the associated police shooting data:
 MS
 Total population: 2994079
