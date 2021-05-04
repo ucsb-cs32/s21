@@ -68,6 +68,12 @@ The below figure represents the hierarchy we will all be following:
 
 Very skeleton base code to fill in:
 
+Modality
+============
+This is a pair lab.  You may choose to work alone or with another student.  When working in a pair, please always follow good pair programming methodologies.  In general, set aside time to work together and share your screen to share the work and learning.  
+
+You will need to identify you partner (pair) in your submission (add a header to your main with both your names!).  The remaining labs will also be optional pair labs and you will be asked to only partner with the same person TWICE.
+
 Task 0 - Introduce new data types
 ============
 Overall, you will be introducing new datatypes:
