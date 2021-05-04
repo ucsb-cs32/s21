@@ -63,3 +63,22 @@ make it easier to add any other new data that likewise is associated with a regi
 This will involve moving around much of the code you have.  Work slowly and use git to keep track of prior versions.
 
 Very skeleton base code to fill in:
+
+![](lab05.jpg)
+
+
+Task 0 - Introduce new data types
+============
+Overall, you will be introducing new datatypes:
+1) A base class: region data (this base class will unify all our data and represent the region name, state(s), and population)<br>
+2) A derived class of region data that abstractly represents demographic data, *demogData* (only demographic data).  This is the data that previously was repeated in both the county and state data.<br>
+3) A derived class of demographic data, *demogCombo* that represents combinations/aggregated regions of demographic data .  This should include any additional data, other than just demographic
+data in order to represent aggregated data. <br>
+4) A derived class of region data that represents individual police shooting incidents<br>
+5) A derived class of region data that represents aggregate police shooting data, *psCombo* that represents combinations (aggregated) police shooting data<br>
+
+
+Given this data and its relationships, you need to move data and getters/setters to their appropriate locations.  
+Between demogData and demogCombo, you should not have *any* repeated
+data members (You shoudl convince yourself that the types between psData and psCombo are different types).  You should have the minimal set of getters/setters.  You should only have certain methods (such as *addXtoAggregate* in the combo level of the data representations).
+
