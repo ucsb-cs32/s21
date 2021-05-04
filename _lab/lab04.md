@@ -120,6 +120,7 @@ Add methods to **dataAQ.h/cpp** in order to use sort to sort state data based on
  ```
 
 Note that each of these methods should sort the full data, print a short report on the top 10 (see below) and write out a full listing for both the police shooting and demographic data for the top three. Example output would look like the following with all blanks filled in:
+
 ```
 Testing sort on BP state data...
 Top ten states sorted on Below Poverty data & the associated police shooting data:
@@ -169,14 +170,15 @@ Incidents involving mental illness: 12
 Male incidents: 73 female incidents: 2
 Racial demographics of state incidents: Racial Demographics Info: 
 % American Indian and Alaska Native count: 0
-% Asian American percent: 0.89 count: 1
-% Black/African American percent: 23.21 count: 26
-% Hispanic or Latinx percent: 0.89 count: 1
+% Asian American percent: 1.33 count: 1
+% Black/African American percent: 34.67 count: 26
+% Hispanic or Latinx percent: 1.33 count: 1
 % Native Hawaiian and Other Pacific Islander count: 0
 % Two or More Races count: 0
-% White (inclusive) percent: 37.50 count: 42
-% White (nonHispanic) percent: 37.50 count: 42
-total Racial Demographic Count: 112
+% White (inclusive) percent: 56.00 count: 42
+% White (nonHispanic) percent: 56.00 count: 42
+% Other percent: 6.67 count: 5
+total Racial Demographic Count: 75
 
 ```
 
@@ -224,18 +226,19 @@ Incidents involving fleeing: 18
 Incidents involving mental illness: 7
 Male incidents: 42 female incidents: 2
 Racial demographics of state incidents: Racial Demographics Info: 
-% American Indian and Alaska Native percent: 13.24 count: 9
-% Asian American percent: 2.94 count: 2
-% Black/African American percent: 4.41 count: 3
+% American Indian and Alaska Native percent: 20.45 count: 9
+% Asian American percent: 4.55 count: 2
+% Black/African American percent: 6.82 count: 3
 % Hispanic or Latinx count: 0
 % Native Hawaiian and Other Pacific Islander count: 0
 % Two or More Races count: 0
-% White (inclusive) percent: 39.71 count: 27
-% White (nonHispanic) percent: 39.71 count: 27
-total Racial Demographic Count: 68
+% White (inclusive) percent: 61.36 count: 27
+% White (nonHispanic) percent: 61.36 count: 27
+% Other percent: 6.82 count: 3
+total Racial Demographic Count: 44
 ```
 
-(Note that 'W' race reported in the police shooting data is added to both White (inclusive) and White (nonHispanic).
+Note that 'W' race reported in the police shooting data is added to both White (inclusive) and White (nonHispanic), however, racial demographic count should only add one member to the community for each category.  *In addition, any empty race reportings from police shootings should be counted as other for the Lab 04*
 
     
 Grading
