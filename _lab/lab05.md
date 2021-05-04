@@ -17,7 +17,7 @@ Learning objectives. At the end of this lab, students should be able to:
 -  Reduce redundancy in code by using inheritance (including re-write parse.cpp to reduce redundant type dependent portions)
 -  Use polymorphism 
 -  Use inheritance to design types (without redundancy) to aggregate data to correct regional level (or aggregate/combine data for a designated criteria)
--  Caompare aggregated data
+-  Compare aggregated data
 
 
 Orientation
@@ -88,4 +88,115 @@ data in order to represent aggregated data. <br>
 Given this data and its relationships, you need to move data and getters/setters to their appropriate locations.  
 Between demogData and demogCombo, you should not have *any* repeated
 data members (You shoudl convince yourself that the types between psData and psCombo are different types).  You should have the minimal set of getters/setters.  You should only have certain methods (such as *addXtoAggregate* in the combo level of the data representations).
+
+A note about regionData, for the first few tasks, region data just needs a singular state value, you will need to revisit this when you get to step 3 in task 1.  Start with a single string and then re-write when you pass all prior tests.
+
+Task 1 - Use the new data types
+============
+Once this is complete, you will then need to tackle:
+
+1) modify parse.cpp to only have one function that reads in csv data into a vector of placeData
+```
+std::vector<shared_ptr<regionData>> read_csv(std::string filename, typeFlag fileType);
+```
+In main.cpp, instead of vectors of police shooting and demographic data, create two vector of regionData and call read_csv (pass the appropriate type and in read_csv, depending upon the type, call the correct readCSVLine).  *Modify the constructor to call the correct constructor for the appropriate type.*. Note we are still using two separate vectors but their type in main and when passed to the function should both be regionData.
+
+2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Carefully think about which type of the data various operations need to be.  Try to make
+your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab04.  There are updated autograders for the same tests as lab04 but using the new type that you should make sure you can pass once you have the re-write complete.
+
+3) Now write the new method in dataAQ to aggregate either data using some data valued criteria.  Please name the method:
+```
+    void createComboDemogDataKey(std::vector<shared_ptr<demogData> >& theData);
+    void createComboPoliceDataKey(std::vector<shared_ptr<psData> >& theData);
+```
+These methods would sometimes be used instead of:
+```
+    void createComboDemogData(std::vector<shared_ptr<demogData> >& theData);
+    void createComboPoliceData(std::vector<shared_ptr<psData> >& theData);
+```
+And will aggregate into your map using a specific key function.  For example:
+```
+string makeKeyExample(shared_ptr<demogData> theData) {
+
+  string theKey = "Key";
+
+  if (theData->getBelowPoverty() < 10) {
+    theKey += "BelowPovLessTenPer";
+  } else if (theData->getBelowPoverty() < 20) {
+    theKey += "BelowPovLessTwentyPer";
+  } else if (theData->getBelowPoverty() < 30) {
+    theKey += "BelowPovLessThirtyPer";
+  } else {
+    theKey += "BelowPovAboveThirtyPer";
+  }
+
+  return theKey;
+}
+```
+Stay tuned for specifics on which key to use for psData.  When using this key to aggregate data, example results for printing all data would look like.
+```
+Combo Demographic Info: key: KeyBelowPovAboveThirtyPer
+Combo Info: AK, AL, AR, AZ, GA, ID, IL, KY, LA, MI, MS, MT, NC, ND, NM, OH, SC, SD, TN, TX, VA, WA, WI, WV, total states: 24
+Number of Counties: 117 County Demographics Info: comboData, many
+Population info: 
+(over 65): 12.31% and total: 508433
+(under 18): 27.12% and total: 1120039
+(under 5): 7.73% and total: 319328
+Education info: 
+(Bachelor or more): 17.60% and total: 726966
+(high school or more): 71.44% and total: 2950441
+persons below poverty: 33.95% and total: 1402079
+Total population: 4129981
+Racial Demographics Info: 
+% American Indian and Alaska Native percent: 7.53 count: 310799
+% Asian American percent: 1.15 count: 47561
+% Black/African American percent: 18.45 count: 762136
+% Hispanic or Latinx percent: 40.51 count: 1672996
+% Native Hawaiian and Other Pacific Islander percent: 0.06 count: 2453
+% Two or More Races percent: 1.13 count: 46721
+% White (inclusive) percent: 71.66 count: 2959502
+% White (nonHispanic) percent: 32.41 count: 1338572
+total Racial Demographic Count: 4129981
+key: KeyBelowPovLessTenPer
+Combo Info: -
+Number of Counties: 431 County Demographics Info: comboData, many
+Population info: 
+(over 65): - and total: -
+(under 18): - and total: -
+(under 5): - and total: -
+Education info: 
+(Bachelor or more): - and total: -
+(high school or more): - and total: -
+persons below poverty: - and total: -
+Total population: -
+Racial Demographics Info: 
+% American Indian and Alaska Native percent: - count: -
+% Asian American percent:-
+% Black/African American percent: -
+% Hispanic or Latinx percent: -
+% Native Hawaiian and Other Pacific Islander percent: -
+% Two or More Races percent: -
+% White (inclusive) percent: -
+% White (nonHispanic) percent: -
+total Racial Demographic Count: -
+...
+```
+Note for this kind of aggregate, you need to keep track of more than one state in region (and not keep duplicates) - use a std::set to accomplish this.
+
+-----
+
+    
+Grading
+================
+(70) autograder tests passed (GS):   <br>
+(30) code review of various aspects
+
+
+
+    
+Acknowledgements
+================
+
+Spring`21 vesion: Zoë Wood.  Thank you to JO and BZF for assistance with the data exploration project and the cleaned Washington Post data.
+
 
