@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab05	
-ready: false
+ready: true
 desc: "OO polymorphism/inheritence"
 assigned: 2021-05-05 
 due: 2021-05-15
