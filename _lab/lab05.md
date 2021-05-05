@@ -95,7 +95,7 @@ Task 1 - Use the new data types
 ============
 Once this is complete, you will then need to tackle:
 
-1) modify parse.cpp to only have one function that reads in csv data into a vector of placeData
+1) modify parse.cpp to only have one function that reads in csv data into a vector of regionData
 ```
 std::vector<shared_ptr<regionData>> read_csv(std::string filename, typeFlag fileType);
 ```
