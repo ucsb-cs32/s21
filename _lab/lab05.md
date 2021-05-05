@@ -66,7 +66,7 @@ This will involve moving around much of the code you have.  Work slowly and use 
 The below figure represents the hierarchy we will all be following:
 ![](lab05.jpg)
 
-Very skeleton base code to fill in:
+Very skeleton base code to fill in: https://github.com/ucsb-cs32-s21/Lab05-STARTER
 
 Modality
 ============
