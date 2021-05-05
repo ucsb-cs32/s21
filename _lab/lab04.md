@@ -149,14 +149,14 @@ Education info:
 (high school or more): 81.62% and total: 2443639
 persons below poverty: 22.63% and total: 677656
 community racial demographics: Racial Demographics Info: 
-% American Indian and Alaska Native percent: 0.58 count: 17228
-% Asian American percent: 1.02 count: 30444
-% Black/African American percent: 37.50 count: 1122809
-% Hispanic or Latinx percent: 2.96 count: 88738
-% Native Hawaiian and Other Pacific Islander percent: 0.05 count: 1616
-% Two or More Races percent: 1.17 count: 35077
-% White (inclusive) percent: 59.65 count: 1786078
-% White (nonHispanic) percent: 57.26 count: 1714508
+% American Indian and Alaska Native percent: 0.58 count: 17264
+% Asian American percent: 1.02 count: 30490
+% Black/African American percent: 37.50 count: 1122847
+% Hispanic or Latinx percent: 2.97 count: 88779
+% Native Hawaiian and Other Pacific Islander percent: 0.05 count: 1628
+% Two or More Races percent: 1.17 count: 35124
+% White (inclusive) percent: 59.66 count: 1786119
+% White (nonHispanic) percent: 57.26 count: 1714550
 total Racial Demographic Count: 2994079
 Total population: 2994079
 **Police shooting incidents:State Info: MS
@@ -206,14 +206,14 @@ Education info:
 (high school or more): 91.51% and total: 674168
 persons below poverty: 9.86% and total: 72611
 community racial demographics: Racial Demographics Info: 
-% American Indian and Alaska Native percent: 14.79 count: 108954
-% Asian American percent: 6.06 count: 44663
-% Black/African American percent: 3.90 count: 28731
-% Hispanic or Latinx percent: 6.81 count: 50152
-% Native Hawaiian and Other Pacific Islander percent: 1.27 count: 9352
-% Two or More Races percent: 7.09 count: 52270
-% White (inclusive) percent: 66.86 count: 492579
-% White (nonHispanic) percent: 61.95 count: 456399
+% American Indian and Alaska Native percent: 14.79 count: 108971
+% Asian American percent: 6.06 count: 44679
+% Black/African American percent: 3.90 count: 28745
+% Hispanic or Latinx percent: 6.81 count: 50165
+% Native Hawaiian and Other Pacific Islander percent: 1.27 count: 9367
+% Two or More Races percent: 7.10 count: 52282
+% White (inclusive) percent: 66.86 count: 492593
+% White (nonHispanic) percent: 61.95 count: 456415
 total Racial Demographic Count: 736732
 Total population: 736732
 **Police shooting incidents:State Info: AK
