@@ -83,7 +83,7 @@ State level police class must support the following methods:</p>
         string getState();
 ```
 
-
+For 'fleeing' - an incident is counted as fleeing if it is logged in the police shooting incident report as: "Foot", "Car" or "Other"
     
  **Task 3:** 
  <p>
