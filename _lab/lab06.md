@@ -11,14 +11,14 @@ github_org_url: https://github.com/ucsb-cs32-w21
 Goals
 =====
 
-This is a two part lab.  This first half is meant to be a a very simple first pass at looking at the visitor pattern.  The purpose is to practice the pattern and associated techology (and the next lab will explore the concepts in more detail with larger code revisions).  Learning objectives. At the end of this lab, students should be able to:
+This is a two part lab.  This first half is meant to be a a very simple first pass at looking at the visitor pattern.  The purpose is to practice the pattern and associated techology, while the second half of the lab explores the concepts in more detail with larger code revisions.  Learning objectives. At the end of this lab, students should be able to:
 
--  Implement the visitor design pattern for the exisiting code to support a simple visitors pattern to create a combined report for data
+-  Implement the visitor design pattern (part 1) for the exisiting code to support a simple visitors pattern to create a combined report for data
 - Use helper functions to compute various statistics for collections (mean, standard dev. and correlation coefficient)(including a basic understanding the use of modern C++ standard algorithms used in the stats tools provided)
 - Use helper code to gather data from our exisiting classes into vectors (understand and use function pointer and function objects).
 - Understand the basic ideas of these statistics and write test cases to confirm the provided tool works as expected (including understanding when to use population)
 - Implement the visitor design pattern (part 2) to combine raw data to state and county level (re-design)
-- - Use your code to answer questions about the data (specifically focused on computing correlation coefficients for various pairs of data values)
+- Use your code to answer questions about the data (specifically focused on computing correlation coefficients for various pairs of data values)
 
 Modality
 ============
