@@ -22,6 +22,8 @@ Learning objectives. At the end of this lab, students should be able to:
 
 Orientation
 ============
+There are two different deadlines for part 1 (no late work accepted), due: thursday May 13 11:59pm and part 2 due Sunday, May 16 11:59pm.
+
 At this point, we have a healthy amount of code (most of your lab04 solutions are over 1K lines of code -- which is still a very small software project, but 
 is growing in complexity).  Assuming we may want to add yet another data source to build up more information in our software, it is worth taking a moment now
 to reflect on the code we have and how to *simplify* that code *or* more importantly for this week's lab, if you need to aggregate data based on varied criteria (i.e. state or all data of a given type or value - i.e. aggregate all counties with percentage of the population at varied thresholds).  The `spirit of the problem' for this assignment is the use of inheritance.
@@ -74,7 +76,7 @@ This is a pair lab.  You may choose to work alone or with another student.  When
 
 You will need to identify you partner (pair) in your submission (add a header to your main with both your names!).  The remaining labs will also be optional pair labs and you will be asked to only partner with the same person TWICE.
 
-Task 0 - Introduce new data types
+Task 0 - Introduce new data types  - part 1
 ============
 Overall, you will be introducing new datatypes:
 1) A base class: region data (this base class will unify all our data and represent the region name, state(s), and population)<br>
@@ -91,7 +93,7 @@ data members (You shoudl convince yourself that the types between psData and psC
 
 A note about regionData, for the first few tasks, region data just needs a singular state value, you will need to revisit this when you get to step 3 in task 1.  Start with a single string and then re-write when you pass all prior tests.
 
-Task 1 - Use the new data types
+Task 1 - Use the new data types to support all prior functionality - also part 1!
 ============
 Once this is complete, you will then need to tackle:
 
@@ -104,7 +106,11 @@ In main.cpp, instead of vectors of police shooting and demographic data, create 
 2) modify dataAQ.h/.cpp and main.cp to use these new data types.  Carefully think about which type of the data various operations need to be.  Try to make
 your code as general as possible.  Test that your code works as expected in that it can produce the same output as lab04.  There are updated autograders for the same tests as lab04 but using the new type that you should make sure you can pass once you have the re-write complete.
 
-3) Now write the new method in dataAQ to aggregate either data using some data valued criteria.  Please name the method:
+Task 2 - Extend your code using the new data types - part 2
+============
+Oce everything is working with your re-design, we will extend our code to be able to aggregate based on data values.
+
+Now write the new method in dataAQ to aggregate either data using some data valued criteria.  Please name the method:
 ```
     void createComboDemogDataKey(std::vector<shared_ptr<demogData> >& theData);
     void createComboPoliceDataKey(std::vector<shared_ptr<psData> >& theData);
@@ -188,7 +194,8 @@ Note for this kind of aggregate, you need to keep track of more than one state i
     
 Grading
 ================
-(70) autograder tests passed (GS):   <br>
+(50) autograder tests passed for part 1 (all test cases given in starter code):https://www.gradescope.com/courses/259718/assignments/1231906/outline/edit   <br>
+(50) autograder tests passed (GS):   <br>
 (30) code review of various aspects
 
 
