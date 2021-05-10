@@ -194,9 +194,9 @@ Note for this kind of aggregate, you need to keep track of more than one state i
     
 Grading
 ================
-(50) autograder tests passed for part 1 (all test cases given in starter code):https://www.gradescope.com/courses/259718/assignments/1231906/outline/edit   <br>
-(50) autograder tests passed (GS):   <br>
-(30) code review of various aspects
+(43) autograder tests passed for part 1 (all test cases given in starter code):https://www.gradescope.com/courses/259718/assignments/1231906/outline/edit   <br>
+(37) autograder tests passed (GS) for aggregation based on data value (part 2) - stay tuned:   <br>
+(20) code review of various aspects
 
 
 
