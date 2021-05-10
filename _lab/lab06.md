@@ -50,7 +50,20 @@ Introduce and modify the following classes as follows to support printing a comb
 ```
 void dataAQ::stateReport(double thresh);
 ```
-....
+
+**While you are working on matching the report output, note that whitespace differences will be important to pay attention to**. A useful tool is to redirect the ouput of the test to a file:
+```
+ ./testReport> t
+```
+and then use vi to edit the file:
+```
+vi t
+```
+and use
+```
+:set list
+```
+to show whitespace (especially to see if there are trailing white space differences.
 
 Mandatory check in part 1 - due May
 ============
