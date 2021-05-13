@@ -253,7 +253,7 @@ and/or you can try https://text-compare.com/
 Grading
 ================
 (43) autograder tests passed for part 1 (all test cases given in starter code):https://www.gradescope.com/courses/259718/assignments/1231906/outline/edit   <br>
-(37) autograder tests passed (GS) for aggregation based on data value (part 2) - stay tuned:   <br>
+(40) autograder tests passed (GS) for aggregation based on data value (part 2): https://www.gradescope.com/courses/259718/assignments/1238749/submissions  <br>
 (20) code review of various aspects
 
 
