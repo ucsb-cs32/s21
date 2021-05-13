@@ -224,11 +224,11 @@ key: KeyAsianVictim
 State Info: AK, AR, CA, CO, FL, GA, HI, ID, KY, LA, MD, MI, MN, MO, MS, NC, NJ, NV, NY, OH, OK, PA, SC, SD, TN, TX, UT, VA, WA, WI, WV, total states: 31
 Number of incidents: 104
 Incidents with age 
-(over 65): 0 ratio: 0.00
-(19 to 64): 93 ratio: 1.12
-(under 18): 11 ratio: 9.45
-Incidents involving fleeing: 21 ratio: 4.95
-Incidents involving mental illness: 26 ratio: 4.00
+(over 65): 0 
+(19 to 64): 93 
+(under 18): 11 
+Incidents involving fleeing: 21 
+Incidents involving mental illness: 26 
 Male incidents: 100 female incidents: 4
 Racial demographics of state incidents: Racial Demographics Info: 
 % American Indian and Alaska Native count: 0
