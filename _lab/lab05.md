@@ -120,7 +120,7 @@ These methods would sometimes be used instead of:
     void createComboDemogData(std::vector<shared_ptr<demogData> >& theData);
     void createComboPoliceData(std::vector<shared_ptr<psData> >& theData);
 ```
-And will aggregate into your map using a specific key function.  For example:
+And will aggregate into your map using a specific key function.  Specifically:
 ```
 string makeKeyExample(shared_ptr<demogData> theData) {
 
@@ -139,7 +139,11 @@ string makeKeyExample(shared_ptr<demogData> theData) {
   return theKey;
 }
 ```
-Stay tuned for specifics on which key to use for psData.  When using this key to aggregate data, example results for printing all data would look like.
+You need to use this exact function because the test cases testAgDemog (and testAgPS) both use these keyes to query the aggregate data.
+
+
+
+When using this key to aggregate data, example results for printing all data would look like.
 ```
 Combo Demographic Info: key: KeyBelowPovAboveThirtyPer
 Combo Info: AK, AL, AR, AZ, GA, ID, IL, KY, LA, MI, MS, MT, NC, ND, NM, OH, SC, SD, TN, TX, VA, WA, WI, WV, total states: 24
@@ -187,9 +191,57 @@ Racial Demographics Info:
 total Racial Demographic Count: -
 ...
 ```
-Note for this kind of aggregate, you need to keep track of more than one state in region (and not keep duplicates) - use a std::set to accomplish this.
+Note for this kind of aggregate, you need to keep track of more than one state in region (and not keep duplicates) as given in the regionData.h, we can use std::set to accomplish this.
 
------
+
+For the police shooting data, we will aggregate the data based on racial demographic data.  Please use the following key:
+```
+
+string makeKeyExample(shared_ptr<psData> theData) {
+
+  string theKey = "Key";
+  if (theData->getRace() == "W") {
+    theKey += "WhiteVictim";
+  } else if (theData->getRace() == "A") {
+    theKey += "AsianVictim";
+  } else if (theData->getRace() == "H") {
+    theKey += "HispanicVictim";
+  } else if (theData->getRace() == "N") {
+    theKey += "NativeAmericanVictim";
+  } else if (theData->getRace() == "B") {
+    theKey += "AfricanAmericanVictim";
+  } else if (theData->getRace() == "O") {
+    theKey += "OtherRaceVictim";
+  } else {
+    theKey += "RaceUnspecifiedVictim";
+  }
+  return theKey;
+}
+```
+When using this key to aggregate data, example results for printing all data would look like.
+```
+key: KeyAsianVictim
+State Info: AK, AR, CA, CO, FL, GA, HI, ID, KY, LA, MD, MI, MN, MO, MS, NC, NJ, NV, NY, OH, OK, PA, SC, SD, TN, TX, UT, VA, WA, WI, WV, total states: 31
+Number of incidents: 104
+Incidents with age 
+(over 65): 0 ratio: 0.00
+(19 to 64): 93 ratio: 1.12
+(under 18): 11 ratio: 9.45
+Incidents involving fleeing: 21 ratio: 4.95
+Incidents involving mental illness: 26 ratio: 4.00
+Male incidents: 100 female incidents: 4
+Racial demographics of state incidents: Racial Demographics Info: 
+% American Indian and Alaska Native count: 0
+% Asian American percent: 100.00 count: 104
+% Black/African American count: 0
+% Hispanic or Latinx count: 0
+% Native Hawaiian and Other Pacific Islander count: 0
+% Two or More Races count: 0
+% White (inclusive) count: 0
+% White (nonHispanic) count: 0
+total Racial Demographic Count: 104
+...
+```
 
     
 Grading
