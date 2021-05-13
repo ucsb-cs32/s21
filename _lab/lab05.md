@@ -243,6 +243,12 @@ total Racial Demographic Count: 104
 ...
 ```
 
+There are two tests for these aggregations. Note that to help with identifying any whitespace differences, you can direct output to a file and then use vi 
+and the command
+```
+:set list
+```
+and/or you can try https://text-compare.com/
     
 Grading
 ================
