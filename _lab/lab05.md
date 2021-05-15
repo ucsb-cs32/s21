@@ -158,14 +158,14 @@ Education info:
 persons below poverty: 33.95% and total: 1402079
 Total population: 4129981
 Racial Demographics Info: 
-% American Indian and Alaska Native percent: 7.53 count: 310799
-% Asian American percent: 1.15 count: 47561
-% Black/African American percent: 18.45 count: 762136
-% Hispanic or Latinx percent: 40.51 count: 1672996
-% Native Hawaiian and Other Pacific Islander percent: 0.06 count: 2453
-% Two or More Races percent: 1.13 count: 46721
-% White (inclusive) percent: 71.66 count: 2959502
-% White (nonHispanic) percent: 32.41 count: 1338572
+% American Indian and Alaska Native percent: 7.53 count: 310853
+% Asian American percent: 1.15 count: 47616
+% Black/African American percent: 18.45 count: 762185
+% Hispanic or Latinx percent: 40.51 count: 1673061
+% Native Hawaiian and Other Pacific Islander percent: 0.06 count: 2478
+% Two or More Races percent: 1.13 count: 46782
+% White (inclusive) percent: 71.66 count: 2959567
+% White (nonHispanic) percent: 32.41 count: 1338625
 total Racial Demographic Count: 4129981
 key: KeyBelowPovLessTenPer
 Combo Info: -
