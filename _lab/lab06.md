@@ -104,6 +104,8 @@ Education info:
 ...
 ```
 
+There are two public test files (and the Makefile that will be used on the autograder) here: https://github.com/ucsb-cs32-s21/Lab06-part1-tests
+
 **While you are working on matching the report output, note that whitespace differences will be important to pay attention to**. A useful tool is to redirect the ouput of the test to a file:
 ```
  ./testReport> t
