@@ -36,14 +36,14 @@ For part 1, the goal is to make minor modifications to use the visitor pattern t
 Steps for part 1 (complete and turn in mid-point code)
 ============
 Introduce and modify the following classes as follows to support printing a combined report, using the visitors pattern.
-1) Create a visitor class to be used as an interface.  This should only define pure virtual methods to visit the two types: psData and demogData
+1) Create a visitor class to be used as an interface.  This should only define pure virtual methods to visit the two types: psData and demogData.  This file must be called **visitor.h**
 2) Modify regionData to also include a pure virtual function (so that derived classes can accept a visitor):
 ```
     //Lab06 anything that is region data must accept a visitor (aka must be visitable)
     virtual void accept(class Visitor &v) = 0;
 ```
 3) Implement the accept method for psData and demogData.  It should just call visit on the visitor for the given type.
-4) Define a visitorReport class that implements the visit method for each of the two types.  For part 1, the visit method just prints a subset of each type's data (match example data shown below).
+4) Define a visitorReport class that implements the visit method for each of the two types.  For part 1, the visit method just prints a subset of each type's data (match example data shown below).  This file must be called **visitorReport.h**
 5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria - name this method:
 ```
 void dataAQ::comboReport(double thresh);
