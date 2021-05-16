@@ -44,11 +44,25 @@ Introduce and modify the following classes as follows to support printing a comb
 ```
 3) Implement the accept method for psData and demogData.  It should just call visit on the visitor for the given type.
 4) Define a visitorReport class that implements the visit method for each of the two types.  For part 1, the visit method just prints a subset of each type's data (match example data shown below).
-5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria.  You must implement this by creating a visitorReport and calling accept with this visitor on a collection of demogData and psData that meets the given criteria. (You may create the selection first then call accept on all values in the collection.  The first report to create is for state data for any state with a percentage of the population that is above a specific threshold with respect to percentage of the population that have graduted high school:
+5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria - name this method:
 ```
-void dataAQ::stateReport(double thresh);
+void dataAQ::comboReport(double thresh);
 ```
-For example, for a dataAQ called *theAnswers*, calling:
+You must implement this method by creating a visitorReport and calling accept with this visitor on a collection of demogData and/or psData that meets the given criteria. You may create the selection first then call accept on all values in the collection.  To be explicit, create one big pile of regionData:
+```
+std::vector<shared_ptr<regionData>> pileData;
+```
+Put any demog data that meets the criteria of any state data where the percentage of the population that have graduted high school is above the specified threshold passed in as a parameter to the method.  Also add the police shooting data from the same state to the pile of data.  Then call accept on the pile of data - i.e.:
+```
+    visitorReport report;
+
+    for (const auto &obj : pileData) {
+        obj->accept(report);
+    }
+    report.display();
+ ```
+
+Thus, for example, for a dataAQ called *theAnswers*, calling:
 ```
 theAnswers.comboReport(92);
 ```
@@ -104,6 +118,6 @@ and use
 ```
 to show whitespace (especially to see if there are trailing white space differences.
 
-Mandatory check in part 1 - due May
+Mandatory check in part 1 - due May 20th
 ============
 (20) autograder (mandatory on time to receive credit for next portion)
