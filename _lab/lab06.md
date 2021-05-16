@@ -122,4 +122,4 @@ to show whitespace (especially to see if there are trailing white space differen
 
 Mandatory check in part 1 - due May 20th
 ============
-(20) autograder (mandatory on time to receive credit for next portion)
+(20) autograder (mandatory on time to receive credit for next portion) : https://www.gradescope.com/courses/259718/assignments/1243215/submissions
