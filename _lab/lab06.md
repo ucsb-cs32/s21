@@ -44,9 +44,50 @@ Introduce and modify the following classes as follows to support printing a comb
 ```
 3) Implement the accept method for psData and demogData.  It should just call visit on the visitor for the given type.
 4) Define a visitorReport class that implements the visit method for each of the two types.  For part 1, the visit method just prints a subset of each type's data (match example data shown below).
-5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria.  You must implement this by creating a visitorReport and calling accept with this visitor on a collection of demogData and psData that meets the given criteria. (You may create the selection first then call accept on all values in the collection.  The first report to create is for state data for any state with a percentage of the population below the poverty line above a threshold (stay tuned for additional reports):
+5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria.  You must implement this by creating a visitorReport and calling accept with this visitor on a collection of demogData and psData that meets the given criteria. (You may create the selection first then call accept on all values in the collection.  The first report to create is for state data for any state with a percentage of the population that is above a specific threshold with respect to percentage of the population that have graduted high school:
 ```
 void dataAQ::stateReport(double thresh);
+```
+For example, for a dataAQ called *theAnswers*, calling:
+```
+theAnswers.comboReport(92);
+```
+would produce the following report:
+```
+print summary demog Data:
+Region info: comboData, MN
+Education info:
+(Bachelor or more): 32.81% and total: 1790458
+(high school or more): 92.09% and total: 5025407
+Total population: 5457173
+Racial Demographics Info: 
+% American Indian and Alaska Native percent: 1.33 count: 72408
+% Asian American percent: 4.72 count: 257453
+% Black/African American percent: 5.86 count: 319700
+% Hispanic or Latinx percent: 5.07 count: 276522
+% Native Hawaiian and Other Pacific Islander percent: 0.07 count: 4020
+% Two or More Races percent: 2.33 count: 127059
+% White (inclusive) percent: 85.73 count: 4678263
+% White (nonHispanic) percent: 81.44 count: 4444343
+total Racial Demographic Count: 5457173
+print aggregate police shooting data 
+State Info: MN, total states: 1
+Number of incidents: 73
+Racial demographics of state incidents: Racial Demographics Info: 
+% American Indian and Alaska Native percent: 4.27 count: 5
+% Asian American percent: 2.56 count: 3
+% Black/African American percent: 11.11 count: 13
+% Hispanic or Latinx percent: 2.56 count: 3
+% Native Hawaiian and Other Pacific Islander count: 0
+% Two or More Races count: 0
+% White (inclusive) percent: 38.46 count: 45
+% White (nonHispanic) percent: 38.46 count: 45
+% Other percent: 2.56 count: 3
+total Racial Demographic Count: 117
+print summary demog Data:
+Region info: comboData, MT
+Education info:
+...
 ```
 
 **While you are working on matching the report output, note that whitespace differences will be important to pay attention to**. A useful tool is to redirect the ouput of the test to a file:
