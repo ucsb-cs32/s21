@@ -48,7 +48,7 @@ In particular, since our data represents population information represented as b
 As a first test that stats.h/cpp is working as expected, edit testStats1.cpp and uncomment the final asserts.  You will need to find an online statistical calculator or use an external method to  compute what the correct values should be and then test the tool to make sure it is working as expected. *Additional tests will be added to test your understanding of the percent vs count.
 
 
-Redsign tasks for part 2 
+Redesign tasks for part 2 
 ============
 
 The heart of this lab is to redesign the way we create aggregate data.  
@@ -106,6 +106,14 @@ Note that for county data, we need to be able to create vectors of data for matc
     private:
         ...
 ```
+
+Note that when working with the visitor pattern and smart pointers, you likely want to look into:
+```
+std::enable_shared_from_this
+```
+See https://en.cppreference.com/w/cpp/memory/enable_shared_from_this
+for more information.
+
 
 Stats Tasks for part 2
 ============
