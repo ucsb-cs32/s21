@@ -36,19 +36,19 @@ For part 1, the goal is to make minor modifications to use the visitor pattern t
 Steps for part 1 (complete and turn in mid-point code)
 ============
 Introduce and modify the following classes as follows to support printing a combined report, using the visitors pattern.
-1) Create a visitor class to be used as an interface.  This should only define pure virtual methods to visit the two types: psData and demogData.  This file must be called **visitor.h**
+1) Create a visitor class to be used as an interface.  This should only define pure virtual methods to visit our types: psCombo and demogData, and psData (although for this exercise you are not asked to generate a report with psData).  This file must be called **visitor.h**
 2) Modify regionData to also include a pure virtual function (so that derived classes can accept a visitor):
 ```
     //Lab06 anything that is region data must accept a visitor (aka must be visitable)
     virtual void accept(class Visitor &v) = 0;
 ```
-3) Implement the accept method for psData and demogData.  It should just call visit on the visitor for the given type.
+3) Implement the accept method for psCombo and demogData, and psData.  It should just call visit on the visitor for the given type.
 4) Define a visitorReport class that implements the visit method for each of the two types.  For part 1, the visit method just prints a subset of each type's data (match example data shown below).  This file must be called **visitorReport.h**
 5) Modify dataAQ.h to add a method to print a report of the data for any state that meets a given criteria - name this method:
 ```
 void dataAQ::comboReport(double thresh);
 ```
-You must implement this method by creating a visitorReport and calling accept with this visitor on a collection of demogData and/or psData that meets the given criteria. You may create the selection first then call accept on all values in the collection.  To be explicit, create one big pile of regionData:
+You must implement this method by creating a visitorReport and calling accept with this visitor on a collection of demogData and/or psCombo/psData  that meets the given criteria. You may create the selection first then call accept on all values in the collection.  To be explicit, create one big pile of regionData:
 ```
 std::vector<shared_ptr<regionData>> pileData;
 ```
