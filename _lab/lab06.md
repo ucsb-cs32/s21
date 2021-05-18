@@ -59,7 +59,6 @@ Put any demog data that meets the criteria of any state data where the percentag
     for (const auto &obj : pileData) {
         obj->accept(report);
     }
-    report.display();
  ```
 
 Thus, for example, for a dataAQ called *theAnswers*, calling:
