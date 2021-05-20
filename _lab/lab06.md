@@ -95,8 +95,8 @@ Racial demographics of state incidents: Racial Demographics Info:
 % Two or More Races count: 0
 % White (inclusive) percent: 38.46 count: 45
 % White (nonHispanic) percent: 38.46 count: 45
-% Other percent: 2.56 count: 3
-total Racial Demographic Count: 117
+% Other percent: 5.48 count: 4
+total Racial Demographic Count: 73
 print summary demog Data:
 Region info: comboData, MT
 Education info:
