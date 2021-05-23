@@ -129,8 +129,15 @@ In statTool.cpp you are provided with implementations for the following:
   /* call visitor pattern to create county data */
   static  void createCountyData(std::vector<shared_ptr<regionData> >& theData, Visitor& theCounties);
   
+  /*create the keyes */
+  static void createKeys(std::vector<shared_ptr<regionData>>& theData, Visitor& theKeyes);
+
+  //these could be simplified in future
   /* call visitor pattern to create aggregate data using a specific criteria */
-  static  void createKeyData(std::vector<shared_ptr<regionData> >& theData, Visitor& theAggregator);
+  static  void createKeyedDataDemog(std::vector<shared_ptr<regionData>>& theData, Visitor& theKeyed);
+
+  /* call visitor pattern to create keyed data based on keyes generated from PS criteria*/
+  static  void createKeyedDataPS(std::vector<shared_ptr<regionData>>& theData, Visitor& theKeyed);
 
   /* helper functions to fill in arrays based on funciton pointers  - on mix*/
   static void gatherCountStats(visitorCombine* theAggregate, vector<double> &XPer, vector<double> &YPer, 
@@ -149,6 +156,9 @@ In statTool.cpp you are provided with implementations for the following:
                                     vector<double> &XCount, vector<double> &Ycount,
                                     double (demogCombo::*f1)() const, double (demogCombo::*f2)() const,
                                     int (demogCombo::*f3)() const, int (demogCombo::*f4)() const);
+
+  static void gatherMixRaceProportionStats(visitorCombine* theAggregate, vector<double> &XPer, vector<double> &YPer, 
+                int (raceDemogData::*f1)() const, int (raceDemogData::*f2)() const);
   
   /* compute statistics for demographic data for a given region expects, 
   the region and function pointers for the methods to fill in - mix ps and demog */
@@ -165,6 +175,11 @@ In statTool.cpp you are provided with implementations for the following:
   the region and function pointers for the methods to fill in - two police shooting fields */
   static void computeStatsPSData(visitorCombine*  theRegions, 
                                 int (psCombo::*f1)()const, int (psCombo::*f2)() const);
+
+  /* compute statistics for mixed demographic data and police shooting data for racial demographics, expects 
+  the region and function pointers for the methods to fill in - note computes proportions */
+  static void computeStatsRaceProportion(visitorCombine*  theRegions, 
+                                int (raceDemogData::*f1)()const, int (raceDemogData::*f2)() const);
 
 ```
 
@@ -191,8 +206,60 @@ See the code in statTool that uses these functors to fill in vectors and then ca
 
 In addition, testStatsData1.cpp as an example of directly filling in data, but in general, using the model shown in main.cpp using statTool will make it easier for you to fill in the worksheet.  Expect additional test cases.
 
+
+Extra credit for part 2
+============
+Another way to aggregate the data is to use data values to create keys (as we did in prior labs).  This can allow us to make aggregrates of regions based on data values (such as racial demographic composition).  In order to then correlate the demographic data and the police shooting data, an additional map is needed to map the keys from one data type to the other.
+
+We can tackle this process by a two step visitor process.  First create a vistor to create the key data and store the region to key mapping.
+```
+class visitorCreateKey : public Visitor {
+public:
+    //constructor expects function pointers to the key functions
+    visitorCreateKey(string (*df)(shared_ptr<demogData>), string (*psf)(shared_ptr<psData>)) {
+    ...
+    }
+```
+
+Then pass the mapping to the visitor to combine data using the map:
+```
+class visitorCombineKeyDemog : public visitorCombine {
+public:
+    //constructor expects the mapping function and a map from region to key
+    visitorCombineKeyDemog(string (*df)(shared_ptr<demogData>), std::map<string, string>& mapDemogToKey) {
+    ...
+    }
+  
+  ...
+  \\or
+class visitorCombineKeyPS : public visitorCombine {
+public:
+    visitorCombineKeyPS(string (*psf)(shared_ptr<psData>), std::map<string, string>& mapPSToKey) {
+    ...
+      
+```
+These can then be used in sequence:
+
+```
+\\for example:
+visitorCreateKey theKeys(&makeKeyDemog, &makeKeyPS);
+statTool::createKeys(pileOfData, theKeys);
+
+visitorCombineKeyDemog theKeyedDemog(&makeKeyDemog, theKeys.getDemogRegionToKey());
+statTool::createKeyedDataDemog(pileOfData, theKeyedDemog);
+theKeyedDemog.printAllCombo();
+
+visitorCombineKeyPS theKeyedPS(&makeKeyPS, theKeys.getPsRegionToKey());
+statTool::createKeyedDataPS(pileOfData, theKeyedPS);
+theKeyedPS.printAllCombo();
+```
+There is a test case in the autograder: testStatsData5.cpp that tests the functionality of combining data based on key functions. This is extra credit and not required.
+
+
+
 Grading
 ============
-(40) worksheet<br>
-(60) autograder (3 tests - youmust provide the complete testStats1.cpp) <br>
+(47) worksheet<br>
+(60) autograder (5 tests - you must provide the complete testStats1.cpp) <br>
+(25) EXTRA CREDIT autograder (1 tests for aggregating data using keyed mode) <br>
 (50) working code + code review (using visitor pattern as specified)<br>
