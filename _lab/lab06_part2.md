@@ -220,8 +220,10 @@ public:
     ...
     }
 ```
+You are provided with a very skeleton implementation of this class and need to fill in the main visit methods and decide about any additional data you need to store in order to keep track of the mapping from a region (county+state) to the key.  This visitor is mainly used to create the mapping.
+The provided skeleton expects function pointers passed to the constructor for use in generating key values.  Examples are provided below.
 
-Then pass the mapping to the visitor to combine data using the map:
+Once you have created and stored the keys, they will then be passed to the visitor to combine data using the map.  There will two different ones, using either the demographic key mapping as the primary organizer or the police shooting keying as the primary organizer for the aggregations:
 ```
 class visitorCombineKeyDemog : public visitorCombine {
 public:
@@ -238,7 +240,9 @@ public:
     ...
       
 ```
-These can then be used in sequence:
+Once again, you are given two very skeleton class files to fill in.  You will need to decide about data you might need and fill in the main visit methods that will aggregate the data based on the key values.
+
+Once these are in place, they can then be used in sequence:
 
 ```
 \\for example:
@@ -255,6 +259,49 @@ theKeyedPS.printAllCombo();
 ```
 There is a test case in the autograder: testStatsData5.cpp that tests the functionality of combining data based on key functions. This is extra credit and not required.
 
+Example key functions are provided and an example report might look like:
+```
+/*key generation functions */
+string makeKeyDemog(shared_ptr<demogData> theData) {
+
+  string theKey = "Key";
+
+  if (theData->getCommunityRaceMix().getBlackPercent() > 20) {
+    theKey += "AfriAmerTwentyPer";
+  } else if (theData->getCommunityRaceMix().getLatinxPercent() > 20) {
+    theKey += "LatinxPerTwentyPer";
+  } else if (theData->getCommunityRaceMix().getFirstNationPercent() > 20) {
+    theKey += "FirstNationTwentyPer";
+  } else if (theData->getCommunityRaceMix().getAsianPercent() > 20) {
+    theKey += "AsianTwentyPer";
+  } else {
+    theKey += "Other";
+  }
+
+  return theKey;
+}
+
+string makeKeyPS(shared_ptr<psData> theData) {
+
+  string theKey = "Key";
+  if (theData->getRace() == "W") {
+    theKey += "WhiteVictim";
+  } else if (theData->getRace() == "A") {
+    theKey += "AsianVictim";
+  } else if (theData->getRace() == "H") {
+    theKey += "HispanicVictim";
+  } else if (theData->getRace() == "N") {
+    theKey += "NativeAmericanVictim";
+  } else if (theData->getRace() == "B") {
+    theKey += "AfricanAmericanVictim";
+  } else if (theData->getRace() == "O") {
+    theKey += "OtherRace";
+  } else {
+    theKey += "RaceUnspecified";
+  }
+  return theKey;
+}
+```
 
 
 Grading
