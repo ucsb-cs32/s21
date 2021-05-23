@@ -183,6 +183,12 @@ In statTool.cpp you are provided with implementations for the following:
 
 ```
 
+To use these new tools, you do need to make sure that you have a getter defined in your demogData.h:
+```
+    raceDemogData getCommunityRaceMix() const { return communityRacialCount; }
+```
+
+
 See the code in statTool that uses these functors to fill in vectors and then call the appropriate stat functions on the data and print them out.  An example of code that could be used in main.cpp to invoke these functions for a specific data field would be:
 ```
  //create a visitor to combine the state data
