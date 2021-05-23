@@ -185,7 +185,7 @@ In statTool.cpp you are provided with implementations for the following:
 
 To use these new tools, you do need to make sure that you have a getter defined in your demogData.h:
 ```
-    raceDemogData getCommunityRaceMix() const { return communityRacialCount; }
+    raceDemogData getCommunityRaceMix() const { return //variable name for racial demographics of this demographic data }
 ```
 
 
