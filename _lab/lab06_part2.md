@@ -69,15 +69,14 @@ Re-write read_csv in parse.cpp to take in a reference to a vector of region data
 ```
 
 Now that we have one big pile of data, we will use the visitor design pattern to create new visitors that we can use on the big pile of data to 
-do the correct aggregation computation for the two different types of data (police shootings and demog data) at various regional levels (or keyed).  
+do the correct aggregation computation for the two different types of data (police shootings and demog data) at various regional levels (or keyed for extra credit).  
 
 Specifically, you will introduce a new class derived from visitor called visitorCombine.  (See added files for structure).  This class should store the aggregated data and allow access to it.
 
-From this class, you will write three concrete visitors: visitorCombineCounty, visitorCombineState, visitorCombineKey each which appropriately aggregate the data.
+From this class, you will write three concrete visitors: visitorCombineCounty and visitorCombineState each which appropriately aggregate the data.  For extra credit, you can also write: visitorCombineKeyDemog and visitorCombineKeyPS (see description below):
 ```
 class visitorCombineState : public visitorCombine 
-class visitorCombineKey : public visitorCombine 
-class visitorCombineKey: public visitorCombine 
+class visitorCombineCounty : public visitorCombine 
 
 ```
 
@@ -88,7 +87,7 @@ Along with getter methods returning the appropriate types needed to access this 
     shared_ptr<demogCombo> getComboDemogData(string regionName) {  } //fill in
     shared_ptr<psCombo> getComboPoliceData(string regionName) {  } //fill in
 
-	std::map<string, shared_ptr<demogCombo> >& getComboDemog()  {  } //fill in
+    std::map<string, shared_ptr<demogCombo> >& getComboDemog()  {  } //fill in
     std::map<string, shared_ptr<psCombo> > & getComboPolice() {  } //fill in
 
 ````
