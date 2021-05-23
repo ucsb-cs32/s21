@@ -303,6 +303,52 @@ string makeKeyPS(shared_ptr<psData> theData) {
 }
 ```
 
+Partial example for printing aggregate keyed data, corresponding demographic regions aggregated based on counties with >=20 percent Latinx community members and the corresponding aggregated police shooting data for those counties:
+```
+name: KeyLatinxPerTwentyPer
+Combo Info: AR, AZ, CA, CO, FL, GA, IA, ID, IL, KS, MA, MN, NE, NJ, NM, NV, NY, OK, OR, PA, RI, TX, VA, WA, total states: 24
+Number of Counties: 344 County Demographics Info: comboData, many
+Population info: 
+(over 65): 12.97% and total: 10642101
+(under 18): 24.28% and total: 19917292
+(under 5): 6.70% and total: 5493287
+Education info: 
+(Bachelor or more): 28.90% and total: 23710001
+(high school or more): 81.44% and total: 66808595
+persons below poverty: 16.91% and total: 13869804
+Total population: 82035024
+Racial Demographics Info: 
+% American Indian and Alaska Native percent: 1.63 count: 1335602
+% Asian American percent: 8.75 count: 7181999
+% Black/African American percent: 8.73 count: 7160490
+% Hispanic or Latinx percent: 39.72 count: 32586270
+% Native Hawaiian and Other Pacific Islander percent: 0.34 count: 279215
+% Two or More Races percent: 2.86 count: 2344520
+% White (inclusive) percent: 77.70 count: 63742869
+% White (nonHispanic) percent: 41.49 count: 34036494
+total Racial Demographic Count: 82035024
+State Info: AZ, CA, CO, FL, GA, ID, IL, KS, MA, NE, NJ, NM, NV, NY, OR, PA, RI, TX, WA, total states: 19
+Number of incidents: 2018
+Incidents with age 
+(over 65): 43 %: 2.13
+(19 to 64): 1756 %: 87.02
+(under 18): 219 %: 10.85
+Incidents involving fleeing: 709 %: 35.13
+Incidents involving mental illness: 422 %: 20.91
+Male incidents: 1917 female incidents: 101
+Racial demographics of state incidents: Racial Demographics Info: 
+% American Indian and Alaska Native percent: 0.74 count: 15
+% Asian American percent: 2.08 count: 42
+% Black/African American percent: 16.95 count: 342
+% Hispanic or Latinx percent: 38.55 count: 778
+% Native Hawaiian and Other Pacific Islander count: 0
+% Two or More Races count: 0
+% White (inclusive) percent: 29.19 count: 589
+% White (nonHispanic) percent: 29.19 count: 589
+% Other percent: 12.49 count: 252
+total Racial Demographic Count: 2018
+```
+
 
 Grading
 ============
