@@ -324,15 +324,15 @@ Education info:
 persons below poverty: 16.91% and total: 13869804
 Total population: 82035024
 Racial Demographics Info: 
-% American Indian and Alaska Native percent: 1.63 count: 1335602
-% Asian American percent: 8.75 count: 7181999
-% Black/African American percent: 8.73 count: 7160490
-% Hispanic or Latinx percent: 39.72 count: 32586270
-% Native Hawaiian and Other Pacific Islander percent: 0.34 count: 279215
-% Two or More Races percent: 2.86 count: 2344520
-% White (inclusive) percent: 77.70 count: 63742869
-% White (nonHispanic) percent: 41.49 count: 34036494
-total Racial Demographic Count: 82035024
+% American Indian and Alaska Native percent: 1.63 count: 1335772
+% Asian American percent: 8.75 count: 7182173
+% Black/African American percent: 8.73 count: 7160662
+% Hispanic or Latinx percent: 39.72 count: 32586464
+% Native Hawaiian and Other Pacific Islander percent: 0.34 count: 279342
+% Two or More Races percent: 2.86 count: 2344697
+% White (inclusive) percent: 77.70 count: 63743127
+% White (nonHispanic) percent: 41.49 count: 34036738
+total Racial Demographic Count: 82035110
 State Info: AZ, CA, CO, FL, GA, ID, IL, KS, MA, NE, NJ, NM, NV, NY, OR, PA, RI, TX, WA, total states: 19
 Number of incidents: 2018
 Incidents with age 
