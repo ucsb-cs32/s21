@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab08	
+num: lab07	
 ready: true
 desc: "Template Classes and Exceptions"
 assigned: 2021-05-27
-due: 2021-06-03 23:59
+due: 2021-06-04 23:59
 github_org_url: https://github.com/ucsb-cs32-s21
 ---
 
@@ -36,7 +36,7 @@ Task 1
 ============
 
 Download the base code.  It is a version of our lecture code with a class to write out a color image (as we have been doing) - see image.h.
-....UPDATE...
+https://github.com/ucsb-cs32-s21/lab07-STARTER
 
 You need to modify this class so that it is templated in terms of the type that the image stores.  Change all methods that operate on a 'color' to instead work on a templated type.
 
@@ -87,7 +87,7 @@ For each concrete class, use try and catch (potentially nested - consider your d
 5) If a polygon has any of its vertices with values less than zero,  a warning is printed ("polygon vert less zero") and the color of the polygon is changed to black<br>
 6) If a polygon is concave, our drawing method will fail (as is*), thus, print a warning ("polygon concave"), change the polygon to be a triangle formed by the first, second and final vertex and color the polygon red. (Note a helper function to detect concave polygons is provided in the new code, make sure you have it<br>
 
-A red re-coloring has priority. Note, this implies an ordering on the warnings as well.<br>
+**A red re-coloring has priority**. Note, this implies an ordering on the warnings as well.<br>
 
 A partial example main.cpp (called TestmainPartial.cpp) is provided demonstrating the testing we expect your code to support.
 
