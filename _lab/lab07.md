@@ -32,6 +32,13 @@ However, we certainly can represent the same 'image' data as either a character 
 
 The next big idea we are playing with is that many times when our program is running things can go wrong.  We can use assert and debugging and hope our user (and other software engineers) will be well behaved, however, we can also plan to have our programs fail gracefully if all else fails.  We will do this using exceptions.  Exception design is an art that we will only just start to experiment with.  The second half of this lab involves adding exception handling for when unexpected issues arise in the drawing program.
 
+
+Modality
+============
+This is a pair lab.  You may choose to work alone or with another student.  When working in a pair, please always follow good pair programming methodologies.  In general, set aside time to work together and share your screen to share the work and learning.  
+
+You will need to identify you partner (pair) in your submission (add a header to your main with both your names!).  For this lab, you *MAY* partner with anyone (i.e. even someone you paired with twice before) as it is a different code base (lecture code).
+
 Task 1
 ============
 
@@ -88,6 +95,7 @@ For each concrete class, use try and catch (potentially nested - consider your d
 6) If a polygon is concave, our drawing method will fail (as is*), thus, print a warning ("polygon concave"), change the polygon to be a triangle formed by the first, second and final vertex and color the polygon red. (Note a helper function to detect concave polygons is provided in the new code, make sure you have it<br>
 
 **A red re-coloring has priority**. Note, this implies an ordering on the warnings as well.<br>
+For the exceptions - think about using some of the standard exceptions - for example, std::out_of_range or std::domain_error.
 
 A partial example main.cpp (called TestmainPartial.cpp) is provided demonstrating the testing we expect your code to support.
 
