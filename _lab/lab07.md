@@ -175,7 +175,7 @@ The example partial main includes the following shapes:
   ```
   
 Expected output for the example TestmainPartial is:<br>
-![](fix.jpg)
+![https://ucsb-cs32.github.io/w21/lab/lab08/fix.jpg](fix.jpg)
 
 The tex output for the errors for the above TestmainPartial would be:
 ```
